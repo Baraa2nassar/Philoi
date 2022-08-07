@@ -1,0 +1,9 @@
+#hello{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: 'Georgia';
+color: rgb(255, 255, 255); /*white text*/
+font-weight: bold
+}

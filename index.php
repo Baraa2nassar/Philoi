@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>haight banking</title>
+    <title>Philoi with friends</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
@@ -24,10 +24,10 @@
 <body>
     <div class="d-flex" id="home">
         <!-- Left pane -->
-  <!--       <?php include 'includes/shapes.php' ?>
+        <?php include 'includes/shapes.php' ?> 
 
-      <!--   <?php include 'includes/left.php' ?> -->
- -->
+
+ 
         <!-- Right pane -->
         <div class="d-flex flex-fill" style="background: #fff; width: 19rem">
             <div class="d-flex flex-column mx-auto" style="width: 415px; margin-top: 80px">
