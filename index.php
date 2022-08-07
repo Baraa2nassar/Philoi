@@ -24,10 +24,10 @@
 <body>
     <div class="d-flex" id="home">
         <!-- Left pane -->
-        <?php include 'includes/shapes.php' ?>
+  <!--       <?php include 'includes/shapes.php' ?>
 
       <!--   <?php include 'includes/left.php' ?> -->
-
+ -->
         <!-- Right pane -->
         <div class="d-flex flex-fill" style="background: #fff; width: 19rem">
             <div class="d-flex flex-column mx-auto" style="width: 415px; margin-top: 80px">
