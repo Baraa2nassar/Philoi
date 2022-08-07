@@ -1,4 +1,4 @@
-Friend 1 (Questioner), Friend 2 (Andwer)
+Friend 1 (Questioner), Friend 2 (answer)
 
 1 asks and puts in 10 questions with multiple choices
 2 asnwers the multiple choice and gets a score
@@ -12,13 +12,22 @@ then flip
 which friend is the real (not fake)
 
 ----
-multi-game 
+multi-game (how much do you know each other?)
 
 Which one has done this before?
-I flipped twice
-- Baraa
-- Mike
-- Tony
-- IDK 
-=-----
-they have to rate it with either thumbs up or thumbs down 
+
+I traveled twice to 5o states
+- Baraa (Votes: Mike, Tony)
+- Mike  (Votes: Baraa)
+- Tony  (Votes: n/a)
+---
+Highest on board is Baraa
+---
+if no one could guess your fact let it say on screen (No body knows you brah)
+--
+Hey! Thanks for asking, no you are not annoying anyone, we are happy to help. The main thing I wanna point out here is PHP is more web based so you can use it if your application is web based as well. As for better ways, I would Google up things like - "database system for quiz based games" or "types of database systems" and make some comparisons. 
+
+Hope that helps! Feel free to ask follow up questions.
+
+the admin will select on the behalf of others.
+----
