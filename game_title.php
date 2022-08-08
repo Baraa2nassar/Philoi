@@ -2,13 +2,19 @@
 // This is the page where the organizer will create a new quiz.
 // here they will enter the game title and password in case they want to join the game in the future
 
+session_start();
+
 $num_questions = $_POST["num_questions"] ?? null;
+
+
+var_dump($_SESSION['players']);
+echo $_SESSION['num_questions'];
+
 
 ?>
 
 <?php
 
-session_start();
 include 'scripts/db.php';
 
 
@@ -72,8 +78,7 @@ if (isset(
 
 
 
-                <form action=loading.php method="POST">
-                <h5 class="text-muted text-center mb-1">Game ID is: 12344</h5>
+                <form action="loading.php" method="POST">
 
 
                 <!-- <h7 class="text-muted text-center mb-4"> The place to check how much your friends know U</h7> -->
@@ -114,30 +119,6 @@ if (isset(
                 <div id="inutContainer">
                 </div>
                 </form>
-
-                <form class="mt-4" method="post">
-                    <h5>Create a new quiz</h5>
-                    <p class="text-muted">Minimum: 1 | Maximum: 10</p>
-                    <label>How many questions will the quiz have?</label>
-                    <input class="form-control-sm" type="number" step="1" name="num_questions" id="" min="1" max="10" value="<?= $num_questions ?>">
-                    <button class="btn btn-primary btn-sm mb-1">Submit</button>
-                </form>
-
-                <?php if (isset($num_questions)): ?>
-                    <?php
-                        for ($i = 1; $i <= $num_questions; $i++) {
-                            echo "<input type='text' placeholder='Question $i'>";
-                            echo "<br>";
-                            for ($j = 1; $j <= 4; $j++) {
-                                echo "<input type='text' placeholder='Answer $j for question $i'>";
-                                echo "<br>";
-                            }
-                            echo "<br>";
-                        }
-                    ?>
-                <?php endif; ?>
-
-
 
                 <div>
                     <a><br> </a>
