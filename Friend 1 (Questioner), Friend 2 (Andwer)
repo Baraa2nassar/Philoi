@@ -41,3 +41,14 @@ Create new game:
 highest point wins
 they can go back once to check which answers were what
 . . . 
+db?
+
+Table 1: 
+- ID for the game
+- number of players
+ 
+- names 
+- user_ID
+- set-colors
+- scores (extra point if correct)
+- questions
