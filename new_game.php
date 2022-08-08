@@ -6,9 +6,7 @@ include 'scripts/db.php';
 
 echo "SID: ".SID."<br>session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
 
-
 // $user_id = $_SESSION["user_id"];
-
 
 if (isset(
     // $_post['number']
@@ -23,16 +21,15 @@ if (isset(
         $username    = $_POST['my-name'];
         $session_id_n = session_id();
 
-
         // header('Location: login.php');
 
-
-    $statement = $pdo->prepare("INSERT INTO user_bluh (user_names) VALUES (:username)");
+    $statement = $pdo->prepare("INSERT INTO user_bluh (user_name) VALUES (:username)");
 
     $statement->execute(array( 
-        'user_names'  => $username,
+        'user_name'  => $username,
         'game_session_ID'=>$session_id_n,
     ));
+
     $pdo = null;
 }
 
@@ -81,7 +78,7 @@ if (isset(
         
 
 
-                <form action=index.php method="POST">
+                <form action=game_title.php method="POST">
                 <h5 class="text-muted text-center mb-1">Enter the names of Your friends </h5>
 
                 <!-- <h7 class="text-muted text-center mb-4"> The place to check how much your friends know U</h7> -->
@@ -121,6 +118,11 @@ if (isset(
                 <div>
                     <a><br> </a>
                 <a class="btn px-2 py-1 rounded" href="index.php" style="background-color:#e4edfb; color: #174ea6; width: 100px;">Back</a>
+
+                <br>
+                <br>
+
+                <a class="btn px-2 py-1 rounded" href="pin.php" style="background-color:#e4edfb; color: #174ea6; width: 100px;">join existing game</a>
             </div>
                 
                 <!-- </div> -->
@@ -128,8 +130,7 @@ if (isset(
                 <!-- <div class="mt-5 text-center"> -->
                          <!--   <a class="btn px-2 py-1 rounded" href="index.php" style="background-color:#e4edfb; color: #174ea6; width: 100px">Back</a> -->
                            <!-- </div> -->
-                         </div>
-                
+                         </div>     
             </div>
 
         </div>

@@ -98,7 +98,7 @@ if (isset(
 
 
                 	
-                <button type="submit" class="btn btn-outline-dark mt-3" name=submit value="submit" style="width: 100px">Submit</button>
+                <button type="Start-Game" class="btn btn-outline-dark mt-3" name=submit value="submit" style="width: 100px">Submit</button>
 
                 <!-- <input type="button" value="submit" id="ok" onclick="getP()"> -->
                 <div id="inutContainer">
