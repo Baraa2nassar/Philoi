@@ -25,9 +25,9 @@ if (isset(
 
     $statement = $pdo->prepare("INSERT INTO user_bluh (user_name) VALUES (:username)");
 
-    $statement->execute(array( 
-        'user_name'  => $username,
-        'game_session_ID'=>$session_id_n,
+    $statement->execute(array(
+        'username'  => $username,
+        // 'game_session_ID'=>$session_id_n,
     ));
 
     $pdo = null;
@@ -75,7 +75,7 @@ if (isset(
 
                 <h1 class="text-center" style="color:#006480;"><strong>How much do they know me?</strong></h1>
                 <hr>
-        
+
 
 
                 <form action=game_title.php method="POST">
@@ -91,7 +91,7 @@ if (isset(
                   <br>
 
                   <input class="form-control" type="text" name="my-name" id="username" value="" placeholder="Player 2" required style="color: #8B8000; border-color: #FED766;">
-                
+
                   <br>
 
                   <input class="form-control" type="text" name="my-name" id="username" value="" placeholder="Player 3"  style="color: #28a745;border-color: #28a745;">
@@ -106,7 +106,7 @@ if (isset(
 
 
 
-                	
+
                 <button type="submit" class="btn btn-outline-dark mt-3" name=submit value="submit" style="width: 100px">Submit</button>
 
                 <!-- <input type="button" value="submit" id="ok" onclick="getP()"> -->
@@ -124,13 +124,13 @@ if (isset(
 
                 <a class="btn px-2 py-1 rounded" href="pin.php" style="background-color:#e4edfb; color: #174ea6; width: 100px;">join existing game</a>
             </div>
-                
+
                 <!-- </div> -->
 
                 <!-- <div class="mt-5 text-center"> -->
                          <!--   <a class="btn px-2 py-1 rounded" href="index.php" style="background-color:#e4edfb; color: #174ea6; width: 100px">Back</a> -->
                            <!-- </div> -->
-                         </div>     
+                         </div>
             </div>
 
         </div>
