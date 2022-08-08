@@ -1,10 +1,11 @@
 <?php
 
-session_start();
 include 'scripts/db.php';
 
 
-echo "SID: ".SID."<br>session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
+session_start();
+
+// echo "SID: ".SID."<br>session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
 
 // $user_id = $_SESSION["user_id"];
 
@@ -87,10 +88,10 @@ if (isset(
                 <!-- <h7 class="text-muted text-center mb-4">The place to check how much you know your friends </h7> -->
 
                 <div class="mt-3 text-center">
-                  <input class="form-control" type="text" name="my-name" id="username" value= "<?php echo (isset($_SESSION['my-name']) ? $_SESSION['my-name'] : ""); unset($_SESSION['my-name']);  ?>"placeholder="Player 1" required style ="color: #0A2239; border-color: #0A2239;" >
+                  <input class="form-control" type="text" name="my-name" id="username">"placeholder="Player 1" required style ="color: #0A2239; border-color: #0A2239;" >
                   <br>
 
-                  <input class="form-control" type="text" name="my-name" id="username" value="" placeholder="Player 2" required style="color: #8B8000; border-color: #FED766;">
+                  <input class="form-control" type="text" name="my-name" id="username" placeholder="Player 2" required style="color: #8B8000; border-color: #FED766;">
 
                   <br>
 

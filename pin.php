@@ -45,7 +45,7 @@
                 <img src="construct.jpg" alt="Paris" style="width:50%;">
 
 
-                 <div class="mt-5 text-center"> 
+                 <div class="mt-5 text-center">
                            <a class="btn px-2 py-1 rounded" href="index.php" style="background-color:#e4edfb; color: #174ea6; width: 100px">Back</a>
                            </div>
                          <!-- </div> -->
@@ -55,7 +55,7 @@
 
                 <!-- <h7 class="text-muted text-center mb-4"> The place to check how much your friends know U</h7> -->
                 <!-- <h7 class="text-muted text-center mb-4">The place to check how much you know your friends </h7> -->
-                
+
             </div>
         </div>
 
