@@ -79,26 +79,11 @@ if (isset(
 
                 <div class="mt-3 text-center">
                   <input class="form-control" type="text" id="username" value="" placeholder="Player 1" required style ="color: #0A2239; border-color: #0A2239;" >
-                  <br>
-
-                  <input class="form-control" type="text" id="username" value="" placeholder="Player 2" required style="color: #8B8000; border-color: #FED766;">
-                
-                  <br>
-
-                  <input class="form-control" type="text" id="username" value="" placeholder="Player 3" required style="color: #28a745;border-color: #28a745;">
-
-                  <br>
-
-                <input class="form-control" type="text" id="username" value="" placeholder="Player 4" required style="color: #565656; border-color: #B7B5B3;">
-
-                <br>
-
-                <input class="form-control" type="text" id="username" value="" placeholder="Player 5" required style="color:#449DD1; border-color: #449DD1;">
-
+                  <!-- <br> -->
 
 
                 	
-                <button type="Start-Game" class="btn btn-outline-dark mt-3" name=submit value="submit" style="width: 100px">Submit</button>
+                <button type="submit" class="btn btn-outline-dark mt-3" name=submit value="submit" style="">Start-Game</button>
 
                 <!-- <input type="button" value="submit" id="ok" onclick="getP()"> -->
                 <div id="inutContainer">
