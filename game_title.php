@@ -1,6 +1,6 @@
-<!-- here they will enter the game title and password in case they want to join the game in the future -->
 <?php
 // This is the page where the organizer will create a new quiz.
+// here they will enter the game title and password in case they want to join the game in the future
 
 $num_questions = $_POST["num_questions"] ?? null;
 
@@ -10,8 +10,6 @@ $num_questions = $_POST["num_questions"] ?? null;
 
 session_start();
 include 'scripts/db.php';
-
-$user_id = $_SESSION["user_id"];
 
 
 if (isset(
@@ -71,7 +69,7 @@ if (isset(
 
                 <h1 class="text-center" style="color:#006480;"><strong>How much do they know me?</strong></h1>
                 <hr>
-        
+
 
 
                 <form action=loading.php method="POST">
@@ -82,11 +80,11 @@ if (isset(
 
 
                 <!-- <h7 class="text-muted text-center mb-4">The place to check how much you know your friends </h7> -->
-                
+
 
 
                 <div class="mt-3 text-center">
-            
+
             <fieldset disabled>
                   <input class="form-control" type="text" id="username" value="Baraa" placeholder="Player 1" required style ="color: #0A2239; border-color: #0A2239;" >
                   <br>
@@ -109,7 +107,7 @@ if (isset(
                   <!-- <br> -->
 
 
-                	
+
                 <button type="submit" class="btn btn-outline-dark mt-3" name=submit value="submit" style="">Start-Game</button>
 
                 <!-- <input type="button" value="submit" id="ok" onclick="getP()"> -->
@@ -145,14 +143,14 @@ if (isset(
                     <a><br> </a>
                 <a class="btn px-2 py-1 rounded" onclick="history.go(-1)" style="background-color:#e4edfb; color: #174ea6; width: 100px;">Back</a>
             </div>
-                
+
                 <!-- </div> -->
 
                 <!-- <div class="mt-5 text-center"> -->
                          <!--   <a class="btn px-2 py-1 rounded" href="index.php" style="background-color:#e4edfb; color: #174ea6; width: 100px">Back</a> -->
                            <!-- </div> -->
                          </div>
-                
+
             </div>
 
         </div>
