@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
                 <form method="post">
 
                     <!-- The form to adjust the number of questions. -->
-                    <label>How many questions per player? (Min: 1 | Max: 10)</label>
+                    <label class="text-muted text-center mb-1">How many questions per player? (Min: 1 | Max: 10)</label>
                         <input class="form-control-sm" type="number" step="1" name="num_questions" id="" min="1" max="10" value="<?= $num_questions ?>">
 
                 <h5 class="text-muted text-center mb-1">Enter the names of Your friends </h5>

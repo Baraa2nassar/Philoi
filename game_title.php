@@ -7,8 +7,17 @@ session_start();
 $num_questions = $_POST["num_questions"] ?? null;
 
 
-var_dump($_SESSION['players']);
-echo $_SESSION['num_questions'];
+// var_dump($_SESSION['players']);
+$player = $_SESSION['players'];
+
+$array_key_set = array_keys($player);
+$first_element = $player[$array_key_set[0]];
+$second_element = $player[$array_key_set[1]]
+
+// $second_element = $_POST[]
+// echo $first_element;
+
+// echo $_SESSION['num_questions'];
 
 
 ?>
@@ -91,22 +100,22 @@ if (isset(
                 <div class="mt-3 text-center">
 
             <fieldset disabled>
-                  <input class="form-control" type="text" id="username" value="Baraa" placeholder="Player 1" required style ="color: #0A2239; border-color: #0A2239;" >
+                  <input class="form-control" type="text" id="username" value='' placeholder="<?php echo $first_element ?>" required style ="color: #0A2239; border-color: #0A2239;" >
                   <br>
 
-                    <input class="form-control" type="text" name="my-name" id="username" value="" placeholder="Ahmad" required style="color: #8B8000; border-color: #FED766;">
+                    <input class="form-control" type="text" name="my-name" id="username" value="" placeholder="<?php echo $second_element ?>" required style="color: #8B8000; border-color: #FED766;">
 
                     <br>
 
-                    <input class="form-control" type="text" name="my-name" id="username" value="" placeholder="Musa"  style="color: #28a745;border-color: #28a745;">
+                    <input class="form-control" type="text" name="my-name" id="username" value="" placeholder=""  style="color: #28a745;border-color: #28a745;">
 
                     <br>
 
-                  <input class="form-control" type="text" name="my-name" id="username" value="" placeholder="Mush"  style="color: #565656; border-color: #B7B5B3;">
+                  <input class="form-control" type="text" name="my-name" id="username" value="" placeholder=""  style="color: #565656; border-color: #B7B5B3;">
 
                   <br>
 
-                  <input class="form-control" type="text" id="username" value="" placeholder="Player 5"  style="color:#449DD1; border-color: #449DD1;">
+                  <input class="form-control" type="text" id="username" value="" placeholder=""  style="color:#449DD1; border-color: #449DD1;">
 
               </fieldset>
                   <!-- <br> -->
