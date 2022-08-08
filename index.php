@@ -19,7 +19,7 @@
 </head>
 <body>
     <div class="d-flex">
-        <!-- <?php include 'includes/shapes.php' ?> -->
+        <?php include 'includes/shapes.php' ?>
         <div class="d-flex flex-fill">
             <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 80px">
                 <h1 class="text-center" style="color:#006480;">Welcome to Philoi</h1>
@@ -27,7 +27,7 @@
                 <hr>
                 <button class="btn btn-primary my-2 mb-1" onclick="location.href = 'pin.php'">Join existing game</button>
                 <button class="btn btn-success my-2" onclick="location.href = 'new_game.php'">Make a new game</button>
-                <!-- <button class="btn btn-success mt-1" onclick="location.href = 'create.php'">Create a new quiz</button> -->
+                <button class="btn btn-secondary mt-1" onclick="location.href = 'rules.php'">View rules</button>
             </div>
         </div>
     </div>
