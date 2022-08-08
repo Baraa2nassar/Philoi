@@ -27,7 +27,7 @@
                 <hr>
                 <button class="btn btn-primary my-2 mb-1" onclick="location.href = 'pin.php'">Join existing game</button>
                 <button class="btn btn-success my-2" onclick="location.href = 'new_game.php'">Make a new game</button>
-                <button class="btn btn-success mt-1" onclick="location.href = 'create.php'">Create a new quiz</button>
+                <!-- <button class="btn btn-success mt-1" onclick="location.href = 'create.php'">Create a new quiz</button> -->
             </div>
         </div>
     </div>

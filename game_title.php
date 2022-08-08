@@ -1,5 +1,12 @@
 <!-- here they will enter the game title and password in case they want to join the game in the future -->
 <?php
+// This is the page where the organizer will create a new quiz.
+
+$num_questions = $_POST["num_questions"] ?? null;
+
+?>
+
+<?php
 
 session_start();
 include 'scripts/db.php';
@@ -109,6 +116,29 @@ if (isset(
                 <div id="inutContainer">
                 </div>
                 </form>
+
+                <form class="mt-4" method="post">
+                    <h5>Create a new quiz</h5>
+                    <p class="text-muted">Minimum: 1 | Maximum: 10</p>
+                    <label>How many questions will the quiz have?</label>
+                    <input class="form-control-sm" type="number" step="1" name="num_questions" id="" min="1" max="10" value="<?= $num_questions ?>">
+                    <button class="btn btn-primary btn-sm mb-1">Submit</button>
+                </form>
+
+                <?php if (isset($num_questions)): ?>
+                    <?php
+                        for ($i = 1; $i <= $num_questions; $i++) {
+                            echo "<input type='text' placeholder='Question $i'>";
+                            echo "<br>";
+                            for ($j = 1; $j <= 4; $j++) {
+                                echo "<input type='text' placeholder='Answer $j for question $i'>";
+                                echo "<br>";
+                            }
+                            echo "<br>";
+                        }
+                    ?>
+                <?php endif; ?>
+
 
 
                 <div>
