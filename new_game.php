@@ -17,13 +17,13 @@ if (isset(
 // $username = $_POST['username'];
 )) {
         $pdo = get_database_connection();
-        $number_players    = $_POST['number'];
+        $number_players = $_POST['number'];
         $username    = $_POST['my-name'];
         $session_id_n = session_id();
 
         // header('Location: login.php');
 
-    $statement = $pdo->prepare("INSERT INTO user_bluh (user_name) VALUES (:username)");
+    $statement = $pdo->prepare("INSERT INTO user_bluh (user_name,) VALUES (:username)");
 
     $statement->execute(array(
         'username'  => $username,
@@ -107,7 +107,7 @@ if (isset(
 
 
 
-                <button type="submit" class="btn btn-outline-dark mt-3" name=submit value="submit" style="width: 100px">Submit</button>
+                <button type="submit" class="btn btn-outline-dark mt-3" name=submit value="submit" style="width: 200px">Submit</button>
 
                 <!-- <input type="button" value="submit" id="ok" onclick="getP()"> -->
                 <div id="inutContainer">
@@ -117,12 +117,12 @@ if (isset(
 
                 <div>
                     <a><br> </a>
-                <a class="btn px-2 py-1 rounded" href="index.php" style="background-color:#e4edfb; color: #174ea6; width: 100px;">Back</a>
+                <a class="btn px-2 py-1 rounded" href="index.php" style="background-color:#e4edfb; color: #174ea6; width: 200px;">Back</a>
 
                 <br>
                 <br>
 
-                <a class="btn px-2 py-1 rounded" href="pin.php" style="background-color:#e4edfb; color: #174ea6; width: 100px;">join existing game</a>
+                <a class="btn px-2 py-1 rounded" href="pin.php" style="background-color:#e4edfb; color: #174ea6; width: 200;">join existing game</a>
             </div>
 
                 <!-- </div> -->

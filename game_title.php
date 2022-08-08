@@ -67,8 +67,9 @@ if (isset(
         
 
 
-                <form>
-                <h5 class="text-muted text-center mb-1">Enter the names of Your friends </h5>
+                <form action=loading.php method="POST">
+                <h5 class="text-muted text-center mb-1">Game ID is: 12344</h5>
+
 
                 <!-- <h7 class="text-muted text-center mb-4"> The place to check how much your friends know U</h7> -->
 
@@ -78,7 +79,26 @@ if (isset(
 
 
                 <div class="mt-3 text-center">
-                  <input class="form-control" type="text" id="username" value="" placeholder="Player 1" required style ="color: #0A2239; border-color: #0A2239;" >
+            
+            <fieldset disabled>
+                  <input class="form-control" type="text" id="username" value="Baraa" placeholder="Player 1" required style ="color: #0A2239; border-color: #0A2239;" >
+                  <br>
+
+                    <input class="form-control" type="text" name="my-name" id="username" value="" placeholder="Ahmad" required style="color: #8B8000; border-color: #FED766;">
+
+                    <br>
+
+                    <input class="form-control" type="text" name="my-name" id="username" value="" placeholder="Musa"  style="color: #28a745;border-color: #28a745;">
+
+                    <br>
+
+                  <input class="form-control" type="text" name="my-name" id="username" value="" placeholder="Mush"  style="color: #565656; border-color: #B7B5B3;">
+
+                  <br>
+
+                  <input class="form-control" type="text" id="username" value="" placeholder="Player 5"  style="color:#449DD1; border-color: #449DD1;">
+
+              </fieldset>
                   <!-- <br> -->
 
 
@@ -93,7 +113,7 @@ if (isset(
 
                 <div>
                     <a><br> </a>
-                <a class="btn px-2 py-1 rounded" href="index.php" style="background-color:#e4edfb; color: #174ea6; width: 100px;">Back</a>
+                <a class="btn px-2 py-1 rounded" onclick="history.go(-1)" style="background-color:#e4edfb; color: #174ea6; width: 100px;">Back</a>
             </div>
                 
                 <!-- </div> -->
