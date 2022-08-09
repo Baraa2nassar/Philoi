@@ -37,9 +37,11 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <div class="d-flex">
-        <div class="d-flex flex-column mx-auto" style="width: 450px; margin-top: 80px">
+        <?php include 'includes/shapes.php' ?>
 
-            <h1 class="text-center" style="color: #006480">Create a new game</h1>
+        <div class="d-flex flex-column mx-auto" style="width: 420px; margin-top: 55px">
+
+            <h1 class="text-center" style="color: #006480">Create a New Game</h1>
             <hr>
 
             <form method="post">
@@ -52,19 +54,18 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="mt-3 text-center">
-                    <h5 class="text-center mb-1 h5" style="color: #0f0f0f;">Enter the names of your friends </h5>
+                    <h5 class="text-center mb-1" style="color: cornflowerblue;">Enter the names of your friends </h5>
 
                     <!-- Player names -->
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="color: #d14430; border-color: #d92007" required>
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" style="color: #885cb5; border-color: #9b42f5" required>
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="color: #565656; border-color: #5a5b5c" required>
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" style="color: #d14430; border-color: #d92007" required>
                     <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" style="color: #28a745; border-color: #28a745">
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 4" style="color: #565656; border-color: #B7B5B3">
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 4" style="color: #885cb5; border-color: #9b42f5">
                     <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 5" style="color: #449DD1; border-color: #449DD1">
 
-                    <button class="btn btn-primary mt-2" name="submit" value="submit" style="width: 200px">Continue</button>
-
-                    <div class="mt-4">
-                        <a class="btn px-2 py-1 rounded mb-5" href="index.php" style="background-color:#e4edfb; color: #174ea6; width: 200px;">Back</a>
+                    <div class="d-flex">
+                        <button class="mx-3 btn btn-secondary mt-2" type="button" style="width: 225px" onclick="location.href = 'index.php'">Back</button>
+                        <button class="mx-3 btn btn-primary mt-2" name="submit" value="submit" style="width: 225px">Continue</button>
                     </div>
                 </div>
             </form>
