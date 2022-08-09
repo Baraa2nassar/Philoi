@@ -13,6 +13,8 @@ if (isset($_POST['submit'])) {
     $_SESSION['players'] = $players;
     $_SESSION['num_questions'] = $num_questions;
 
+
+// we can have if statements that dirrects to different pages depending on the number of players inputed for the game
     header("Location: game_title.php");
 }
 
