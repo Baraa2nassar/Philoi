@@ -82,7 +82,7 @@ if (isset(
         <div class="d-flex flex-fill" style="background: #fff; width: 19rem">
             <div class="d-flex flex-column mx-auto" style="width: 415px; margin-top: 80px">
 
-                <h1 class="text-center" style="color:#006480;"><strong>How much do they know me?</strong></h1>
+                <h1 class="text-center" style="color: #006480">Create a new game</h1>
                 <hr>
 
 
