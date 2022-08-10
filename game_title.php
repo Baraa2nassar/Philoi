@@ -73,7 +73,7 @@ $num_players = count($players);
                     <?php endfor; ?>
                 </div>
 
-                <div class="d-flex text-center mt-4" style="margin: 0px 90px;">
+                <div class="d-flex text-center mt-4 mb-5" style="margin: 0px 90px;">
                     <button type="button" class="mx-3 btn btn-secondary mt-2" style="width: 225px" onclick="location.href = 'new_game.php'">Back</button>
                     <button type="submit" class="mx-3 btn btn-primary mt-2" name="create" style="width: 225px">Create</button>
                 </div>
