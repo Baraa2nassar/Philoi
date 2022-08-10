@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
                 <div class="row mb-3">
                     <label class="text-center col-sm-9 col-form-label">How many questions per player? <span class="text-muted">(10 max)</span></label>
                     <div class="col-sm-3">
-                        <input class="form-control" type="number" step="1" name="num_questions" min="1" max="10" required>
+                        <input class="form-control" type="number" step="1" value="5" name="num_questions" min="1" max="10" required>
                     </div>
                 </div>
 
@@ -57,11 +57,11 @@ if (isset($_POST['submit'])) {
                     <h5 class="text-center mb-1" style="color: cornflowerblue;">Enter the names of your friends </h5>
 
                     <!-- Player names -->
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="color: #565656; border-color: #5a5b5c" required>
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" style="color: #d14430; border-color: #d92007" required>
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" style="color: #28a745; border-color: #28a745">
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 4" style="color: #885cb5; border-color: #9b42f5">
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 5" style="color: #449DD1; border-color: #449DD1">
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" value="Baraa" style="color: #565656; border-color: #5a5b5c" required>
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" value="Ken" style="color: #d14430; border-color: #d92007" required>
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" value="Mumin" style="color: #28a745; border-color: #28a745">
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 4" value="Mush" style="color: #885cb5; border-color: #9b42f5">
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 5" value="Omar" style="color: #449DD1; border-color: #449DD1">
 
                     <div class="d-flex">
                         <button class="mx-3 btn btn-secondary mt-2" type="button" style="width: 225px" onclick="location.href = 'index.php'">Back</button>
