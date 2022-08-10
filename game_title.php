@@ -4,43 +4,20 @@
 
 session_start();
 
-$num_questions = $_POST["num_questions"] ?? null;
+$styles = [
+    "background-color: #565656 !important; border-color: #5a5b5c !important; color: white; width: 100px;",
+    "background-color: #d14430 !important; border-color: #d92007 !important; color: white; width: 100px;",
+    "background-color: #28a745 !important; border-color: #28a745 !important; color: white; width: 100px;",
+    "background-color: #885cb5 !important; border-color: #9b42f5 !important; color: white; width: 100px;",
+    "background-color: #449DD1 !important; border-color: #449DD1 !important; color: white; width: 100px;",
+];
 
+$num_questions = $_SESSION["num_questions"] ?? null;
+$players = $_SESSION['players'];
 
-// var_dump($_SESSION['players']);
-$player = $_SESSION['players'];
-
-$array_key_set = array_keys($player);
-$first_element = $player[$array_key_set[0]];
-$second_element = $player[$array_key_set[1]]
-
-// $second_element = $_POST[]
-// echo $first_element;
-
-// echo $_SESSION['num_questions'];
-
+$num_players = count($players);
 
 ?>
-
-<?php
-
-include 'scripts/db.php';
-
-
-if (isset(
-    $_post['number']
-
-
-// $last     = $_POST['last-name'];
-// $username = $_POST['username'];
-)) {
-    $pdo = get_database_connection();
-    $number_players    = $_POST['number'];
-
-    header('Location: login.php');
-}
-?>
-
 
 <!doctype html>
 <html>
@@ -51,105 +28,93 @@ if (isset(
 
     <title>Philoi with Friends</title>
 
-    <!-- Bootstrapa CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css">
     <style>
-        button {
-            width: 100%;
-            height: 57px;
+        .initially-hidden {
+            display: none;
         }
 
-  /*      input:not(:placeholder-shown) {
-           background-color:  #FED766!important;
-        }*/
-
-
+        .reveal {
+            display: unset;
+        }
     </style>
 </head>
 <body>
-    <div class="d-flex" id="home">
-        <!-- Left pane -->
-<!--         <?php include 'includes/shapes.php' ?>
- -->
-      <!--   <?php include 'includes/left.php' ?> -->
+    <?php include 'includes/shapes.php' ?>
 
-        <!-- Right pane -->
+    <div class="d-flex flex-column mx-auto" style="width: 600px; margin-top: 55px">
+        <h1 class="text-center" style="color: #006480">Create a New Game</h1>
+        <hr>
 
-        <div class="d-flex flex-fill" style="background: #fff; width: 19rem">
-            <div class="d-flex flex-column mx-auto" style="width: 420px; margin-top: 55px">
+        <form method="post">
+            <div class="text-center">
+                <h5 class="mb-4" style="color: cornflowerblue;">Click on a name to enter their questions</h5>
 
-                <h1 class="text-center" style="color: #006480">Create a New Game</h1>
-                <hr>
+                <?php for ($i = 0; $i < $num_players; $i++): ?>
+                    <!-- Player buttons have a custom class named `player-btn` -->
+                    <button class="btn mx-2 player-btn" type="button" value="<?= $i ?>" style="<?= $styles[$i] ?>"><?= $players[$i] ?></button>
+                <?php endfor; ?>
 
-
-
-                <form action="loading.php" method="POST">
-
-
-                <!-- <h7 class="text-muted text-center mb-4"> The place to check how much your friends know U</h7> -->
-
-
-                <!-- <h7 class="text-muted text-center mb-4">The place to check how much you know your friends </h7> -->
-
-
-
-                <div class="mt-3 text-center">
-
-            <fieldset disabled>
-                  <input class="form-control" type="text" id="username" value='' placeholder="<?php echo $first_element ?>" required style ="color: #0A2239; border-color: #0A2239;" >
-                  <br>
-
-                    <input class="form-control" type="text" name="my-name" id="username" value="" placeholder="<?php echo $second_element ?>" required style="color: #8B8000; border-color: #FED766;">
-
-                    <br>
-
-                    <input class="form-control" type="text" name="my-name" id="username" value="" placeholder=""  style="color: #28a745;border-color: #28a745;">
-
-                    <br>
-
-                  <input class="form-control" type="text" name="my-name" id="username" value="" placeholder=""  style="color: #565656; border-color: #B7B5B3;">
-
-                  <br>
-
-                  <input class="form-control" type="text" id="username" value="" placeholder=""  style="color:#449DD1; border-color: #449DD1;">
-
-              </fieldset>
-                  <!-- <br> -->
-
-
-
-                <button type="submit" class="btn btn-outline-dark mt-3" name=submit value="submit" style="">Start-Game</button>
-
-                <!-- <input type="button" value="submit" id="ok" onclick="getP()"> -->
-                <div id="inutContainer">
+                <div class="mt-3">
+                    <?php for ($i = 0; $i < $num_players; $i++): ?>
+                        <?php for ($j = 1; $j <= $num_questions; $j++): ?>
+                            <div class="row mx-2">
+                                <!-- Custom classes for ... -->
+                                <?php if ($i > 0): ?>
+                                    <input class="form-control my-1 bg-light" style="display: none" type='text' placeholder='Enter question #<?=$j?> for <?=$players[$i]?>' required>
+                                <?php else: ?>
+                                    <input class="form-control my-1 bg-light" type='text' placeholder='Enter question #<?=$j?> for <?=$players[$i]?>' required>
+                                <?php endif; ?>
+                            </div>
+                        <?php endfor; ?>
+                    <?php endfor; ?>
                 </div>
-                </form>
 
-                <div>
-                    <a><br> </a>
-                <a class="btn px-2 py-1 rounded" onclick="history.go(-1)" style="background-color:#e4edfb; color: #174ea6; width: 100px;">Back</a>
+                <div class="d-flex text-center mt-4" style="margin: 0px 90px;">
+                    <button type="button" class="mx-3 btn btn-secondary mt-2" style="width: 225px" onclick="location.href = 'new_game.php'">Back</button>
+                    <button type="submit" class="mx-3 btn btn-primary mt-2" name="create" style="width: 225px">Create</button>
+                </div>
             </div>
-
-                <!-- </div> -->
-
-                <!-- <div class="mt-5 text-center"> -->
-                         <!--   <a class="btn px-2 py-1 rounded" href="index.php" style="background-color:#e4edfb; color: #174ea6; width: 100px">Back</a> -->
-                           <!-- </div> -->
-                         </div>
-
-            </div>
-
-        </div>
-
-
+        </form>
     </div>
 
+    <script>
+        let playerButtons = document.querySelectorAll('.player-btn');
+        let questions = document.querySelectorAll('input');
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        let numPlayers = playerButtons.length;
+        let numQuestions = questions.length;
+
+        for (let playerButton of playerButtons) {
+            playerButton.addEventListener('click', () => {
+                let value = playerButton.value;
+                console.log(value);
+                questionNumLow = value * Math.floor(numQuestions / numPlayers);
+                questionNumHi = questionNumLow + Math.floor(numQuestions / numPlayers) - 1;
+                console.log(questionNumLow, questionNumHi);
+                for (let i = 0; i < numQuestions; i++) {
+                    if (i >= questionNumLow && i <= questionNumHi) {
+                        // questions[i].removeAttribute('class', 'initially-hidden')
+                        questions[i].setAttribute('style', 'display: unset;');
+                    } else {
+                        // questions[i].removeAttribute('class', 'reveal');
+                        questions[i].setAttribute('style', 'display: none;');
+                    }
+                    // if (numQuestions % numPlayers == value) {
+                    //     questions[i].setAttribute('style', 'reveal');
+                    // } else {
+                    //     questions[i].setAttribute('style', 'initially-hidden');
+                    // }
+                }
+            });
+        }
+
+    </script>
+
+    <!-- Bootstrap JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
