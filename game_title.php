@@ -30,17 +30,6 @@ $num_players = count($players);
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <style>
-        .initially-hidden {
-            display: none;
-        }
-
-        .reveal {
-            display: unset;
-        }
-    </style>
 </head>
 <body>
     <?php include 'includes/shapes.php' ?>
@@ -62,7 +51,6 @@ $num_players = count($players);
                     <?php for ($i = 0; $i < $num_players; $i++): ?>
                         <?php for ($j = 1; $j <= $num_questions; $j++): ?>
                             <div class="row mx-2">
-                                <!-- Custom classes for ... -->
                                 <?php if ($i > 0): ?>
                                     <input class="form-control my-1 bg-light" style="display: none" type='text' placeholder='Enter question #<?=$j?> for <?=$players[$i]?>' required>
                                 <?php else: ?>
@@ -91,27 +79,17 @@ $num_players = count($players);
         for (let playerButton of playerButtons) {
             playerButton.addEventListener('click', () => {
                 let value = playerButton.value;
-                console.log(value);
                 questionNumLow = value * Math.floor(numQuestions / numPlayers);
                 questionNumHi = questionNumLow + Math.floor(numQuestions / numPlayers) - 1;
-                console.log(questionNumLow, questionNumHi);
                 for (let i = 0; i < numQuestions; i++) {
                     if (i >= questionNumLow && i <= questionNumHi) {
-                        // questions[i].removeAttribute('class', 'initially-hidden')
                         questions[i].setAttribute('style', 'display: unset;');
                     } else {
-                        // questions[i].removeAttribute('class', 'reveal');
                         questions[i].setAttribute('style', 'display: none;');
                     }
-                    // if (numQuestions % numPlayers == value) {
-                    //     questions[i].setAttribute('style', 'reveal');
-                    // } else {
-                    //     questions[i].setAttribute('style', 'initially-hidden');
-                    // }
                 }
             });
         }
-
     </script>
 
     <!-- Bootstrap JS with Popper -->
