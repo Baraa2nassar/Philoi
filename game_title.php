@@ -12,8 +12,30 @@ $num_players = count($players);
 $questions = $_POST['questions'] ?? null;
 
 if (isset($questions)) {
-    echo 'questions are made';
-    var_dump($questions);
+    $questions_per_player = $num_questions;
+
+    $answers = [];
+    for ($i = 0; $i < $num_players; $i++) {
+        for ($j = 0; $j < $questions_per_player; $j++) {
+            $answers[] = $players[$i];
+        }
+    }
+
+    $questions_json = json_encode($questions);
+    $choices_json = json_encode($players);
+    $answers_json = json_encode($answers);
+
+    require 'scripts/functions.php';
+
+    $pdo = get_database_connection();
+
+    $query = "INSERT INTO quizzes (questions, choices, answers) VALUES (?, ?, ?)";
+    $statement = $pdo->prepare($query);
+    $statement->execute(array($questions_json, $choices_json, $answers_json));
+
+    $_SESSION['game_code'] = $pdo->lastInsertId();
+
+    header('Location: success.php');
 }
 
 ?>
