@@ -1,21 +1,20 @@
 <?php
 // This is the page where the organizer will create a new quiz.
 // here they will enter the game title and password in case they want to join the game in the future
-
 session_start();
 
-$styles = [
-    "background-color: #565656 !important; border-color: #5a5b5c !important; color: white; width: 100px;",
-    "background-color: #d14430 !important; border-color: #d92007 !important; color: white; width: 100px;",
-    "background-color: #28a745 !important; border-color: #28a745 !important; color: white; width: 100px;",
-    "background-color: #885cb5 !important; border-color: #9b42f5 !important; color: white; width: 100px;",
-    "background-color: #449DD1 !important; border-color: #449DD1 !important; color: white; width: 100px;",
-];
-
+// Get information from previous page
 $num_questions = $_SESSION["num_questions"] ?? null;
 $players = $_SESSION['players'];
 
 $num_players = count($players);
+
+$questions = $_POST['questions'] ?? null;
+
+if (isset($questions)) {
+    echo 'questions are made';
+    var_dump($questions);
+}
 
 ?>
 
@@ -30,6 +29,21 @@ $num_players = count($players);
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <style>
+        .player-btn {
+            opacity: 0.5 !important;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .player-btn:hover {
+            /* background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)); */
+            opacity: 0.7 !important;
+        }
+        .player-btn-0 { background-color: #565656 !important; border-color: #5a5b5c !important; color: white !important; width: 100px !important; }
+        .player-btn-1 { background-color: #d14430 !important; border-color: #d92007 !important; color: white !important; width: 100px !important; }
+        .player-btn-2 { background-color: #28a745 !important; border-color: #28a745 !important; color: white !important; width: 100px !important; }
+        .player-btn-3 { background-color: #885cb5 !important; border-color: #9b42f5 !important; color: white !important; width: 100px !important; }
+        .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
+    </style>
 </head>
 <body>
     <?php include 'includes/shapes.php' ?>
@@ -42,19 +56,21 @@ $num_players = count($players);
             <div class="text-center">
                 <h5 class="mb-4" style="color: cornflowerblue;">Click on a name to enter their questions</h5>
 
-                <?php for ($i = 0; $i < $num_players; $i++): ?>
-                    <!-- Player buttons have a custom class named `player-btn` -->
-                    <button class="btn mx-2 player-btn" type="button" value="<?= $i ?>" style="<?= $styles[$i] ?>"><?= $players[$i] ?></button>
-                <?php endfor; ?>
+                <div class="player-btns">
+                    <?php for ($i = 0; $i < $num_players; $i++): ?>
+                        <!-- Player buttons have a custom class named `player-btn` -->
+                        <button class="btn mx-2 player-btn player-btn-<?=$i?>" type="button" value="<?= $i ?>"><?= $players[$i] ?></button>
+                    <?php endfor; ?>
+                </div>
 
                 <div class="mt-3">
                     <?php for ($i = 0; $i < $num_players; $i++): ?>
                         <?php for ($j = 1; $j <= $num_questions; $j++): ?>
                             <div class="row mx-2">
                                 <?php if ($i > 0): ?>
-                                    <input class="form-control my-1 bg-light" style="display: none" type='text' placeholder='Enter question #<?=$j?> for <?=$players[$i]?>' required>
+                                    <input class="form-control my-1 bg-light" name="questions[]" style="display: none" type='text' placeholder='Enter question #<?=$j?> for <?=$players[$i]?>' required>
                                 <?php else: ?>
-                                    <input class="form-control my-1 bg-light" type='text' placeholder='Enter question #<?=$j?> for <?=$players[$i]?>' required>
+                                    <input class="form-control my-1 bg-light" name="questions[]" type='text' placeholder='Enter question #<?=$j?> for <?=$players[$i]?>' required>
                                 <?php endif; ?>
                             </div>
                         <?php endfor; ?>
@@ -76,8 +92,16 @@ $num_players = count($players);
         let numPlayers = playerButtons.length;
         let numQuestions = questions.length;
 
+        const s = 'opacity: 1.0 !important;    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;';
+        playerButtons[0].setAttribute('style', s);
+
         for (let playerButton of playerButtons) {
             playerButton.addEventListener('click', () => {
+                for (let button of playerButtons) {
+                    button.removeAttribute('style', s)
+                }
+                playerButton.setAttribute('style', s);
+
                 let value = playerButton.value;
                 questionNumLow = value * Math.floor(numQuestions / numPlayers);
                 questionNumHi = questionNumLow + Math.floor(numQuestions / numPlayers) - 1;
