@@ -32,10 +32,14 @@ if (isset($questions)) {
     <style>
         .player-btn {
             opacity: 0.5 !important;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+        }
+        .player-btn:active {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
         }
         .player-btn:hover {
             /* background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)); */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
             opacity: 0.7 !important;
         }
         .player-btn-0 { background-color: #565656 !important; border-color: #5a5b5c !important; color: white !important; width: 100px !important; }
