@@ -3,7 +3,20 @@
 $game_code = $_POST['game_code'] ?? null;
 
 if (isset($game_code)) {
-    // do some stuff
+
+    require 'scripts/functions.php';
+
+    $pdo = get_database_connection();
+
+    $query = "SELECT * FROM quizzes WHERE quiz_id = ?";
+    $statement = $pdo->prepare($query);
+    $statement->execute(array($game_code));
+
+    if ($statement->rowCount() > 0) {
+        $_SESSION['game_code'] = $game_code;
+        header('Location: lobby.php');
+    }
+
 }
 
 ?>
@@ -33,11 +46,11 @@ if (isset($game_code)) {
         <form class="mt-4" method="post">
             <input class="form-control bg-light" type="text" name="game_code" placeholder="Enter your game code" required>
 
+            <div class="mt-5 text-center" style="font-size: 0;">
+                <button class="mx-2 btn btn-secondary mt-2" type="button" style="width: 150px" onclick="location.href = 'index.php'">Back</button>
+                <button class="mx-2 btn btn-primary mt-2" style="width: 150px">Join</button>
+            </div>
         </form>
-        <div class="mt-5 text-center">
-            <button class="mx-2 btn btn-secondary mt-2" type="button" style="width: 150px" onclick="location.href = 'index.php'">Back</button>
-            <button class="mx-2 btn btn-primary mt-2" style="width: 150px">Submit</button>
-        </div>
     </div>
 
     <!-- Bootstrap JS with Popper -->
