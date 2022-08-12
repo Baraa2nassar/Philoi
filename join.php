@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $game_code = $_POST['game_code'] ?? null;
 
 if (isset($game_code)) {
