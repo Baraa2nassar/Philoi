@@ -1,3 +1,13 @@
+<?php
+
+$game_code = $_POST['game_code'] ?? null;
+
+if (isset($game_code)) {
+    // do some stuff
+}
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -8,60 +18,29 @@
     <title>Philoi with Friends</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        button {
-            width: 100%;
-            height: 57px;
-        }
-        img {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          /*width: 100%;*/
-        }
-
-    </style>
+    <!-- ... -->
 </head>
 <body>
-    <div class="d-flex" id="home">
-        <!-- Left pane -->
-        <?php include 'includes/shapes.php' ?>
+    <?php include 'includes/shapes.php' ?>
 
-      <!--   <?php include 'includes/left.php' ?> -->
+    <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 80px">
+        <h1 class="text-center" style="color: #006480;">Join a Game</h1>
+        <hr>
 
-        <!-- Right pane -->
-        <div class="d-flex flex-fill" style="background: #fff; width: 19rem">
-            <div class="d-flex flex-column mx-auto" style="width: 415px; margin-top: 80px">
+        <form class="mt-4" method="post">
+            <input class="form-control bg-light" type="text" name="game_code" placeholder="Enter your game code" required>
 
-                <h1 class="text-center" style="color:#006480;"><strong>Hello There!</strong></h1>
-
-                <hr>
-                <h5 class="text-muted text-center mb-1">This feature is under development </h5>
-                <img src="construct.jpg" alt="Paris" style="width:50%;">
-
-
-                 <div class="mt-5 text-center">
-                           <a class="btn px-2 py-1 rounded" href="index.php" style="background-color:#e4edfb; color: #174ea6; width: 100px">Back</a>
-                           </div>
-                         <!-- </div> -->
-
-                <!-- <img src="https://i.pinimg.com/originals/69/8e/9e/698e9ecabe90b1b9bc81f878331cb508.jpg" alt="Paris" class="center">
- -->
-
-                <!-- <h7 class="text-muted text-center mb-4"> The place to check how much your friends know U</h7> -->
-                <!-- <h7 class="text-muted text-center mb-4">The place to check how much you know your friends </h7> -->
-
-            </div>
+        </form>
+        <div class="mt-5 text-center">
+            <button class="mx-2 btn btn-secondary mt-2" type="button" style="width: 150px" onclick="location.href = 'index.php'">Back</button>
+            <button class="mx-2 btn btn-primary mt-2" style="width: 150px">Submit</button>
         </div>
-
     </div>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
