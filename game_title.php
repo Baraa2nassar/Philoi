@@ -38,6 +38,8 @@ if (isset($questions)) {
     header('Location: success.php');
 }
 
+$ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"];
+
 ?>
 
 <!doctype html>
@@ -89,14 +91,14 @@ if (isset($questions)) {
                     <?php endfor; ?>
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-4">
                     <?php for ($i = 0; $i < $num_players; $i++): ?>
                         <?php for ($j = 1; $j <= $num_questions; $j++): ?>
                             <div class="row mx-2">
                                 <?php if ($i > 0): ?>
-                                    <input class="form-control my-1 bg-light" name="questions[]" style="display: none" type='text' placeholder='Enter question #<?=$j?> for <?=$players[$i]?>' required>
+                                    <input class="form-control my-1 bg-light" name="questions[]" style="display: none" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>
                                 <?php else: ?>
-                                    <input class="form-control my-1 bg-light" name="questions[]" type='text' placeholder='Enter question #<?=$j?> for <?=$players[$i]?>' required>
+                                    <input class="form-control my-1 bg-light" name="questions[]" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>
                                 <?php endif; ?>
                             </div>
                         <?php endfor; ?>
