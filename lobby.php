@@ -1,5 +1,32 @@
 <?php
 
+session_start();
+
+$game_code = $_SESSION['game_code'];
+
+if (!isset($game_code)) {
+    // User is trying to access lobby without a game code.
+    // Eventually we will send an error message, but for now
+    // they'll just be taken to join.php without warning.
+    header('Location: join.php');
+}
+
+require 'scripts/functions.php';
+
+$pdo = get_database_connection();
+
+$query = "SELECT * FROM quizzes WHERE quiz_id = ?";
+$statement = $pdo->prepare($query);
+$statement->execute(array($game_code));
+$row = $statement->fetch();
+
+$questions = json_decode($row['questions']);
+$choices = json_decode($row['choices']);
+$answers = json_decode($row['answers']);
+
+// we need to zip each question, choice, and answer
+// into individual arrays so we can iterate over them
+// and display them one at a time.
 
 ?>
 
@@ -24,7 +51,7 @@
     <div class="d-flex">
         <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 80px">
 
-            <h1 class="text-center" style="color:#006480;">lobby.php</h1>
+            <h1 class="text-center" style="color: #006480;">lobby.php</h1>
             <hr>
 
             <div class="mt-5 text-center" style="font-size: 0;">
