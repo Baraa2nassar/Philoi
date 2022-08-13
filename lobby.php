@@ -4,6 +4,10 @@ session_start();
 
 $game_code = $_SESSION['game_code'];
 
+if (isset($_POST['start'])) {
+    header('Location: example.php');
+}
+
 if (!isset($game_code)) {
     // User is trying to access lobby without a game code.
     // Eventually we will send an error message, but for now
@@ -24,9 +28,24 @@ $questions = json_decode($row['questions']);
 $choices = json_decode($row['choices']);
 $answers = json_decode($row['answers']);
 
-// we need to zip each question, choice, and answer
-// into individual arrays so we can iterate over them
-// and display them one at a time.
+$_SESSION['players'] = $choices;
+
+$num_players = count($choices);
+$num_questions = count($questions);
+
+
+$qna = [];
+for ($i = 0; $i < $num_questions; $i++) {
+    $qna[] = [$questions[$i], $answers[$i]];
+}
+
+shuffle($qna);
+
+$_SESSION['qna'] = $qna;
+$_SESSION['current'] = 0;
+
+$scores = array_map(function() { return 0; }, range(1, $num_players));
+$_SESSION['scores'] = $scores;
 
 ?>
 
@@ -51,13 +70,17 @@ $answers = json_decode($row['answers']);
     <div class="d-flex">
         <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 80px">
 
-            <h1 class="text-center" style="color: #006480;">lobby.php</h1>
+            <h1 class="text-center" style="color: #006480;">Lobby</h1>
             <hr>
 
-            <div class="mt-5 text-center" style="font-size: 0;">
-                <button class="mx-2 btn btn-secondary mt-2" type="button" style="width: 150px" onclick="location.href = 'index.php'">Exit</button>
-                <button class="mx-2 btn btn-success mt-2" type="button" style="width: 150px">Start</button>
-            </div>
+            <p>TODO: add some game info here</p>
+
+            <form method="post">
+                <div class="mt-5 text-center" style="font-size: 0;">
+                    <button class="mx-2 btn btn-secondary mt-2" type="button" style="width: 150px" onclick="location.href = 'index.php'">Exit</button>
+                    <button class="mx-2 btn btn-success mt-2" name="start" style="width: 150px">Start</button>
+                </div>
+            </form>
         </div>
     </div>
 
