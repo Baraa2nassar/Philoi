@@ -5,7 +5,9 @@ session_start();
 $game_code = $_SESSION['game_code'];
 
 if (isset($_POST['start'])) {
-    header('Location: example.php');
+    // header('locatoin: loading.php');
+    // header('Locatoin: loading.php');
+    header('Location: loading.php');
 }
 
 if (!isset($game_code)) {

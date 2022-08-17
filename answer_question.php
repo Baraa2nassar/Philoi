@@ -44,6 +44,7 @@ if (isset($next)) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Philoi with Friends</title>
+    <!-- <p></p> -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
@@ -74,11 +75,13 @@ if (isset($next)) {
         <?php include 'includes/shapes.php' ?>
         <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 60px">
 
+<!-- displays the question  -->
             <div class="text-center">
                 <h5 class="text-muted">Question <?= $current + 1 ?> of <?= count($qna) ?></h5>
                 <h4 class=""><?= $question ?></h4>
             </div>
 
+<!-- displaying buttons as names-->
             <div class="player-btns text-center my-4">
                 <?php for ($i = 0; $i < $num_players; $i++): ?>
                     <!-- Player buttons have a custom class named `player-btn` -->
@@ -88,24 +91,18 @@ if (isset($next)) {
 
             <form method="post">
                 <div class="text-center mx-3">
-                    <?php foreach ($players as $player): ?>
+     
                         <div class="d-flex row my-3">
-                            <div class="col-6 col-form-label">
-                                <span><span class=""><?= $player ?></span> chooses:</sp>
-                            </div>
-                            <div class="col-4">
-                                <select class="form-select bg-light" name="selections[]" required>
-                                    <option selected="true" disabled="true"></option>
-                                    <?php for ($i = 0; $i < $num_players; $i++): ?>
-                                        <option value="<?= $players[$i] ?>"><?= $players[$i]; ?></option>
-                                    <?php endfor; ?>
-                                </select>
-                            </div>
+                        	<div>
+                        		
+                        		<h1><?=$answer?></h1>
+
+                        	</div>
                             <div class="col-2">
 
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    
                 </div>
 
                 <div class="text-center mt-4">
@@ -119,3 +116,5 @@ if (isset($next)) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<!-- <?=$answer?> -->

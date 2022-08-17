@@ -1,3 +1,4 @@
+<?php require 'scripts/functions.php'; ?>
 <!doctype html>
 <html>
 <head>
@@ -17,9 +18,28 @@
         button { width: 100%; height: 57px; }
         #rules-btn { background-color: #315659; border: 1px solid #315659 }
         #rules-btn:hover { background-color: #264042 }
+            body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+    .light-mode {
+      background-color: white;
+      color: black;
+    }
     </style>
 </head>
+
 <body>
+
+    <!-- <h3 id="DarkModetext">Dark Mode is OFF</h3> -->
+
+
     <div class="d-flex">
         <?php include 'includes/shapes.php' ?>
         <div class="d-flex flex-fill">
@@ -30,11 +50,29 @@
                 <button class="btn btn-primary my-2 mb-1" onclick="location.href = 'join.php'">Join existing game</button>
                 <button class="btn btn-success my-2" onclick="location.href = 'new_game.php'">Make a new game</button>
                 <button class="btn mt-1 text-white" id="rules-btn" onclick="location.href = 'rules.php'">View rules</button>
+  
             </div>
         </div>
     </div>
 
     <!-- Bootstrap JS with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+        
+
+
+    </script>
+    <script>function darkMode() {
+    var element = document.body;
+    var content = document.getElementById("DarkModetext");
+    element.className = "dark-mode";
+    content.innerText = "Dark Mode is ON";
+}
+function lightMode() {
+    var element = document.body;
+    var content = document.getElementById("DarkModetext");
+    element.className = "light-mode";
+    content.innerText = "Dark Mode is OFF";
+}</script>
+
 </body>
 </html>
