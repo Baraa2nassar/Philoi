@@ -106,7 +106,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
                 </div>
 
                 <div class="d-flex text-center mt-4 mb-5" style="margin: 0px 90px;">
-                    <button type="button" class="mx-3 btn btn-secondary mt-2" style="width: 225px" onclick="location.href = 'new_game.php'">Back</button>
+                    <button type="button" class="mx-3 btn btn-secondary mt-2" style="width: 225px" onclick="location.href = 'create1.php'">Back</button>
                     <button type="submit" class="mx-3 btn btn-primary mt-2" name="create" style="width: 225px">Create</button>
                 </div>
             </div>
