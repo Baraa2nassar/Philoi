@@ -51,7 +51,7 @@ if (isset($next)) {
 
     <!-- Custom CSS -->
     <style>
- 
+
 
         .player-btn {
             /* opacity: 0.5 !important; */
@@ -86,7 +86,7 @@ if (isset($next)) {
             <div class="player-btns text-center my-4">
                 <?php for ($i = 0; $i < $num_players; $i++): ?>
                     <!-- Player buttons have a custom class named `player-btn` -->
-                    <button class="btn mx-2 player-btn player-btn-<?=$i?>" type="button" value="<?= $i ?>"><?= $players[$i] ?></button>
+                    <button class="btn mx-2 player-btn player-btn-<?=$i?>" type="button" value="<?= $i ?>" tabindex="-1"><?= $players[$i] ?></button>
                 <?php endfor; ?>
             </div>
 
@@ -112,7 +112,7 @@ if (isset($next)) {
                     <?php endforeach; ?>
                 </div>
 
-                
+
                 <div class="text-center mt-4">
                     <button class="btn btn-success px-5" name="next">Next</button>
                 </div>
