@@ -46,7 +46,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
         <h1 class="text-center" style="color: #006480;">Results</h1>
         <hr>
 
-        <div class="container text-center">
+        <div class="container text-center" style="height: 250px">
             <!-- Results header -->
             <div class="row fw-bold mb-3">
                 <div class="col-3 text-start">Rank</div>
