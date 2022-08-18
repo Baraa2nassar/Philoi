@@ -5,8 +5,9 @@ session_start();
 $qna = $_SESSION['qna'];
 
 $current = $_SESSION['current'];
-$question = $qna[$current][0];
-$answer = $qna[$current][1];
+
+$question = $qna[$current-1][0];
+$answer = $qna[$current-1][1];
 
 
 $players = $_SESSION['players'];
@@ -20,23 +21,7 @@ $total =$_SESSION['scores'];
 
 $next = $_POST['next'] ?? null;
 if (isset($next)) {
-    // First need to update scores
-    $scores = $_SESSION['scores'];
-    $selections = $_POST['selections'];
-    for ($i = 0; $i < $num_players; $i++) {
-        if ($selections[$i] == $answer) {
-            $scores[$i]++;
-        }
-    }
-    $_SESSION['scores'] = $scores;
-
-    // Then redirect to same page with updated index
-    $_SESSION['current'] += 1;
-    if ($_SESSION['current'] == count($qna)) {
-        header('Location: results.php');
-        die;
-    }
-    header('Location: answer.php');
+    header('Location: question.php');
 }
 
 // echo gettype($scores);
@@ -88,8 +73,9 @@ if (isset($next)) {
 
 <!-- number of question displaye d-->
             <div class="text-center">
-                <h5 class="text-muted">Question <?= $current + 1 ?> of <?= count($qna) ?></h5>
+                <h5 class="text-muted">Question <?= $current  ?> of <?= count($qna) ?></h5>
                 <h4 class=""><?= $question ?></h4>
+                <h5 class=""><?=$answer?></h5>
             </div>
 
             <div class="player-btns text-center my-4">
@@ -100,27 +86,7 @@ if (isset($next)) {
             </div>
 
             <form method="post">
-                <div class="text-center mx-3">
-                    <?php foreach ($players as $player): ?>
-                        <div class="d-flex row my-3">
-                            <div class="col-6 col-form-label">
-                                <span><span class=""><?= $player ?></span> chooses:</sp>
-                            </div>
-                            <div class="col-4">
-                                <select class="form-select bg-light" name="selections[]" required>
-                                    <option selected="true" disabled="true"></option>
-                                    <?php for ($i = 0; $i < $num_players; $i++): ?>
-                                        <option value="<?= $players[$i] ?>"><?= $players[$i]; ?></option>
-                                    <?php endfor; ?>
-                                </select>
-                            </div>
-                            <div class="col-2">
-
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-
+          
 
                 <div class="text-center mt-4">
                     <button class="btn btn-success px-5" name="next">Next</button>
