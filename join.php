@@ -17,6 +17,8 @@ if (isset($game_code)) {
     if ($statement->rowCount() > 0) {
         $_SESSION['game_code'] = $game_code;
         header('Location: lobby.php');
+    } else {
+        $_SESSION["BAD_GAME_CODE"] = "We couldn't identify that game code. Please try again.";
     }
 
 }
@@ -45,10 +47,24 @@ if (isset($game_code)) {
         <h1 class="text-center" style="color: #006480;">Join a Game</h1>
         <hr>
 
-        <form class="mt-4" method="post">
-            <input class="form-control bg-light" type="text" name="game_code" placeholder="Enter your game code" required>
+        <form class="mt-3" method="post">
+            <div style="height: 60px">
+                <?php if (isset($_SESSION["BAD_GAME_CODE"])): ?>
+                    <input class="form-control bg-light is-invalid" type="text" value="<?= $_POST['game_code'] ?>" name="game_code" placeholder="Enter your game code" required>
+                <div class="invalid-feedback text-center">
+                    <?= $_SESSION["BAD_GAME_CODE"] ?>
+                </div>
+                <?php else: ?>
+                    <input class="form-control bg-light" type="text" name="game_code" placeholder="Enter your game code" required>
+                    <?php endif; ?>
+                    <?php
+                if (isset($_SESSION["BAD_GAME_CODE"])) {
+                    unset($_SESSION["BAD_GAME_CODE"]);
+                }
+                ?>
+            </div>
 
-            <div class="mt-5 text-center" style="font-size: 0;">
+            <div class="mt-3 text-center" style="font-size: 0;">
                 <button class="mx-2 btn btn-secondary mt-2" type="button" style="width: 150px" onclick="location.href = 'index.php'">Back</button>
                 <button class="mx-2 btn btn-primary mt-2" style="width: 150px">Join</button>
             </div>
