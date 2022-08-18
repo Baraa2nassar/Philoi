@@ -9,9 +9,12 @@ $question = $qna[$current][0];
 $answer = $qna[$current][1];
 
 $players = $_SESSION['players'];
+// $scores=array() ;
+
 $num_players = count($players);
 
 // print_r($_SESSION['scores']);
+$total =$_SESSION['scores'];
 
 $next = $_POST['next'] ?? null;
 if (isset($next)) {
@@ -33,6 +36,10 @@ if (isset($next)) {
     }
     header('Location: question.php');
 }
+
+// echo gettype($scores);
+// echo $total[0];
+// echo $scores;
 
 ?>
 
@@ -86,7 +93,7 @@ if (isset($next)) {
             <div class="player-btns text-center my-4">
                 <?php for ($i = 0; $i < $num_players; $i++): ?>
                     <!-- Player buttons have a custom class named `player-btn` -->
-                    <button class="btn mx-2 player-btn player-btn-<?=$i?>" type="button" value="<?= $i ?>" tabindex="-1"><?= $players[$i] ?></button>
+                    <button class="btn mx-2 player-btn player-btn-<?=$i?>" type="button" value="<?= $i ?>" tabindex="-1"><?= $players[$i] ?>: <?= $total[$i]?></button>
                 <?php endfor; ?>
             </div>
 
