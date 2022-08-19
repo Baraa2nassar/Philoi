@@ -25,9 +25,9 @@
         height: 100px;
         width: 200px;
         rotate: 45deg;
-        -webkit-transform: skew(20deg);
-        transform: rotate(45deg) skew(20deg);
-        -moz-transform: skew(20deg);
+        -webkit-transform: rotate(5deg) skew(20deg);
+        transform: rotate(5deg) skew(20deg);
+        -moz-transform: rotate(5deg) skew(20deg);
         background-color: darkolivegreen;
         opacity: 30%;
         z-index: -1;
