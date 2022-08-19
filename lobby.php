@@ -5,7 +5,7 @@ session_start();
 $game_code = $_SESSION['game_code'];
 
 if (isset($_POST['start'])) {
-    header('Location: loading.php');
+    header('Location: question.php');
 }
 
 if (!isset($game_code)) {
