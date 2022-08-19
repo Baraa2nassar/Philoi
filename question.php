@@ -52,7 +52,7 @@ if (isset($next)) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Philoi with Friends</title>
+    <title>Question - Philoi</title>
     <!-- <p></p> -->
 
     <!-- Bootstrap CSS -->

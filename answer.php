@@ -37,7 +37,7 @@ if (isset($next)) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Philoi with Friends</title>
+    <title>Answer - Philoi</title>
     <!-- <p></p> -->
 
     <!-- Bootstrap CSS -->
@@ -86,7 +86,7 @@ if (isset($next)) {
             </div>
 
             <form method="post">
-          
+
 
                 <div class="text-center mt-4">
                     <button class="btn btn-success px-5" name="next">Next</button>

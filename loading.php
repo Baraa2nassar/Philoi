@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Philoi with Friends</title>
+    <title>Loading game - Philoi</title>
 
     <!-- Bootstrapa CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
@@ -62,7 +62,7 @@
 
       <!-- <img src="goku.gif”"> -->
       <!-- <a href=“”> <img src=goku.gif” height="100px" width=“200px”> </a> -->
-      
+
       <div class="text-center">
         <h1 class="text-center" style="color:#white;"><strong>Philoi</strong></h1>
         <br>
