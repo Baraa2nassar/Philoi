@@ -18,12 +18,14 @@
 <div class="d-flex">
         <?php include 'includes/shapes.php' ?>
         <div class="d-flex flex-fill">
-            <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 80px">
+            <div class="d-flex flex-column mx-auto" style="width: 550px; margin-top: 70px">
                 <h1 class="text-center" style="color:#006480;">Rules of Philoi</h1>
                 <hr>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci beatae nesciunt ad blanditiis corrupti exercitationem ut tempora</p>
-                <p>ipsum amet, laboriosam asperiores quidem iusto magnam tenetur officia unde maiores. Provident, perferendis?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, harum.</p>
+                <p><strong>Philoi</strong> is a quiz game designed to test how well friends know each other.</p>
+                <p>It works by an organizer, a person who will serve as a game host, creating an equal amount of questions for a group of 2-5 friends each.</p>
+                <p>Once the quiz has been created, the organizer can start the game by visiting the join existing game link and entering the game code provided after creating a quiz.</p>
+                <p>After waiting in the lobby and having start the game, a random question from the quiz will be displayed. Once all players have read the question, it is the organizer's job to input the answers each player chooses.</p>
+                <p>After submitting their answers, the correct answer is displayed and the process repeats again until all questions are completed.</p>
 
                 <button class="mx-auto btn btn-secondary mt-2" style="width: 150px" onclick="location.href = 'index.php'">Back</button>
             </div>
