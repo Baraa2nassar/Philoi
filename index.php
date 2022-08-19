@@ -15,7 +15,7 @@
         button { width: 100%; height: 57px; }
         #rules-btn { background-color: #315659; border: 1px solid #315659 }
         #rules-btn:hover { background-color: #264042 }
-        /* body { background-color: #2c3e50; } */
+        /* body { background-color: #4186e8; } */
     </style>
 </head>
 <body>

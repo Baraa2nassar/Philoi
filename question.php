@@ -23,6 +23,7 @@ if (isset($next)) {
     // First need to update scores
     $scores = $_SESSION['scores'];
     $selections = $_POST['selections'];
+    $_SESSION['selections'] = $selections;
     for ($i = 0; $i < $num_players; $i++) {
         if ($selections[$i] == $answer) {
             $scores[$i]++;

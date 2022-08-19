@@ -9,6 +9,8 @@ $current = $_SESSION['current'];
 $question = $qna[$current-1][0];
 $answer = $qna[$current-1][1];
 
+$selections = $_SESSION['selections'];
+
 
 $players = $_SESSION['players'];
 // $scores=array() ;
@@ -38,15 +40,12 @@ if (isset($next)) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Answer - Philoi</title>
-    <!-- <p></p> -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
     <style>
-
-
         .player-btn {
             /* opacity: 0.5 !important; */
             cursor: unset;
@@ -75,18 +74,39 @@ if (isset($next)) {
             <div class="text-center">
                 <h5 class="text-muted">Question <?= $current  ?> of <?= count($qna) ?></h5>
                 <h4 class=""><?= $question ?></h4>
-                <h5 class=""><?=$answer?></h5>
             </div>
 
             <div class="player-btns text-center my-4">
                 <?php for ($i = 0; $i < $num_players; $i++): ?>
+                    <?php if ($players[$i] == $answer): ?>
+                        <button class="btn mx-2 player-btn player-btn-<?=$i?>" type="button" value="<?= $i ?>" tabindex="-1"><?= $players[$i] ?></button>
+                    <?php else: ?>
                     <!-- Player buttons have a custom class named `player-btn` -->
-                    <button class="btn mx-2 player-btn player-btn-<?=$i?>" type="button" value="<?= $i ?>" tabindex="-1"><?= $players[$i] ?>: <?= $total[$i]?></button>
+                    <button class="btn mx-2 player-btn player-btn-<?=$i?>" style="opacity: 20%;" type="button" value="<?= $i ?>" tabindex="-1"><?= $players[$i] ?></button>
+                    <?php endif ?>
                 <?php endfor; ?>
             </div>
 
             <form method="post">
+                <div class="text-center mx-3">
+                    <?php for ($i = 0; $i < $num_players; $i++): ?>
+                        <div class="d-flex row my-3">
+                            <div class="col-6 col-form-label">
+                                <span><span class=""><?= $players[$i] ?></span> chose:</sp>
+                            </div>
+                            <div class="col-4">
+                                <?php if ($selections[$i] == $answer): ?>
+                                    <input class="form-control" style="background-color: #afffa522 !important;" value="<?= $selections[$i] ?>" tabindex="-1" readonly></input>
+                                <?php else: ?>
+                                    <input class="form-control" style="background-color: #ffa6a522 !important;" value="<?= $selections[$i] ?>" tabindex="-1" readonly></input>
+                                <?php endif; ?>
+                            </div>
+                            <div class="col-2">
 
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
 
                 <div class="text-center mt-4">
                     <button class="btn btn-success px-5" name="next">Next</button>
