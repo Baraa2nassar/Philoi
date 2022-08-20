@@ -39,8 +39,6 @@ $game_code = $_SESSION['game_code'];
     </style>
 </head>
 <body>
-    <?php include 'includes/shapes.php' ?>
-
     <div class="d-flex flex-column mx-auto" style="width: 450px; margin-top: 55px">
         <h1 class="text-center" style="color: #006480">Success</h1>
         <hr>

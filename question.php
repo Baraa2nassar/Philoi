@@ -10,12 +10,9 @@ $answer = $qna[$current][1];
 
 
 $players = $_SESSION['players'];
-// $scores=array() ;
 
 $num_players = count($players);
 
-// print_r( $answer);
-// print_r($_SESSION['scores']);
 $total =$_SESSION['scores'];
 
 $next = $_POST['next'] ?? null;
@@ -40,12 +37,6 @@ if (isset($next)) {
     }
     header('Location: answer.php');
 }
-
-print_r(count($qna));
-// echo "hey";
-// echo gettype($scores);
-// echo $total[0];
-// echo $scores;
 
 ?>
 
@@ -87,7 +78,6 @@ print_r(count($qna));
 </head>
 <body>
     <div class="d-flex">
-        <?php include 'includes/shapes.php' ?>
         <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 60px">
 
 <!-- number of question displaye d-->

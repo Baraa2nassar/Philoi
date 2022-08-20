@@ -36,7 +36,6 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <div class="d-flex">
-        <?php include 'includes/shapes.php' ?>
 
         <div class="d-flex flex-column mx-auto" style="width: 420px; margin-top: 55px">
 

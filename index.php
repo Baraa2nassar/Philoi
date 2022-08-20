@@ -40,7 +40,6 @@ if (isset($game_code)) {
     </style>
 </head>
 <body>
-    <?php include 'includes/shapes.php' ?>
 
     <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 90px">
         <h1 class="text-center" style="color:#006480;">Welcome to Philoi</h1>

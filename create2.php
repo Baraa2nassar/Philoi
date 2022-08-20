@@ -41,7 +41,7 @@ if (isset($questions)) {
 $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"];
 
 ?>
-    
+
 <!doctype html>
 <html>
 <head>
@@ -74,8 +74,6 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
     </style>
 </head>
 <body>
-    <?php include 'includes/shapes.php' ?>
-
     <div class="d-flex flex-column mx-auto" style="width: 600px; margin-top: 55px">
         <h1 class="text-center" style="color: #006480">Create a New Game</h1>
         <hr>

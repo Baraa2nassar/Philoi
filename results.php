@@ -40,8 +40,6 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <?php include 'includes/shapes.php' ?>
-
     <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 80px">
         <h1 class="text-center" style="color: #006480;">Results</h1>
         <hr>

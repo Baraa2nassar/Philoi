@@ -67,7 +67,6 @@ if (isset($next)) {
 </head>
 <body>
     <div class="d-flex">
-        <?php include 'includes/shapes.php' ?>
         <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 60px">
 
 <!-- number of question displaye d-->

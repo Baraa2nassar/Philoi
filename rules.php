@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <?php include 'includes/shapes.php' ?>
-
     <div class="d-flex flex-fill">
         <div class="d-flex flex-column mx-auto" style="width: 550px; margin-top: 60px">
             <h1 class="text-center" style="color:#006480;">Rules of Philoi</h1>
