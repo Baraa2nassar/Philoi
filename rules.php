@@ -18,7 +18,7 @@
             <h1 class="text-center" style="color:#006480;">Rules of Philoi</h1>
             <hr>
             <p>Philoi is a quiz game designed to test how well friends know each other.</p>
-            <p>It works by an organizer, a person who will serve as a game host, creating an equal amount of questions for a group of 2-5 friends each.</p>
+            <p>It works by an organizer, a person who will serve as a game host, creating an equal amount of questions for a group of 3-5 friends each.</p>
             <p>Once the quiz has been created, the organizer can start the game by visiting the join existing game link and entering the game code provided after creating a quiz.</p>
             <p>After waiting in the lobby and having start the game, a random question from the quiz will be displayed. Once all players have read the question, it is the organizer's job to input the answers each player chooses.</p>
             <p>After submitting their answers, the correct answer will be shown and the process repeats again until all questions have been completed.</p>

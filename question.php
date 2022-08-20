@@ -32,14 +32,17 @@ if (isset($next)) {
     $_SESSION['scores'] = $scores;
 
     // Then redirect to same page with updated index
+    $counter=(count($qna));
     $_SESSION['current'] += 1;
-    if ($_SESSION['current'] == count($qna)) {
+    if ($_SESSION['current'] == ($counter)) {
         header('Location: results.php');
         die;
     }
     header('Location: answer.php');
 }
 
+print_r(count($qna));
+// echo "hey";
 // echo gettype($scores);
 // echo $total[0];
 // echo $scores;

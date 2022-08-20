@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
                     <!-- Player names -->
                     <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="color: #565656; border-color: #5a5b5c" required>
                     <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" style="color: #d14430; border-color: #d92007" required>
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" style="color: #28a745; border-color: #28a745">
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" style="color: #28a745; border-color: #28a745" required>
                     <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 4" style="color: #885cb5; border-color: #9b42f5">
                     <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 5" style="color: #449DD1; border-color: #449DD1">
 
