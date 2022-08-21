@@ -28,13 +28,9 @@ if (isset($next)) {
     }
     $_SESSION['scores'] = $scores;
 
-    // Then redirect to same page with updated index
     $counter=(count($qna));
     $_SESSION['current'] += 1;
-    if ($_SESSION['current'] == ($counter)) {
-        header('Location: results.php');
-        die;
-    }
+
     header('Location: answer.php');
 }
 

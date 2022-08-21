@@ -1,50 +1,5 @@
-In no particular order, this is what we need to do:
-1) Prevent users from accessing files they shouldn't be able to
-2) Simplify rules
-3) Show answer of final question before going to results
-4) Change UI (darker background is more suitable)
-5) Validate user inputs (specifically when they enter names and questions)
-
-        
-                    .------.____
-                 .-'       \ ___)
-              .-'         \\\
-           .-'        ___  \\)
-        .-'          /  (\  |)
-                 __  \  ( | |
-                /  \  \__'| |
-               /    \____).-'
-             .'       /   |
-            /     .  /    |
-          .'     / \/     |
-         /      /   \     |
-               /    /    _|_
-               \   /    /\ /\
-                \ /    /__v__\
-                 '    |       |
-                      |     .#|
-                      |#.  .##|
-                      |#######|
-                      |#######|
-        
-                      (
-                        )     (
-                 ___...(-------)-....___
-             .-""       )    (          ""-.
-       .-'``'|-._             )         _.-|
-      /  .--.|   `""---...........---""`   |
-     /  /    |                             |
-     |  |    |                             |
-      \  \   |                             |
-       `\ `\ |                             |
-         `\ `|                             |
-         _/ /\                             /
-        (__/  \                           /
-     _..---""` \                         /`""---.._
-  .-'           \                       /          '-.
- :               `-.__             __.-'              :
- :                  ) ""---...---"" (                 :
-  '._               `"--...___...--"`              _.'
-jgs \""--..__                              __..--""/
-     '._     """----.....______.....----"""     _.'
-        `""--..,,_____            _____,,..--""`
+In no particular order, this is what we need to do...
+- Prevent users from accessing files they shouldn't be able to
+- Simplify rules
+- Change UI (darker background is more suitable)
+- Validate user inputs (specifically when they enter names and questions)

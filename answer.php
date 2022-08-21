@@ -11,24 +11,22 @@ $answer = $qna[$current-1][1];
 
 $selections = $_SESSION['selections'];
 
-
 $players = $_SESSION['players'];
-// $scores=array() ;
 
 $num_players = count($players);
 
-// print_r( $answer);
-// print_r($_SESSION['scores']);
 $total =$_SESSION['scores'];
 
 $next = $_POST['next'] ?? null;
 if (isset($next)) {
+    $counter=(count($qna));
+    if ($_SESSION['current'] == ($counter)) {
+        header('Location: results.php');
+        die;
+    }
+
     header('Location: question.php');
 }
-
-// echo gettype($scores);
-// echo $total[0];
-// echo $scores;
 
 ?>
 
