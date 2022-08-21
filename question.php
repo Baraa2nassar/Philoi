@@ -3,34 +3,25 @@
 session_start();
 
 $qna = $_SESSION['qna'];
-
 $current = $_SESSION['current'];
-$question = $qna[$current][0];
-$answer = $qna[$current][1];
 
+$question = $qna[$current][0];
+$correct_answer = $qna[$current][1];
 
 $players = $_SESSION['players'];
-
 $num_players = count($players);
 
-$total =$_SESSION['scores'];
+$total = $_SESSION['scores'];
 
-$next = $_POST['next'] ?? null;
-if (isset($next)) {
-    // First need to update scores
-    $scores = $_SESSION['scores'];
-    $selections = $_POST['selections'];
-    $_SESSION['selections'] = $selections;
+if (isset($_POST['next'])) {
+    // update player scores if they've chosen the correct answer
     for ($i = 0; $i < $num_players; $i++) {
-        if ($selections[$i] == $answer) {
-            $scores[$i]++;
+        if ($_POST['selections'][$i] == $correct_answer) {
+            $_SESSION['scores'][$i]++;
         }
     }
-    $_SESSION['scores'] = $scores;
-
-    $counter=(count($qna));
     $_SESSION['current'] += 1;
-
+    $_SESSION['selections'] = $_POST['selections'];
     header('Location: answer.php');
 }
 
@@ -44,17 +35,13 @@ if (isset($next)) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Question - Philoi</title>
-    <!-- <p></p> -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
     <style>
-
-
         .player-btn {
-            /* opacity: 0.5 !important; */
             cursor: unset;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px !important;
         }
@@ -70,53 +57,46 @@ if (isset($next)) {
         .player-btn-3 { background-color: #885cb5 !important; border-color: #9b42f5 !important; color: white !important; width: 100px !important; }
         .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
     </style>
-
 </head>
 <body>
-    <div class="d-flex">
-        <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 60px">
-
-<!-- number of question displaye d-->
-            <div class="text-center">
-                <h5 class="text-muted">Question <?= $current + 1 ?> of <?= count($qna) ?></h5>
-                <h4 class=""><?= $question ?></h4>
-            </div>
-
-            <div class="player-btns text-center my-4">
-                <?php for ($i = 0; $i < $num_players; $i++): ?>
-                    <!-- Player buttons have a custom class named `player-btn` -->
-                    <button class="btn mx-2 player-btn player-btn-<?=$i?>" type="button" value="<?= $i ?>" tabindex="-1"><?= $players[$i] ?>: <?= $total[$i]?></button>
-                <?php endfor; ?>
-            </div>
-
-            <form method="post">
-                <div class="text-center mx-3">
-                    <?php foreach ($players as $player): ?>
-                        <div class="d-flex row my-3">
-                            <div class="col-6 col-form-label">
-                                <span><span class=""><?= $player ?></span> chooses:</sp>
-                            </div>
-                            <div class="col-4">
-                                <select class="form-select bg-light" name="selections[]" required>
-                                    <option selected="true" disabled="true"></option>
-                                    <?php for ($i = 0; $i < $num_players; $i++): ?>
-                                        <option value="<?= $players[$i] ?>"><?= $players[$i]; ?></option>
-                                    <?php endfor; ?>
-                                </select>
-                            </div>
-                            <div class="col-2">
-
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-
-
-                <div class="text-center mt-4">
-                    <button class="btn btn-success px-5" name="next">Next</button>
-                </div>
-            </form>
+    <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 60px">
+        <div class="text-center">
+            <h5 class="text-muted">Question <?= $current + 1 ?> of <?= count($qna) ?></h5>
+            <h4 class=""><?= $question ?></h4>
         </div>
+
+        <div class="player-btns text-center my-4">
+            <?php for ($i = 0; $i < $num_players; $i++): ?>
+                <!-- Player buttons have a custom class named `player-btn` -->
+                <button class="btn mx-2 player-btn player-btn-<?=$i?>" type="button" value="<?= $i ?>" tabindex="-1"><?= $players[$i] ?>: <?= $total[$i]?></button>
+            <?php endfor; ?>
+        </div>
+
+        <form method="post">
+            <div class="text-center mx-3">
+                <?php foreach ($players as $player): ?>
+                    <div class="d-flex row my-3">
+                        <div class="col-6 col-form-label">
+                            <span><span class=""><?= $player ?></span> chooses:</sp>
+                        </div>
+                        <div class="col-4">
+                            <select class="form-select bg-light" name="selections[]" required>
+                                <option selected="true" disabled="true"></option>
+                                <?php for ($i = 0; $i < $num_players; $i++): ?>
+                                    <option value="<?= $players[$i] ?>"><?= $players[$i]; ?></option>
+                                <?php endfor; ?>
+                            </select>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-success px-5" name="next">Next</button>
+            </div>
+        </form>
     </div>
 
     <!-- Bootstrap JS with Popper -->
