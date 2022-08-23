@@ -40,6 +40,7 @@ if (isset($questions)) {
     $_SESSION['game_code'] = $pdo->lastInsertId();
 
     unset($_SESSION['CREATE2_ACCESS']);
+    $_SESSION['SUCCESS_ACCESS'] = true;
     header('Location: success.php');
 }
 
