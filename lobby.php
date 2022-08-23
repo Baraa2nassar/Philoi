@@ -2,17 +2,15 @@
 
 session_start();
 
-$game_code = $_SESSION['game_code'];
+if (!isset($_SESSION['LOBBY_ACCESS'])) {
+    header('Location: index.php');
+}
+unset($_SESSION['LOBBY_ACCESS']);
+
+$game_code = $_SESSION['game_code'] ?? null;
 
 if (isset($_POST['start'])) {
     header('Location: question.php');
-}
-
-if (!isset($game_code)) {
-    // User is trying to access lobby without a game code.
-    // Eventually we will send an error message, but for now
-    // they'll just be taken to join.php without warning.
-    header('Location: join.php');
 }
 
 require 'scripts/functions.php';
@@ -46,6 +44,8 @@ $_SESSION['current'] = 0;
 
 $scores = array_map(function() { return 0; }, range(1, $num_players));
 $_SESSION['scores'] = $scores;
+
+unset($_SESSION['game_code']);
 
 ?>
 

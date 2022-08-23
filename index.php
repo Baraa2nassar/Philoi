@@ -14,6 +14,7 @@ if (isset($game_code)) {
 
     if ($statement->rowCount() > 0) {
         $_SESSION['game_code'] = $game_code;
+        $_SESSION['LOBBY_ACCESS'] = true;
         header('Location: lobby.php');
     } else {
         $_SESSION["BAD_GAME_CODE"] = "Invalid game code. Please try again.";
@@ -21,7 +22,6 @@ if (isset($game_code)) {
 
 }
 ?>
-
 <!doctype html>
 <html>
 <head>
@@ -56,7 +56,7 @@ if (isset($game_code)) {
         </form>
 
         <button class="btn btn-primary my-1" style="height: 57px" onclick="location.href = 'create1.php'">Make a new game</button>
-        <button class="btn btn-success my-1" style="height: 57px" onclick="location.href = 'rules.php'">View rules</button>
+        <button class="btn btn-success mt-2" style="height: 57px" onclick="location.href = 'rules.php'">View rules</button>
     </div>
 
     <!-- Bootstrap JS with Popper -->
