@@ -45,8 +45,6 @@ $_SESSION['current'] = 0;
 $scores = array_map(function() { return 0; }, range(1, $num_players));
 $_SESSION['scores'] = $scores;
 
-unset($_SESSION['game_code']);
-
 ?>
 
 <!doctype html>
