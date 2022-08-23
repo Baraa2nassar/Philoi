@@ -21,6 +21,7 @@ $next = $_POST['next'] ?? null;
 if (isset($next)) {
     $counter=(count($qna));
     if ($_SESSION['current'] == ($counter)) {
+        $_SESSION['RESULTS_ACCESS'] = true;
         header('Location: results.php');
         die;
     }
