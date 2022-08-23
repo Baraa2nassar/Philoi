@@ -1,4 +1,3 @@
 In no particular order, this is what we need to do...
-- Prevent users from accessing files they shouldn't be able to
 - Change UI (darker background is more suitable)
 - Validate user inputs (specifically when they enter names and questions)

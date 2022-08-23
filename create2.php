@@ -4,7 +4,7 @@
 session_start();
 
 if (!isset($_SESSION['CREATE2_ACCESS'])) {
-    header('Location: create1.php');
+    header('Location: index.php');
 }
 
 // Get information from previous page
