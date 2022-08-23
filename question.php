@@ -2,6 +2,11 @@
 
 session_start();
 
+if (!isset($_SESSION['QUESTION_ACCESS'])) {
+    header('Location: index.php');
+}
+unset($_SESSION['QUESTION_ACCESS']);
+
 $qna = $_SESSION['qna'];
 $current = $_SESSION['current'];
 
@@ -22,6 +27,8 @@ if (isset($_POST['next'])) {
     }
     $_SESSION['current'] += 1;
     $_SESSION['selections'] = $_POST['selections'];
+
+    $_SESSION['ANSWER_ACCESS'] = true;
     header('Location: answer.php');
 }
 

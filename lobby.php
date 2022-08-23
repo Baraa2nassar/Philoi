@@ -10,6 +10,7 @@ unset($_SESSION['LOBBY_ACCESS']);
 $game_code = $_SESSION['game_code'] ?? null;
 
 if (isset($_POST['start'])) {
+    $_SESSION['QUESTION_ACCESS'] = true;
     header('Location: question.php');
 }
 

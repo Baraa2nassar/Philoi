@@ -2,6 +2,11 @@
 
 session_start();
 
+if (!isset($_SESSION['ANSWER_ACCESS'])) {
+    header('Location: question.php');
+}
+unset($_SESSION['ANSWER_ACCESS']);
+
 $qna = $_SESSION['qna'];
 
 $current = $_SESSION['current'];
@@ -26,6 +31,7 @@ if (isset($next)) {
         die;
     }
 
+    $_SESSION['QUESTION_ACCESS'] = true;
     header('Location: question.php');
 }
 
