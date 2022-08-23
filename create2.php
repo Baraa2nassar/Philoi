@@ -3,6 +3,10 @@
 // here they will enter the game title and password in case they want to join the game in the future
 session_start();
 
+if (!isset($_SESSION['CREATE2_ACCESS'])) {
+    header('Location: create1.php');
+}
+
 // Get information from previous page
 $num_questions = $_SESSION["num_questions"] ?? null;
 $players = $_SESSION['players'];
@@ -35,6 +39,7 @@ if (isset($questions)) {
 
     $_SESSION['game_code'] = $pdo->lastInsertId();
 
+    unset($_SESSION['CREATE2_ACCESS']);
     header('Location: success.php');
 }
 

@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     $_SESSION['players'] = $players;
     $_SESSION['num_questions'] = $num_questions;
 
-
+    $_SESSION['CREATE2_ACCESS'] = True;
     header("Location: create2.php");
 }
 
