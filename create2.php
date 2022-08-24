@@ -16,6 +16,15 @@ $num_players = count($players);
 $questions = $_POST['questions'] ?? null;
 
 if (isset($questions)) {
+
+    // Redirect back to page if a question is just whitespace or empty
+    foreach ($questions as $question) {
+        if (ctype_space($question) || $question == '') {
+            header('Location: create2.php');
+            exit;
+        }
+    }
+
     $questions_per_player = $num_questions;
 
     $answers = [];
@@ -109,7 +118,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
                     <?php endfor; ?>
                 </div>
 
-                <div class="d-flex text-center mt-4 mb-5" style="margin: 0px 90px;">
+                <div class="d-flex text-center mt-3 mb-5" style="margin: 0px 90px;">
                     <button type="button" class="mx-3 btn btn-secondary mt-2" style="width: 225px" onclick="location.href = 'create1.php'">Back</button>
                     <button type="submit" class="mx-3 btn btn-primary mt-2" name="create" style="width: 225px">Create</button>
                 </div>
