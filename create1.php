@@ -3,22 +3,32 @@
 session_start();
 
 if (isset($_POST['submit'])) {
-
     $players = $_POST['players'];
-    // Remove whitespace values
-    $players = array_filter(array_map('trim', $players));
+    $tmp = [];
 
-    $num_questions = $_POST['num_questions'];
+    foreach ($players as &$player) {
+        $player = trim($player);
+        if (ctype_space($player) || $player == '') {
+            continue;
+        }
+        $tmp[] = $player;
+    }
+    $players = $tmp;
+
+    if (count($players) < 3) {
+        // User needs to enter at least 3 valid player names.
+        header('Location: create1.php');
+        exit;
+    }
 
     $_SESSION['players'] = $players;
-    $_SESSION['num_questions'] = $num_questions;
+    $_SESSION['num_questions'] = $_POST['num_questions'];
 
     $_SESSION['CREATE2_ACCESS'] = True;
     header("Location: create2.php");
 }
 
 ?>
-
 <!doctype html>
 <html>
 <head>
@@ -52,12 +62,12 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="mt-3 text-center">
-                    <h5 class="text-center mb-1" style="color: cornflowerblue;">Enter the names of your friends </h5>
+                    <h5 class="text-center mb-1" style="color: cornflowerblue;">Enter the names of your friends <span class="" style="opacity: 70%">(3 min)</span></h5>
 
                     <!-- Player names -->
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="color: #565656; border-color: #5a5b5c" required>
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" style="color: #d14430; border-color: #d92007" required>
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" style="color: #28a745; border-color: #28a745" required>
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="color: #565656; border-color: #5a5b5c">
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" style="color: #d14430; border-color: #d92007">
+                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" style="color: #28a745; border-color: #28a745">
                     <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 4" style="color: #885cb5; border-color: #9b42f5">
                     <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 5" style="color: #449DD1; border-color: #449DD1">
 
