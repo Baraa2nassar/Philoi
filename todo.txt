@@ -1,2 +1,3 @@
 In no particular order, this is what we need to do...
 - Change UI (darker background is more suitable)
+- Give error messages for invalid inputs
