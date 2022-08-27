@@ -17,6 +17,7 @@ if (isset($_POST['submit'])) {
 
     if (count($players) < 3) {
         // User needs to enter at least 3 valid player names.
+        $_SESSION['INVALID_PLAYER_NAMES'] = "Please enter at least 3 non-empty player names.";
         header('Location: create1.php');
         exit;
     }
@@ -45,40 +46,45 @@ if (isset($_POST['submit'])) {
     <!-- ... -->
 </head>
 <body>
-    <div class="d-flex">
 
-        <div class="d-flex flex-column mx-auto" style="width: 420px; margin-top: 55px">
+    <div class="d-flex flex-column mx-auto" style="width: 420px; margin-top: 40px">
 
-            <h1 class="text-center" style="color: #006480">Create a New Game</h1>
-            <hr>
+        <h1 class="text-center" style="color: #006480">Create a New Game</h1>
+        <hr>
 
-            <form method="post">
-                <!-- Number of questions -->
-                <div class="row mb-3">
-                    <label class="text-center col-sm-9 col-form-label">How many questions per player? <span class="text-muted">(10 max)</span></label>
-                    <div class="col-sm-3">
-                        <input class="form-control" type="number" step="1" name="num_questions" min="1" max="10" required>
-                    </div>
+        <form method="post">
+            <!-- Number of questions -->
+            <div class="row mb-3">
+                <label class="text-center col-sm-9 col-form-label">How many questions per player? <span class="text-muted">(10 max)</span></label>
+                <div class="col-sm-3">
+                    <input class="form-control" type="number" step="1" name="num_questions" min="1" max="10" required>
                 </div>
+            </div>
 
-                <div class="mt-3 text-center">
-                    <h5 class="text-center mb-1" style="color: cornflowerblue;">Enter the names of your friends <span class="" style="opacity: 70%">(3 min)</span></h5>
+            <div class="mt-3 text-center">
+                <h5 class="text-center mb-1" style="color: cornflowerblue;">Enter the names of your friends <span class="" style="opacity: 70%">(3 min)</span></h5>
 
-                    <!-- Player names -->
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="color: #565656; border-color: #5a5b5c">
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" style="color: #d14430; border-color: #d92007">
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" style="color: #28a745; border-color: #28a745">
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 4" style="color: #885cb5; border-color: #9b42f5">
-                    <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 5" style="color: #449DD1; border-color: #449DD1">
+                <!-- Player names -->
+                <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="color: #565656; border-color: #5a5b5c">
+                <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" style="color: #d14430; border-color: #d92007">
+                <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" style="color: #28a745; border-color: #28a745">
+                <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 4" style="color: #885cb5; border-color: #9b42f5">
+                <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 5" style="color: #449DD1; border-color: #449DD1">
 
-                    <div class="d-flex">
-                        <button class="mx-3 btn btn-secondary mt-2" type="button" style="width: 225px" onclick="location.href = 'index.php'">Back</button>
-                        <button class="mx-3 btn btn-primary mt-2" name="submit" value="submit" style="width: 225px">Continue</button>
+                <?php if (isset($_SESSION['INVALID_PLAYER_NAMES'])): ?>
+                    <div class="alert alert-danger text-center" style="padding: 10px 20px">
+                        <?= $_SESSION['INVALID_PLAYER_NAMES'] ?>
                     </div>
-                </div>
-            </form>
 
-        </div>
+                    <?php unset($_SESSION['INVALID_PLAYER_NAMES']); ?>
+                <?php endif; ?>
+
+                <div class="d-flex">
+                    <button class="mx-3 btn btn-secondary mt-1" type="button" style="width: 225px" onclick="location.href = 'index.php'">Back</button>
+                    <button class="mx-3 btn btn-primary mt-1" name="submit" value="submit" style="width: 225px">Continue</button>
+                </div>
+            </div>
+        </form>
     </div>
 
     <!-- Bootstrap JS with Popper -->
