@@ -20,6 +20,7 @@ if (isset($questions)) {
     // Redirect back to page if a question is just whitespace or empty
     foreach ($questions as $question) {
         if (ctype_space($question) || $question == '') {
+            $_SESSION['INVALID_QUESTION'] = "Please enter non-empty questions.";
             header('Location: create2.php');
             exit;
         }
@@ -118,9 +119,17 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
                     <?php endfor; ?>
                 </div>
 
+                <?php if (isset($_SESSION['INVALID_QUESTION'])): ?>
+                    <div class="alert alert-danger text-center mt-3" style="padding: 10px 20px">
+                        <?= $_SESSION['INVALID_QUESTION'] ?>
+                    </div>
+
+                    <?php unset($_SESSION['INVALID_QUESTION']); ?>
+                <?php endif; ?>
+
                 <div class="d-flex text-center mt-3 mb-5" style="margin: 0px 90px;">
-                    <button type="button" class="mx-3 btn btn-secondary mt-2" style="width: 225px" onclick="location.href = 'create1.php'">Back</button>
-                    <button type="submit" class="mx-3 btn btn-primary mt-2" name="create" style="width: 225px">Create</button>
+                    <button type="button" class="mx-3 btn btn-secondary mt-1" style="width: 225px" onclick="location.href = 'create1.php'">Back</button>
+                    <button type="submit" class="mx-3 btn btn-primary mt-1" name="create" style="width: 225px">Create</button>
                 </div>
             </div>
         </form>
