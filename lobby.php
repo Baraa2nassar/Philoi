@@ -14,7 +14,7 @@ if (isset($_POST['start'])) {
     header('Location: question.php');
 }
 
-require 'scripts/functions.php';
+require 'includes/functions.php';
 
 $pdo = get_database_connection();
 

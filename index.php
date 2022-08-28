@@ -5,7 +5,7 @@ session_start();
 $game_code = $_POST['game_code'] ?? null;
 
 if (isset($game_code)) {
-    require 'scripts/functions.php';
+    require 'includes/functions.php';
     $pdo = get_database_connection();
 
     $query = "SELECT * FROM quizzes WHERE quiz_id = ?";

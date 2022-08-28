@@ -1,6 +1,5 @@
 <?php
 
-
 function get_database_connection()
 {
     $dsn = "mysql:dbname=philoi;host=localhost";
@@ -18,4 +17,3 @@ function get_database_connection()
 
     return $pdo;
 }
-

@@ -39,7 +39,7 @@ if (isset($questions)) {
     $choices_json = json_encode($players);
     $answers_json = json_encode($answers);
 
-    require 'scripts/functions.php';
+    require 'includes/functions.php';
 
     $pdo = get_database_connection();
 
