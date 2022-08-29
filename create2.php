@@ -57,9 +57,8 @@ if (isset($questions)) {
 $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"];
 
 ?>
-
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <!-- Meta tags -->
     <meta charset="utf-8">
@@ -78,7 +77,6 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
         }
         .player-btn:hover {
-            /* background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)); */
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
             opacity: 0.7 !important;
         }
@@ -142,7 +140,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
         let numPlayers = playerButtons.length;
         let numQuestions = questions.length;
 
-        const s = 'opacity: 1.0 !important;    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;';
+        const s = 'opacity: 1.0 !important; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;';
         playerButtons[0].setAttribute('style', s);
 
         for (let playerButton of playerButtons) {
@@ -153,10 +151,10 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
                 playerButton.setAttribute('style', s);
 
                 let value = playerButton.value;
-                questionNumLow = value * Math.floor(numQuestions / numPlayers);
-                questionNumHi = questionNumLow + Math.floor(numQuestions / numPlayers) - 1;
+                let questionNumLo = value * Math.floor(numQuestions / numPlayers);
+                let questionNumHi = questionNumLo + Math.floor(numQuestions / numPlayers) - 1;
                 for (let i = 0; i < numQuestions; i++) {
-                    if (i >= questionNumLow && i <= questionNumHi) {
+                    if (i >= questionNumLo && i <= questionNumHi) {
                         questions[i].setAttribute('style', 'display: unset;');
                     } else {
                         questions[i].setAttribute('style', 'display: none;');

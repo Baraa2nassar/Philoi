@@ -11,7 +11,7 @@ $game_code = $_SESSION['game_code'] ?? null;
 
 ?>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <!-- Meta tags -->
     <meta charset="utf-8">

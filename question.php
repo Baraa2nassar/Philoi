@@ -33,7 +33,6 @@ if (isset($_POST['next'])) {
 }
 
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -46,7 +45,6 @@ if (isset($_POST['next'])) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 
-    <!-- Custom CSS -->
     <style>
         .player-btn {
             cursor: unset;

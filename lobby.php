@@ -47,9 +47,8 @@ $scores = array_map(function() { return 0; }, range(1, $num_players));
 $_SESSION['scores'] = $scores;
 
 ?>
-
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <!-- Meta tags -->
     <meta charset="utf-8">
@@ -61,18 +60,37 @@ $_SESSION['scores'] = $scores;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 70px">
-
+    <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 30px">
         <h1 class="text-center" style="color: #006480;">Lobby</h1>
         <hr>
 
-        <h5 class="text-center mb-4" style="color: cornflowerblue;">Game will begin after clicking 'Start'</h5>
+        <h5 class="text-center mb-3" style="color: cornflowerblue;">Game will begin after clicking 'Start'</h5>
 
-        <h6 class="fw-semibold">Game code<span class="fw-normal text-end">: <?= $game_code ?></span></h6>
-        <h6 class="fw-semibold">Number of questions<span class="fw-normal">: <?= $num_questions ?></span></h6>
-        <h6 class="fw-semibold">Players<span class="fw-normal">: <?= join(", ", $choices) ?></span></h6>
+        <div class="d-flex">
+            <div class="flex-item mx-2" style="width: 220px">
+                <ul class="list-group text-center">
+                    <li class="list-group-item fw-bold text-white" style="background-color: darkolivegreen !important">Game code</li>
+                    <li class="list-group-item"><?= $game_code ?></li>
+                </ul>
+            </div>
+            <div class="flex-item mx-2" style="width: 220px">
+                <ul class="list-group text-center">
+                    <li class="list-group-item fw-bold text-white" style="background-color: darkolivegreen !important"># of questions</li>
+                    <li class="list-group-item"><?= $num_questions ?></li>
+                </ul>
+            </div>
+        </div>
 
-        <ul class="list-group mt-3">
+        <div class="d-flex">
+            <div class="flex-grow-1 text-center mx-2">
+                <ul class="list-group mt-3">
+                    <li class="list-group-item fw-bold text-white" style="background-color: cornflowerblue">Players</li>
+                    <li class="list-group-item"><?= join(", ", $choices) ?></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul class="list-group mt-3 mx-2">
             <li class="list-group-item">Ensure all players are ready to play.</li>
             <li class="list-group-item">Remember to input the response each player gives.</li>
             <li class="list-group-item">Good luck and have fun!</li>

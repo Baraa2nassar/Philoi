@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <!-- Meta tags -->
     <meta charset="utf-8">
@@ -41,14 +41,9 @@ if (isset($_POST['submit'])) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <!-- ... -->
 </head>
 <body>
-
     <div class="d-flex flex-column mx-auto" style="width: 420px; margin-top: 40px">
-
         <h1 class="text-center" style="color: #006480">Create a New Game</h1>
         <hr>
 

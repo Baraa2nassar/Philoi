@@ -21,11 +21,11 @@ if (isset($game_code)) {
         $_SESSION['LOBBY_ACCESS'] = true;
         header('Location: lobby.php');
     }
-
 }
+
 ?>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <!-- Meta tags -->
     <meta charset="utf-8">
@@ -35,16 +35,10 @@ if (isset($game_code)) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <style>
-        /* body { background-color: #4186e8; } */
-    </style>
 </head>
 <body>
-
     <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 90px">
-        <h1 class="text-center" style="color:#006480;">Welcome to Philoi</h1>
+        <h1 class="text-center" style="color: #006480;">Welcome to Philoi</h1>
         <h5 class="text-center mx-1" style="color: cornflowerblue;">A game to see how much your friends know you</h5>
         <hr>
 
@@ -53,7 +47,7 @@ if (isset($game_code)) {
                 <input class="form-control bg-light" type="text" name="game_code" placeholder="Enter your game code" required>
             </div>
             <div class="col-4 text-center">
-                <button class="btn btn-secondary" style="width: 100%">Join</button>
+                <button class="btn btn-secondary" style="width: 100%">Enter</button>
             </div>
         </form>
 
