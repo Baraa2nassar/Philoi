@@ -15,18 +15,13 @@ A quiz game to see how much your friends know you
 <br />
 <div align="center">
   <a href="https://github.com/Baraa2nassar/Philoi">
-    <img src="https://media.discordapp.net/attachments/843930563399122985/992110928587927582/unknown.png?width=940&height=632" alt="Logo" width="80" height="80">
+    <img src="https://cdn-icons-png.flaticon.com/512/7420/7420690.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Philoi</h3>
 
   <p align="center">
-    A full stack website that lets you make a quiz and see with your which facts apply to your friends
-    Philoi is greek word that means a "friend" :)
-    Created by: 
-    Baraa Nassar
-    Mushtaq Miah
-    
+    A full stack website that lets you make a quiz and see with your which facts apply to your friends    
     <br />
     <a href="https://github.com/Baraa2nassar/Philoi"><strong>Explore the docs »</strong></a>
     <br />
@@ -73,7 +68,11 @@ A quiz game to see how much your friends know you
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]]
-
+ Philoi is greek word that means a "friend" :)
+    Created by: 
+    Baraa Nassar
+    Mushtaq Miah
+    
 Usually, when groups, students, or even friends get to know each other they begin with some facts about themselves. Some teachers would play a game of (two truths/one lie) with their students, so they can start building a strong bond with the students. This app aims to tackle this aspect of social life using a game hosted by an instructor (creator) and played by group
 
 Why?
@@ -108,7 +107,7 @@ Why?
 
 - [x] Make Readme
 - [ ] enable a way where people can put in questions remotely (sockets)
-- [ ] host the site
+- [ ] host the site philoi.tech
 - [ ] use git command linked to cloud
 -
 
@@ -189,4 +188,4 @@ Some other sources that helped us build this project:
 [license-url]: https://github.com/Baraa2nassar/philoi/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/baraa2nassar
-[product-screenshot]: https://cdn.discordapp.com/attachments/767632792950407179/929123702036107324/unknown.png
+[product-screenshot]: https://media.discordapp.net/attachments/1038123706830049335/1039003961308483624/image.png?width=1257&height=632
