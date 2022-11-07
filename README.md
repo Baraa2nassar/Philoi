@@ -109,7 +109,7 @@ Why?
 - [ ] enable a way where people can put in questions remotely (sockets)
 - [ ] host the site philoi.tech
 - [ ] use git command linked to cloud
--
+- [ ] make youtube short demo and link the link in this readME and in the demo hyperlink
 
 Check out [open issues](https://github.com/Baraa2nassar/Philoi/issues) to see any proposed features AKA issues.
 
