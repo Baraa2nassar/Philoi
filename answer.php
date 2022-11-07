@@ -49,6 +49,12 @@ if (isset($next)) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 
     <style>
+        .wrapper {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: left-end;
+    }
         .player-btn {
             /* opacity: 0.5 !important; */
             cursor: unset;
@@ -67,7 +73,7 @@ if (isset($next)) {
         .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
     </style>
 </head>
-<body>
+<body class="p-3 mb-2 bg-light-gray text-dark">
     <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 60px">
         <div class="text-center">
             <h5 class="text-muted">Question <?= $current  ?> of <?= count($qna) ?></h5>
@@ -94,9 +100,9 @@ if (isset($next)) {
                         </div>
                         <div class="col-4">
                             <?php if ($selections[$i] == $answer): ?>
-                                <input class="form-control" style="background-color: #afffa522 !important;" value="<?= $selections[$i] ?>" tabindex="-1" readonly></input>
+                                <input class="form-control text-white" style="background-color: darkgreen !important;" value="✅<?= $selections[$i] ?>" tabindex="-1" readonly></input>
                             <?php else: ?>
-                                <input class="form-control" style="background-color: #ffa6a522 !important;" value="<?= $selections[$i] ?>" tabindex="-1" readonly></input>
+                                <input class="form-control text-white" style="background-color: OrangeRed !important;" value="❌<?= $selections[$i] ?>" tabindex="-1" readonly></input>
                             <?php endif; ?>
                         </div>
                         <div class="col-2">
@@ -110,6 +116,10 @@ if (isset($next)) {
                 <button class="btn btn-success px-5" name="next">Next</button>
             </div>
         </form>
+    </div>
+
+    <div class="wrapper">
+        <img src="https://freepngimg.com/thumb/youtube/77816-balloon-youtube-up-monsters,-inc.-pixar.png"/>
     </div>
 
     <!-- Bootstrap JS with Popper -->

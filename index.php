@@ -36,10 +36,12 @@ if (isset($game_code)) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
-<body>
+<body class="p-3 mb-2 bg-dark text-white">
+    <div class="container">
+
     <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 90px">
-        <h1 class="text-center" style="color: #006480;">Welcome to Philoi</h1>
-        <h5 class="text-center mx-1" style="color: cornflowerblue;">A game to see how much your friends know you</h5>
+        <h1 class="text-center" style="color: DarkTurquoise    ;">Welcome to Philoi</h1>
+        <h6 class="text-center mx-1" style="color: lightgray;">A game to see how much your friends know you</h6>
         <hr>
 
         <form class="row my-2 mb-3" method="post">

@@ -59,24 +59,24 @@ $_SESSION['scores'] = $scores;
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
-<body>
+<body class="p-3 mb-2 bg-dark text-white">
     <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 30px">
-        <h1 class="text-center" style="color: #006480;">Lobby</h1>
+        <h1 class="text-center" style="color: DarkTurquoise;">Lobby</h1>
         <hr>
 
-        <h5 class="text-center mb-3" style="color: cornflowerblue;">Game will begin after clicking 'Start'</h5>
+        <h5 class="text-center mb-3" style="color: lightgray;">Game will begin after clicking 'Start'</h5>
 
         <div class="d-flex">
             <div class="flex-item mx-2" style="width: 220px">
                 <ul class="list-group text-center">
                     <li class="list-group-item fw-bold text-white" style="background-color: darkolivegreen !important">Game code</li>
-                    <li class="list-group-item"><?= $game_code ?></li>
+                    <li class="list-group-item list-group-item-light"><?= $game_code ?></li>
                 </ul>
             </div>
             <div class="flex-item mx-2" style="width: 220px">
                 <ul class="list-group text-center">
                     <li class="list-group-item fw-bold text-white" style="background-color: darkolivegreen !important"># of questions</li>
-                    <li class="list-group-item"><?= $num_questions ?></li>
+                    <li class="list-group-item list-group-item-light"><?= $num_questions ?></li>
                 </ul>
             </div>
         </div>
@@ -85,15 +85,15 @@ $_SESSION['scores'] = $scores;
             <div class="flex-grow-1 text-center mx-2">
                 <ul class="list-group mt-3">
                     <li class="list-group-item fw-bold text-white" style="background-color: cornflowerblue">Players</li>
-                    <li class="list-group-item"><?= join(", ", $choices) ?></li>
+                    <li class="list-group-item list-group-item-light"><?= join(", ", $choices) ?></li>
                 </ul>
             </div>
         </div>
 
         <ul class="list-group mt-3 mx-2">
-            <li class="list-group-item">Ensure all players are ready to play.</li>
-            <li class="list-group-item">Remember to input the response each player gives.</li>
-            <li class="list-group-item">Good luck and have fun!</li>
+            <li class="list-group-item list-group-item-light">Ensure all players are ready to play.</li>
+            <li class="list-group-item list-group-item-light">Remember to input the response each player gives.</li>
+            <li class="list-group-item list-group-item-light">Good luck and have fun!</li>
         </ul>
 
         <form method="post">
