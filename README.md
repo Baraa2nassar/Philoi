@@ -150,7 +150,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Baraa Nassar - [@baraa2nassar](https://www.instagram.com/baraa2nassar) - baraa-aziz@hotmail.com
 
-Mushtar Miah - [Mushtaq miah](https://www.linkedin.com/in/mushtaq-miah-3469a0246/)
+Mushtaq Miah - [GitHub](https://github.com/mhmh4)
 
 Project Link: [https://github.com/Baraa2nassar/philoi](https://github.com/Baraa2nassar/philoi)
 
