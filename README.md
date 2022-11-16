@@ -111,6 +111,8 @@ Why?
 
 - [x] Make Readme
 - [x] host the site philoi.tech
+- [ ] fix the rules page 
+- [ ] enable users to put password of their game sessions 
 - [ ] use git command linked to cloud
 - [ ] enable a way where people can put in questions remotely (sockets)
 - [ ] make youtube short demo and link the link in this readME and in the demo hyperlink
