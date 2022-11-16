@@ -117,6 +117,12 @@ Why?
 - [ ] enable a way where people can put in questions remotely (sockets)
 - [ ] make youtube short demo and link the link in this readME and in the demo hyperlink
 
+**IDEAS** for the online version:
+  - [ ] When playing a round = Quick game(ppl answer) **vs** Discussion game(host puts the answers)
+  - [ ] When Creating a round =  Ppl's choice (particpants put in facts) **vs** Host's choice (Host puts the participants and the questions) 
+  - [ ] Voting system to whether the question is good or bad (if the majority puts in bad the person loses a point). 
+
+
 Check out [open issues](https://github.com/Baraa2nassar/Philoi/issues) to see any proposed features AKA issues.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
