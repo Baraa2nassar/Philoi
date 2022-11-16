@@ -19,6 +19,9 @@ A quiz game to see how much your friends know you
   </a>
 
   <h3 align="center">Philoi</h3>
+  <br />
+
+  <h3 href="http://philoi.tech/" align="center">philoi.tech/</h3>
 
   <p align="center">
     A full stack website that lets you make a quiz and see with your which facts apply to your friends    
@@ -26,7 +29,8 @@ A quiz game to see how much your friends know you
     <a href="https://github.com/Baraa2nassar/Philoi"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Baraa2nassar/Philoi">View Demo</a>
+    <a href="http://philoi.tech/">visit site</a>
+    <!-- <a href="http://philoi.tech/">view demo</a> later in the future inshAllah -->
     ·
     <a href="https://github.com/Baraa2nassar/Philoi/issues">Report Bug</a>
     ·
@@ -67,7 +71,7 @@ A quiz game to see how much your friends know you
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]
+![Product Name Screen Shot][product-screenshot]]
  Philoi is greek word that means a "friend" :)
     Created by: 
     Baraa Nassar
@@ -106,9 +110,9 @@ Why?
 ## Roadmap
 
 - [x] Make Readme
-- [ ] enable a way where people can put in questions remotely (sockets)
-- [ ] host the site philoi.tech
+- [x] host the site philoi.tech
 - [ ] use git command linked to cloud
+- [ ] enable a way where people can put in questions remotely (sockets)
 - [ ] make youtube short demo and link the link in this readME and in the demo hyperlink
 
 Check out [open issues](https://github.com/Baraa2nassar/Philoi/issues) to see any proposed features AKA issues.
