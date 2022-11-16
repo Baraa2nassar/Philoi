@@ -1,0 +1,16 @@
+body{
+	margin : 0;
+	font-family: system-ui;
+}
+
+.hero {
+	background-color:#074f57;
+	background-image: url("../img/compress_friendstalking.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: multiply;
+	color: white;
+	/*padding-top: 200px;*/
+	/*padding-bottom: 200px;*/
+
+}
