@@ -69,6 +69,8 @@ if (isset($game_code)) {
     </div>
 <!-- </div> -->
     <!-- Bootstrap JS with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+
+    </script>
 </body>
 </html>
