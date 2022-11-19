@@ -27,13 +27,14 @@ if (isset($game_code)) {
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="icon" href="https://camo.githubusercontent.com/c11671f6642668cc8677e0ecf16c75406bb86d4262d75ba2fad480290509c999/68747470733a2f2f63646e2d69636f6e732d706e672e666c617469636f6e2e636f6d2f3531322f373432302f373432303639302e706e67">
-
     <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Philoi</title>
+
+    <!-- Favorite icon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
