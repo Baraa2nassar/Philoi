@@ -1,40 +1,29 @@
-# Philoi
-A quiz game to see how much your friends know you
-<div id="top"></div>
+# [Philoi](http://philoi.tech)
 
-<!-- [![Contributors][contributors-shield]][contributors-url] -->
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-<!-- [![MIT License][license-shield]][license-url] -->
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
-  <a href="https://github.com/Baraa2nassar/Philoi">
-    <img src="https://cdn-icons-png.flaticon.com/512/7420/7420690.png" alt="Logo" width="80" height="80">
-  </a>
+  <img src="img/favicon.ico" alt="Philoi logo" width="100">
 
-  <h3 align="center">Philoi</h3>
-  <br />
+  <img src="https://img.shields.io/github/forks/baraa2nassar/Philoi?style=for-the-badge">
+  &nbsp;
+  <img src="https://img.shields.io/github/stars/baraa2nassar/Philoi?color=yellow&style=for-the-badge">
+  &nbsp;
+  <img src="https://img.shields.io/github/issues/baraa2nassar/Philoi?color=orange&style=for-the-badge">
+</div>
 
-  <h3 href="http://philoi.tech/" align="center">philoi.tech/</h3>
-
-  <p align="center">
-    A full stack website that lets you make a quiz and see with your which facts apply to your friends    
-    <br />
-    <a href="https://github.com/Baraa2nassar/Philoi"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="http://philoi.tech/">visit site</a>
-    <!-- <a href="http://philoi.tech/">view demo</a> later in the future inshAllah -->
-    ·
-    <a href="https://github.com/Baraa2nassar/Philoi/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Baraa2nassar/Philoi/issues">Request Feature</a>
+<div align="center">
+  <br>
+  <p>
+    A full stack web application that lets you create quizzes to test which facts applies to your friends.
+    <br>
+    <h4>
+      <a href="http://philoi.tech/">Visit site</a>
+      -
+      <!-- <a href="http://philoi.tech/">View demo</a> later in the future inshAllah -->
+      <!-- - -->
+      <a href="https://github.com/Baraa2nassar/Philoi/issues">Report Bug</a>
+      -
+      <a href="https://github.com/Baraa2nassar/Philoi/issues">Request Feature</a>
+    </h4>
   </p>
 </div>
 
@@ -73,14 +62,14 @@ A quiz game to see how much your friends know you
 
 ![Product Name Screen Shot][product-screenshot]]
  Philoi is greek word that means a "friend" :)
-    Created by: 
+    Created by:
     Baraa Nassar
     Mushtaq Miah
-    
+
 Usually, when groups, students, or even friends get to know each other they begin with some facts about themselves. Some teachers would play a game of (two truths/one lie) with their students, so they can start building a strong bond with the students. This app aims to tackle this aspect of social life using a game hosted by an instructor (creator) and played by group
 
 Why?
-* New way introduction system 
+* New way introduction system
 * Get conversations going in a group
 
 
@@ -90,7 +79,7 @@ Why?
 
 ### Built With
 
- Major frameworks/libraries I used to bootstrap my project. 
+ Major frameworks/libraries I used to bootstrap my project.
 
 * [PHP]
 * [json]
@@ -111,17 +100,16 @@ Why?
 
 - [x] Make Readme
 - [x] host the site philoi.tech
-- [ ] fix the rules page 
-- [ ] enable users to put password of their game sessions 
+- [ ] fix the rules page
+- [ ] enable users to put password of their game sessions
 - [ ] use git command linked to cloud
 - [ ] enable a way where people can put in questions remotely (sockets)
 - [ ] make youtube short demo and link the link in this readME and in the demo hyperlink
-- [ ] sql injection 
 
 **IDEAS** for the online version:
   - [ ] When playing a round = Quick game(ppl answer) **vs** Discussion game(host puts the answers)
-  - [ ] When Creating a round =  Ppl's choice (particpants put in facts) **vs** Host's choice (Host puts the participants and the questions) 
-  - [ ] Voting system to whether the question is good or bad (if the majority puts in bad the person loses a point). 
+  - [ ] When Creating a round =  Ppl's choice (particpants put in facts) **vs** Host's choice (Host puts the participants and the questions)
+  - [ ] Voting system to whether the question is good or bad (if the majority puts in bad the person loses a point).
 
 
 Check out [open issues](https://github.com/Baraa2nassar/Philoi/issues) to see any proposed features AKA issues.
@@ -133,8 +121,8 @@ Check out [open issues](https://github.com/Baraa2nassar/Philoi/issues) to see an
 <!-- CONTRIBUTING -->
 ## Contributing
 
-This entire program is open srouce so feel free to take inspiration from it. Also please feel free to suggest any great ideas. No idea is left behind :) You may please fork the repo and create a pull request. 
-Feel free to give this project a star if you like it. 
+This entire program is open srouce so feel free to take inspiration from it. Also please feel free to suggest any great ideas. No idea is left behind :) You may please fork the repo and create a pull request.
+Feel free to give this project a star if you like it.
 
 To add your changes using Git:
 1. Fork the Project
@@ -161,11 +149,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Baraa Nassar - [@baraa2nassar](https://www.instagram.com/baraa2nassar) - baraa-aziz@hotmail.com
+Baraa Nassar - [@baraa2nassar](https://www.instagram.com/baraa2nassar) - baraa-aziz@hotmail.com - [LinkedIn](https://www.linkedin.com/in/baraa2nassar/)
 
 Mushtaq Miah - [GitHub](https://github.com/mhmh4)
-
-Project Link: [https://github.com/Baraa2nassar/philoi](https://github.com/Baraa2nassar/philoi)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
