@@ -16,13 +16,13 @@
     A full stack web application that lets you create quizzes to test which facts applies to your friends.
     <br>
     <h4>
-      <a href="http://philoi.tech/">Visit site</a>
+      <a href="http://philoi.tech/">Visit the site</a>
       -
       <!-- <a href="http://philoi.tech/">View demo</a> later in the future inshAllah -->
       <!-- - -->
-      <a href="https://github.com/Baraa2nassar/Philoi/issues">Report Bug</a>
+      <a href="https://github.com/Baraa2nassar/Philoi/issues">Report a bug</a>
       -
-      <a href="https://github.com/Baraa2nassar/Philoi/issues">Request Feature</a>
+      <a href="https://github.com/Baraa2nassar/Philoi/issues">Request a feature</a>
     </h4>
   </p>
 </div>
