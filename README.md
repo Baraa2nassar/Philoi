@@ -116,6 +116,7 @@ Why?
 - [ ] use git command linked to cloud
 - [ ] enable a way where people can put in questions remotely (sockets)
 - [ ] make youtube short demo and link the link in this readME and in the demo hyperlink
+- [ ] sql injection 
 
 **IDEAS** for the online version:
   - [ ] When playing a round = Quick game(ppl answer) **vs** Discussion game(host puts the answers)
