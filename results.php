@@ -48,9 +48,9 @@ session_destroy();
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
-<body>
-    <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 80px">
-        <h1 class="text-center" style="color: #006480;">Results</h1>
+<body class="bg-dark">
+    <div class="d-flex flex-column mx-auto text-white" style="width: 350px; margin-top: 80px">
+        <h1 class="text-center" style="color: darkturquoise;">Results</h1>
         <hr>
 
         <div class="container text-center" style="height: 250px">

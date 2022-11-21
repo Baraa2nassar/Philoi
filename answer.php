@@ -76,7 +76,7 @@ if (isset($next)) {
         .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
     </style>
 </head>
-<body class="p-3 mb-2 bg-light-gray text-dark">
+<body class="p-3 mb-2 bg-dark text-white">
     <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 60px">
         <div class="text-center">
             <h5 class="text-muted">Question <?= $current  ?> of <?= count($qna) ?></h5>
@@ -103,9 +103,9 @@ if (isset($next)) {
                         </div>
                         <div class="col-4">
                             <?php if ($selections[$i] == $answer): ?>
-                                <input class="form-control text-white" style="background-color: darkgreen !important;" value="✅<?= $selections[$i] ?>" tabindex="-1" readonly></input>
+                                <input class="form-control text-white" style="background-color: darkgreen !important;" value="<?= $selections[$i] ?>" tabindex="-1" readonly></input>
                             <?php else: ?>
-                                <input class="form-control text-white" style="background-color: OrangeRed !important;" value="❌<?= $selections[$i] ?>" tabindex="-1" readonly></input>
+                                <input class="form-control text-white" style="background-color: OrangeRed !important;" value="<?= $selections[$i] ?>" tabindex="-1" readonly></input>
                             <?php endif; ?>
                         </div>
                         <div class="col-2">
@@ -121,9 +121,9 @@ if (isset($next)) {
         </form>
     </div>
 
-    <div class="wrapper">
+    <!-- <div class="wrapper">
         <img src="https://freepngimg.com/thumb/youtube/77816-balloon-youtube-up-monsters,-inc.-pixar.png"/>
-    </div>
+    </div> -->
 
     <!-- Bootstrap JS with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -43,14 +43,14 @@ $game_code = $_SESSION['game_code'] ?? null;
         .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
     </style>
 </head>
-<body>
-    <div class="d-flex flex-column mx-auto" style="width: 450px; margin-top: 55px">
-        <h1 class="text-center" style="color: #006480">Success</h1>
+<body class="bg-dark">
+    <div class="d-flex flex-column mx-auto text-white" style="width: 450px; margin-top: 55px">
+        <h1 class="text-center" style="color: darkturquoise">Success</h1>
         <hr>
 
         <form method="post">
             <div class="text-center">
-                <h5 class="mb-4" style="color: cornflowerblue;">Your quiz has been created!</h5>
+                <h5 class="mb-4" style="color: lightblue;">Your quiz has been created!</h5>
                 <h4>Game code: <?= $game_code ?></h4>
                 <p class="text-muted">Remember this code as you'll need it to join a lobby.</p>
 

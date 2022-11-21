@@ -73,7 +73,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <style>
         .player-btn {
-            opacity: 0.5 !important;
+            opacity: 0.3 !important;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
         }
         .player-btn:active {
@@ -81,7 +81,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
         }
         .player-btn:hover {
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
-            opacity: 0.7 !important;
+            opacity: 0.6 !important;
         }
         .player-btn-0 { background-color: #565656 !important; border-color: #5a5b5c !important; color: white !important; width: 100px !important; }
         .player-btn-1 { background-color: #d14430 !important; border-color: #d92007 !important; color: white !important; width: 100px !important; }
@@ -90,14 +90,14 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
         .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
     </style>
 </head>
-<body>
+<body class="bg-dark">
     <div class="d-flex flex-column mx-auto" style="width: 600px; margin-top: 55px">
-        <h1 class="text-center" style="color: #006480">Create a New Game</h1>
+        <h1 class="text-center" style="color: darkturquoise">Create a New Game</h1>
         <hr>
 
         <form method="post">
             <div class="text-center">
-                <h5 class="mb-4" style="color: cornflowerblue;">Click on a name to enter their questions</h5>
+                <h5 class="mb-4" style="color: lightblue;">Click on a name to enter their questions</h5>
 
                 <div class="player-btns">
                     <?php for ($i = 0; $i < $num_players; $i++): ?>
