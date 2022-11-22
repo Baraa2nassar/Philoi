@@ -45,7 +45,7 @@ if (isset($game_code)) {
     <!-- <div class = ""> -->
     <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 90px">
         <h1 class="text-center" style="color: DarkTurquoise    ;">Welcome to Philoi</h1>
-        <h6 class="text-center mx-1" style="color: lightgray;">A game to see how much your friends know you</h6>
+        <h6 class="text-center mx-1" style="color: lightgray;">A game to see how well friends know each other</h6>
         <hr>
 
         <form class="row my-2 mb-3" method="post">
