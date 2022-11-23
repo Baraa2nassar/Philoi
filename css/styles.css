@@ -1,6 +1,5 @@
-body{
-	margin : 0;
-	font-family: system-ui;
+body {
+	margin: 0;
 }
 
 .hero {
@@ -15,46 +14,4 @@ body{
 	overflow: hidden;
 	background-blend-mode: multiply;
 	color: white;
-	/*padding-top: 200px;*/
-	/*padding-bottom: 200px;*/
 }
-/*.hero:hover {
-  background-size: 120% !important;
-}
-*/
-
-/*----------------*/
-
-.tm-about-text a { color: #9F6; }
-.tm-link-gray { color: #999999; }
-.tm-link-white { color: white; }
-
-.tm-footer { 
-    color: #999999; 
-    text-align: center;
-}
-
-.tm-container-fluid {
-    width: 100%;
-    max-width: 970px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 60px 15px;
-}
-
-.tm-site-header { height: 170px; }
-
-.tm-flex-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.tm-p-50 { padding: 50px; }
-.tm-mb-50 { margin-bottom: 30px; }
-.tm-bgcolor-1 { background-color: #458A45; }
-.tm-bgcolor-2 { background-color: #A63F3C; }
-.tm-bgcolor-3 { background-color: #438DA3; }
-.tm-border-rounded { border-radius: 15px; }
