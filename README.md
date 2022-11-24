@@ -39,7 +39,9 @@
 
 ## About The Project
 
-![Product Name Screen Shot][product-screenshot]]
+<div align="center">
+  <img src="https://media.discordapp.net/attachments/1038123706830049335/1039003961308483624/image.png?width=1257&height=632" width="80%">
+</div>
 
 Philoi is greek for "friend" :)
 
@@ -98,5 +100,3 @@ Mushtaq Miah: [GitHub](https://github.com/mhmh4)
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-[product-screenshot]: https://media.discordapp.net/attachments/1038123706830049335/1039003961308483624/image.png?width=1257&height=632
