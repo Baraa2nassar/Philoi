@@ -41,8 +41,7 @@ if (isset($game_code)) {
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
-<body class="hero">
-    <!-- <div class = ""> -->
+<body class="hero bg-dark">
     <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 90px">
         <h1 class="text-center" style="color: DarkTurquoise    ;">Welcome to Philoi</h1>
         <h6 class="text-center mx-1" style="color: lightgray;">A game to see how well friends know each other</h6>

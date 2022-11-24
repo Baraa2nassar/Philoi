@@ -15,7 +15,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="p-3 mb-2 text-white" style="background-color: #16202c;">
+<body class="bg-dark p-3 mb-2 text-white">
     <div class="d-flex flex-column mx-auto" style="width: 600px; margin-top: 40px">
 
         <section class="my-2 p-2 text-center" style="background-color: #458A45; border-radius: 12px;">
