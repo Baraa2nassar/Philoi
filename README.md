@@ -40,7 +40,7 @@
 ## About The Project
 
 <div align="center">
-  <img src="https://cdn.discordapp.com/attachments/971958892156317777/1045525778374332507/ss.png">
+  <img src="https://cdn.discordapp.com/attachments/1045702617742979157/1045702765814493254/philoi.png">
 </div>
 
 Philoi is Greek for "friend" :)
