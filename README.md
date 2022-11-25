@@ -40,10 +40,10 @@
 ## About The Project
 
 <div align="center">
-  <img src="https://media.discordapp.net/attachments/1038123706830049335/1039003961308483624/image.png?width=1257&height=632" width="80%">
+  <img src="https://cdn.discordapp.com/attachments/971958892156317777/1045525778374332507/ss.png">
 </div>
 
-Philoi is greek for "friend" :)
+Philoi is Greek for "friend" :)
 
 This project is developed by Baraa Nassar and Mushtaq Miah.
 
