@@ -8,12 +8,10 @@
     <title>Rules - Philoi</title>
 
     <!-- Favorite icon -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-dark p-3 mb-2 text-white">
     <div class="d-flex flex-column mx-auto" style="width: 600px; margin-top: 40px">

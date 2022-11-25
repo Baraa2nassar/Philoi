@@ -1,7 +1,7 @@
 # [Philoi](http://philoi.tech)
 
 <div align="center">
-  <img src="img/favicon.ico" alt="Philoi logo" width="100">
+  <img src="static/images/favicon.ico" alt="Philoi logo" width="100">
   <br>
   <img src="https://img.shields.io/github/forks/baraa2nassar/Philoi?style=for-the-badge">
   &nbsp;

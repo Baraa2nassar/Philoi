@@ -34,12 +34,10 @@ if (isset($game_code)) {
     <title>Philoi</title>
 
     <!-- Favorite icon -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <body class="hero bg-dark">
     <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 90px">
