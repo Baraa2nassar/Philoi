@@ -18,17 +18,17 @@
 
         <section class="my-2 p-2 px-3" style="background-color: #14181d; border-radius: 12px;">
             <h1 class="mt-2 fs-3" style="color: #458A45">What is Philoi? 🔎</h1>
-            <p class="text-muted">Philoi is a quiz game designed to test how well friends know each other.</p>
+            <p class="text-light ">Philoi is a quiz game designed to test how well friends know each other.</p>
         </section>
 
         <section class="my-2 p-2 px-3" style="background-color: #14181d; border-radius: 12px;">
             <h1 class="mt-2 fs-3" style="color: #A63F3C">Organizer 🧠</h1>
-            <p class="text-muted">One person will serve as the organizer. They will create the questions for a set of players, host the game, and input the answer each player gives.</p>
+            <p class="text-light ">One person will serve as the organizer. They will create the questions for a set of players, host the game, and input the answer each player gives.</p>
         </section>
 
         <section class="my-2 p-2 px-3" style="background-color: #14181d; border-radius: 12px;">
             <h1 class="mt-2 fs-3" style="color: #438DA3">Players 🕹️</h1>
-            <p class="text-muted">Players can see the game by the organizer sharing their screen with them or the players can be together in a physical location.</shadow>
+            <p class="text-light ">Players can see the game by the organizer sharing their screen with them or the players can be together in a physical location.</shadow>
         </section>
 
         <div class="col text-center">
