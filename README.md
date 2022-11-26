@@ -61,9 +61,10 @@ Why?
 
 - [x] Create a README
 - [x] Host the site at philoi.tech
-- [ ] Fix the rules page
+- [x] Use git command linked to cloud
+- [x] Fix the rules page
+- [ ] add a demo video in the rules page
 - [ ] Enable users to put password of their game sessions
-- [ ] Use git command linked to cloud
 - [ ] Enable a way where people can put in questions remotely (sockets)
 - [ ] Create a short video demoing and link it here
 
