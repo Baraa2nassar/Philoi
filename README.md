@@ -1,7 +1,7 @@
 # [Philoi](http://philoi.tech)
 
 <div align="center">
-  <img src="img/favicon.ico" alt="Philoi logo" width="100">
+  <img src="static/images/favicon.ico" alt="Philoi logo" width="100">
   <br>
   <img src="https://img.shields.io/github/forks/baraa2nassar/Philoi?style=for-the-badge">
   &nbsp;
@@ -40,10 +40,10 @@
 ## About The Project
 
 <div align="center">
-  <img src="https://media.discordapp.net/attachments/1038123706830049335/1039003961308483624/image.png?width=1257&height=632" width="80%">
+  <img src="https://cdn.discordapp.com/attachments/1045702617742979157/1045702765814493254/philoi.png">
 </div>
 
-Philoi is greek for "friend" :)
+Philoi is Greek for "friend" :)
 
 This project is developed by Baraa Nassar and Mushtaq Miah.
 
