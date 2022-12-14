@@ -3,15 +3,6 @@
 <div align="center">
   <img src="static/images/favicon.ico" alt="Philoi logo" width="100">
   <br>
-  <img src="https://img.shields.io/github/forks/baraa2nassar/Philoi?style=for-the-badge">
-  &nbsp;
-  <img src="https://img.shields.io/github/stars/baraa2nassar/Philoi?color=yellow&style=for-the-badge">
-  &nbsp;
-  <img src="https://img.shields.io/github/issues/baraa2nassar/Philoi?color=orange&style=for-the-badge">
-</div>
-
-<div align="center">
-  <br>
   <p>
     A full stack web application that lets you create quizzes to test which facts applies to your friends.
     <br>
