@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 <body class="bg-dark">
-    <div class="d-flex flex-column mx-auto mt-5" style="width: 600px;">
+    <div class="d-flex flex-column mx-auto mt-5" style="width: 37.5rem;">
 
         <section class="my-2 p-2 px-3" style="background-color: #286279; border-radius: 12px;">
             <h1 class="mt-2 fs-3 text-white">What is Philoi? 🔎</h1>
