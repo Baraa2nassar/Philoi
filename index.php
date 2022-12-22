@@ -43,14 +43,14 @@ if (isset($game_code)) {
     <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 90px">
         <h1 class="text-center" style="color: DarkTurquoise    ;">Welcome to Philoi</h1>
         <h6 class="text-center mx-1" style="color: lightgray;">A game to see how well friends know each other</h6>
-        <hr>
+        <hr class="text-white">
 
         <form class="row my-2 mb-3" method="post">
             <div class="col-8">
                 <input class="form-control bg-light" type="text" name="game_code" placeholder="Enter your game code" required>
             </div>
             <div class="col-4 text-center">
-                <button class="btn btn-secondary" style="width: 100%">Enter</button>
+                <button class="btn text-white" style="width: 100%; background: #588157 !important">Enter</button>
             </div>
         </form>
 
@@ -62,13 +62,15 @@ if (isset($game_code)) {
             <?php unset($_SESSION['INVALID_GAME_CODE']); ?>
         <?php endif; ?>
 
-        <button class="btn btn-primary my-1" style="height: 57px" onclick="location.href = 'create1.php'">Make a new game</button>
-        <button class="btn btn-success mt-2" style="height: 57px" onclick="location.href = 'rules.php'">View rules</button>
-    </div>
-<!-- </div> -->
-    <!-- Bootstrap JS with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
 
-    </script>
+        <a href="create1.php" class="my-1" tabindex="-1">
+            <button class="btn btn-primary w-100" style="height: 57px;">Make a new game</button>
+        </a>
+        <a href="rules.php" class="mt-2" tabindex="-1">
+            <button class="btn btn-success w-100" style="height: 57px;">View rules</button>
+        </a>
+    </div>
+    <!-- Bootstrap JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
