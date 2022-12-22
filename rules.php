@@ -28,7 +28,7 @@
 
         <section class="my-2 p-2 px-3" style="background-color: #286279; border-radius: 12px;">
             <h1 class="mt-2 fs-3 text-white">Players 🕹️</h1>
-            <p class="text-light ">Players can see the game by the organizer sharing their screen with them or the players can be together in a physical location.</shadow>
+            <p class="text-light ">Players can see the game by the organizer sharing their screen with them or the players can be together in a physical location.</p>
         </section>
 
         <div class="col text-center">
