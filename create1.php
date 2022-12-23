@@ -1,5 +1,5 @@
 <?php
-
+// this is a comment test
 session_start();
 
 if (isset($_POST['submit'])) {
