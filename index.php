@@ -38,25 +38,7 @@ if (isset($game_code)) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <style>
-        .custom-btn-primary {
-            background-color: #1D70A2;
-            border-color: #1D70A2;
-            height: 57px;
-        }
-
-        .custom-btn-primary:hover,
-        .custom-btn-primary:focus {
-            background-color: #185f89 !important;
-            border-color: #185f89 !important;
-        }
-
-        .custom-btn-success:hover,
-        .custom-btn-success:focus {
-            background-color: #4a6d49 !important;
-            border-color: #4a6d49 !important;
-        }
-    </style>
+    <link rel="stylesheet" href="static/css/other.css">
 </head>
 <body class="hero bg-dark">
     <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 90px">
@@ -83,10 +65,10 @@ if (isset($game_code)) {
 
 
         <a href="create1.php" class="my-1" tabindex="-1">
-            <button class="btn custom-btn-primary text-white w-100">Make a new game</button>
+            <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">Make a new game</button>
         </a>
         <a href="rules.php" class="mt-2" tabindex="-1">
-            <button class="btn custom-btn-primary text-white w-100">View rules</button>
+            <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">View rules</button>
         </a>
     </div>
     <!-- Bootstrap JS with Popper -->
