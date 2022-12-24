@@ -71,6 +71,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/other.css">
     <style>
         .player-btn {
             opacity: 0.4 !important;
@@ -92,7 +93,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
 </head>
 <body class="bg-dark">
     <div class="d-flex flex-column mx-auto" style="width: 650px; margin-top: 3%">
-        <h1 class="text-center" style="color: darkturquoise">Create a New Game</h1>
+        <h1 class="text-center" style="color: darkturquoise">Create a New Quiz</h1>
         <hr>
         <form method="post">
             <h5 class="mb-2 text-center text-white" style="color: #000;">Click on a name to enter their questions</h5>
@@ -133,8 +134,8 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
                 </div>
             </div>
             <div class="d-flex text-center mt-3 " style="margin: 0px 90px;">
-                <button type="button" class="mx-3 btn btn-secondary mt-1" style="width: 225px" onclick="location.href = 'create1.php'">Back</button>
-                <button type="submit" class="mx-3 btn btn-primary mt-1" name="create" style="width: 225px">Create</button>
+                <button type="button" class="mx-3 btn custom-btn-secondary text-white mt-1" style="width: 225px" onclick="location.href = 'create1.php'">Back</button>
+                <button type="submit" class="mx-3 btn custom-btn-primary text-white mt-1" name="create" style="width: 225px">Create</button>
             </div>
         </form>
     </div>

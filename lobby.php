@@ -61,6 +61,7 @@ $_SESSION['scores'] = $scores;
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/other.css">
 </head>
 <body class="p-3 mb-2 bg-dark text-white">
     <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 30px">
@@ -72,13 +73,13 @@ $_SESSION['scores'] = $scores;
         <div class="d-flex">
             <div class="flex-item mx-2" style="width: 220px">
                 <ul class="list-group text-center">
-                    <li class="list-group-item fw-bold text-white" style="background-color: darkolivegreen !important">Game code</li>
+                    <li class="list-group-item fw-bold text-white" style="background-color: #286279">Game code</li>
                     <li class="list-group-item list-group-item-light"><?= $game_code ?></li>
                 </ul>
             </div>
             <div class="flex-item mx-2" style="width: 220px">
                 <ul class="list-group text-center">
-                    <li class="list-group-item fw-bold text-white" style="background-color: darkolivegreen !important"># of questions</li>
+                    <li class="list-group-item fw-bold text-white" style="background-color: #286279"># of questions</li>
                     <li class="list-group-item list-group-item-light"><?= $num_questions ?></li>
                 </ul>
             </div>
@@ -87,7 +88,7 @@ $_SESSION['scores'] = $scores;
         <div class="d-flex">
             <div class="flex-grow-1 text-center mx-2">
                 <ul class="list-group mt-3">
-                    <li class="list-group-item fw-bold text-white" style="background-color: cornflowerblue">Players</li>
+                    <li class="list-group-item fw-bold text-white" style="background-color: #286279">Players</li>
                     <li class="list-group-item list-group-item-light"><?= join(", ", $choices) ?></li>
                 </ul>
             </div>
@@ -101,8 +102,8 @@ $_SESSION['scores'] = $scores;
 
         <form method="post">
             <div class="mt-4 text-center" style="font-size: 0;">
-                <button class="mx-2 btn btn-secondary mt-2" type="button" style="width: 150px" onclick="location.href = 'index.php'">Exit</button>
-                <button class="mx-2 btn btn-success mt-2" name="start" style="width: 150px">Start</button>
+                <button class="mx-2 btn custom-btn-secondary text-white mt-2" type="button" style="width: 150px" onclick="location.href = 'index.php'">Exit</button>
+                <button class="mx-2 btn custom-btn-success mt-2" name="start" style="width: 150px">Start</button>
             </div>
         </form>
     </div>

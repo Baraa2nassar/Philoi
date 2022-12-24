@@ -44,10 +44,16 @@ if (isset($_POST['submit'])) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/other.css">
+    <style>
+        .form-control::placeholder {
+            opacity: 0.5;
+        }
+    </style>
 </head>
 <body class="bg-dark">
     <div class="d-flex flex-column mx-auto text-white" style="width: 420px; margin-top: 3%">
-        <h1 class="text-center" style="color: darkturquoise">Create a New Game</h1>
+        <h1 class="text-center" style="color: darkturquoise">Create a New Quiz</h1>
         <hr>
 
         <form method="post">
@@ -79,9 +85,9 @@ if (isset($_POST['submit'])) {
 
                 <div class="d-flex mt-4">
                     <a href="index.php" tabindex="-1">
-                        <button class="me-2 btn btn-secondary" type="button" style="width: 200px;">Back</button>
+                        <button class="me-2 btn custom-btn-secondary" type="button" style="width: 200px; background: #5D737E">Back</button>
                     </a>
-                    <button class="ms-2 btn btn-primary" name="submit" style="width: 200px">Continue</button>
+                    <button class="ms-2 btn custom-btn-primary" name="submit" style="width: 200px">Continue</button>
                 </div>
             </div>
         </form>

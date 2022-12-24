@@ -12,6 +12,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/other.css">
 </head>
 <body class="bg-dark">
     <div class="d-flex flex-column mx-auto mt-5" style="width: 37.5rem;">
@@ -32,7 +33,7 @@
         </section>
 
         <div class="col text-center">
-            <button class="mx-auto btn btn-secondary mt-3" style="width: 200px" onclick="location.href = 'index.php'">Back</button>
+            <button class="mx-auto btn btn-secondary custom-btn-secondary mt-3" style="width: 200px" onclick="location.href = 'index.php'">Back</button>
         </div>
     </div>
 

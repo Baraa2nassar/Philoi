@@ -1,0 +1,38 @@
+.custom-btn-primary {
+  color: #fff;
+  background-color: #1D70A2 !important;
+  border-color: #1D70A2 !important;
+}
+
+.custom-btn-primary:hover,
+.custom-btn-primary:focus {
+  color: #fff;
+  background-color: #185f89 !important;
+  border-color: #185f89 !important;
+}
+
+.custom-btn-secondary {
+  color: #fff;
+  background-color: #5D737E !important;
+  border-color: #5D737E !important;
+}
+
+.custom-btn-secondary:hover,
+.custom-btn-secondary:focus {
+  color: #fff;
+  background-color: #4f616b !important;
+  border-color: #4f616b !important;
+}
+
+.custom-btn-success {
+  color: #fff;
+  background-color: #588157 !important;
+  border-color: #588157 !important;
+}
+
+.custom-btn-success:hover,
+.custom-btn-success:focus {
+  color: #fff;
+  background-color: #4a6d49 !important;
+  border-color: #4a6d49 !important;
+}

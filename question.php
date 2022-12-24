@@ -47,7 +47,7 @@ if (isset($_POST['next'])) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="static/css/other.css">
     <style>
         .player-btn {
             cursor: unset;
@@ -102,7 +102,7 @@ if (isset($_POST['next'])) {
                 <?php endforeach; ?>
             </div>
             <div class="text-center mt-4">
-                <button class="btn btn-success px-5" name="next">Next</button>
+                <button class="btn custom-btn-success px-5" name="next">Next</button>
             </div>
         </form>
     </div>

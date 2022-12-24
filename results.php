@@ -47,6 +47,7 @@ session_destroy();
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/other.css">
 </head>
 <body class="bg-dark">
     <div class="d-flex flex-column mx-auto text-white" style="width: 350px; margin-top: 80px">
@@ -77,7 +78,7 @@ session_destroy();
         </div>
 
         <div class="text-center">
-            <button class="mx-2 btn btn-secondary mt-4" type="button" style="width: 150px" onclick="location.href = 'index.php'">Exit</button>
+            <button class="mx-2 btn custom-btn-secondary mt-4" type="button" style="width: 150px" onclick="location.href = 'index.php'">Exit</button>
         </div>
     </div>
 

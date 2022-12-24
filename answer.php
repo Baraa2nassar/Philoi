@@ -50,14 +50,9 @@ if (isset($next)) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/other.css">
 
     <style>
-        .wrapper {
-    height: 200px;
-    width: 200px;
-    display: flex;
-    align-items: left-end;
-    }
         .player-btn {
             /* opacity: 0.5 !important; */
             cursor: unset;
@@ -116,14 +111,10 @@ if (isset($next)) {
             </div>
 
             <div class="text-center mt-4">
-                <button class="btn btn-success px-5" name="next">Next</button>
+                <button class="btn custom-btn-success px-5" name="next">Next</button>
             </div>
         </form>
     </div>
-
-    <!-- <div class="wrapper">
-        <img src="https://freepngimg.com/thumb/youtube/77816-balloon-youtube-up-monsters,-inc.-pixar.png"/>
-    </div> -->
 
     <!-- Bootstrap JS with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
