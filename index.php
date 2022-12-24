@@ -38,10 +38,29 @@ if (isset($game_code)) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <style>
+        .custom-btn-primary {
+            background-color: #1D70A2;
+            border-color: #1D70A2;
+            height: 57px;
+        }
+
+        .custom-btn-primary:hover,
+        .custom-btn-primary:focus {
+            background-color: #185f89 !important;
+            border-color: #185f89 !important;
+        }
+
+        .custom-btn-success:hover,
+        .custom-btn-success:focus {
+            background-color: #4a6d49 !important;
+            border-color: #4a6d49 !important;
+        }
+    </style>
 </head>
 <body class="hero bg-dark">
     <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 90px">
-        <h1 class="text-center" style="color: DarkTurquoise    ;">Welcome to Philoi</h1>
+        <h1 class="text-center" style="color: lightblue;">Welcome to Philoi</h1>
         <h6 class="text-center mx-1" style="color: lightgray;">A game to see how well friends know each other</h6>
         <hr class="text-white">
 
@@ -50,7 +69,7 @@ if (isset($game_code)) {
                 <input class="form-control bg-light" type="text" name="game_code" placeholder="Enter your game code" required>
             </div>
             <div class="col-4 text-center">
-                <button class="btn text-white" style="width: 100%; background: #588157 !important">Enter</button>
+                <button class="btn custom-btn-success text-white w-100" style="background: #588157">Enter</button>
             </div>
         </form>
 
@@ -64,10 +83,10 @@ if (isset($game_code)) {
 
 
         <a href="create1.php" class="my-1" tabindex="-1">
-            <button class="btn btn-primary w-100" style="height: 57px;">Make a new game</button>
+            <button class="btn custom-btn-primary text-white w-100">Make a new game</button>
         </a>
         <a href="rules.php" class="mt-2" tabindex="-1">
-            <button class="btn btn-success w-100" style="height: 57px;">View rules</button>
+            <button class="btn custom-btn-primary text-white w-100">View rules</button>
         </a>
     </div>
     <!-- Bootstrap JS with Popper -->
