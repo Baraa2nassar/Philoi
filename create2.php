@@ -83,55 +83,58 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
             opacity: 0.6 !important;
         }
-        .player-btn-0 { background-color: #565656 !important; border-color: #5a5b5c !important; color: white !important; width: 100px !important; }
-        .player-btn-1 { background-color: #d14430 !important; border-color: #d92007 !important; color: white !important; width: 100px !important; }
-        .player-btn-2 { background-color: #28a745 !important; border-color: #28a745 !important; color: white !important; width: 100px !important; }
-        .player-btn-3 { background-color: #885cb5 !important; border-color: #9b42f5 !important; color: white !important; width: 100px !important; }
-        .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
+        .player-btn-0 { background-color: #565656 !important; border-color: #5a5b5c !important; color: white !important; }
+        .player-btn-1 { background-color: #d14430 !important; border-color: #d92007 !important; color: white !important; }
+        .player-btn-2 { background-color: #28a745 !important; border-color: #28a745 !important; color: white !important; }
+        .player-btn-3 { background-color: #885cb5 !important; border-color: #9b42f5 !important; color: white !important; }
+        .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; }
     </style>
 </head>
 <body class="bg-dark">
-    <div class="d-flex flex-column mx-auto" style="width: 600px; margin-top: 55px">
+    <div class="d-flex flex-column mx-auto" style="width: 600px; margin-top: 3%">
         <h1 class="text-center" style="color: darkturquoise">Create a New Game</h1>
         <hr>
-
         <form method="post">
-            <div class="text-center">
-                <h5 class="mb-4" style="color: lightblue;">Click on a name to enter their questions</h5>
-
-                <div class="player-btns">
-                    <?php for ($i = 0; $i < $num_players; $i++): ?>
-                        <!-- Player buttons have a custom class named `player-btn` -->
-                        <button class="btn mx-2 player-btn player-btn-<?=$i?>" type="button" value="<?= $i ?>"><?= $players[$i] ?></button>
-                    <?php endfor; ?>
-                </div>
-
-                <div class="mt-4">
-                    <?php for ($i = 0; $i < $num_players; $i++): ?>
-                        <?php for ($j = 1; $j <= $num_questions; $j++): ?>
-                            <div class="row mx-2">
-                                <?php if ($i > 0): ?>
-                                    <input class="form-control my-1 bg-light" name="questions[]" style="display: none" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>
-                                <?php else: ?>
-                                    <input class="form-control my-1 bg-light" name="questions[]" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>
-                                <?php endif; ?>
-                            </div>
+            <h5 class="mb-2 text-center text-white" style="color: #000;">Click on a name to enter their questions</h5>
+            <div class="d-flex p-3 rounded">
+                <!-- Left pane -->
+                <div class="col-4">
+                    <div class="player-btns px-4">
+                        <?php for ($i = 0; $i < $num_players; $i++): ?>
+                            <!-- Player buttons have a custom class named `player-btn` -->
+                            <button class="btn player-btn my-1 player-btn-<?=$i?> w-100" type="button" value="<?= $i ?>"><?= $players[$i] ?></button>
                         <?php endfor; ?>
-                    <?php endfor; ?>
-                </div>
-
-                <?php if (isset($_SESSION['INVALID_QUESTION'])): ?>
-                    <div class="alert alert-danger text-center mt-3" style="padding: 10px 20px">
-                        <?= $_SESSION['INVALID_QUESTION'] ?>
                     </div>
-
-                    <?php unset($_SESSION['INVALID_QUESTION']); ?>
-                <?php endif; ?>
-
-                <div class="d-flex text-center mt-3 mb-5" style="margin: 0px 90px;">
-                    <button type="button" class="mx-3 btn btn-secondary mt-1" style="width: 225px" onclick="location.href = 'create1.php'">Back</button>
-                    <button type="submit" class="mx-3 btn btn-primary mt-1" name="create" style="width: 225px">Create</button>
                 </div>
+                <!-- Right pane -->
+                <div class="col-8" style="max-height: 300px !important; overflow-y: scroll !important">
+                    <div class="text-center">
+                        <div class="">
+                            <?php for ($i = 0; $i < $num_players; $i++): ?>
+                                <?php for ($j = 1; $j <= $num_questions; $j++): ?>
+                                    <div class="row mx-2">
+                                        <?php if ($i > 0): ?>
+                                            <input class="form-control my-1 bg-light" name="questions[]" style="display: none" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>
+                                        <?php else: ?>
+                                            <input class="form-control my-1 bg-light" name="questions[]" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endfor; ?>
+                            <?php endfor; ?>
+                        </div>
+                        <?php if (isset($_SESSION['INVALID_QUESTION'])): ?>
+                            <div class="alert alert-danger text-center mt-3" style="padding: 10px 20px">
+                                <?= $_SESSION['INVALID_QUESTION'] ?>
+                            </div>
+
+                            <?php unset($_SESSION['INVALID_QUESTION']); ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex text-center mt-3 mb-5" style="margin: 0px 90px;">
+                <button type="button" class="mx-3 btn btn-secondary mt-1" style="width: 225px" onclick="location.href = 'create1.php'">Back</button>
+                <button type="submit" class="mx-3 btn btn-primary mt-1" name="create" style="width: 225px">Create</button>
             </div>
         </form>
     </div>
