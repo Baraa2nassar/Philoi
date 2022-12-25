@@ -63,12 +63,12 @@ $_SESSION['scores'] = $scores;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/other.css">
 </head>
-<body class="p-3 mb-2 bg-dark text-white">
+<body>
     <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 30px">
         <h1 class="text-center" style="color: lightblue;">Lobby</h1>
-        <hr>
+        <hr class="text-white">
 
-        <h5 class="text-center mb-3" style="color: lightgray;">Game will begin after clicking 'Start'</h5>
+        <h5 class="text-center mb-3 text-white">Game will begin after clicking 'Start'</h5>
 
         <div class="d-flex">
             <div class="flex-item mx-2" style="width: 220px">
@@ -79,7 +79,7 @@ $_SESSION['scores'] = $scores;
             </div>
             <div class="flex-item mx-2" style="width: 220px">
                 <ul class="list-group text-center">
-                    <li class="list-group-item fw-bold text-white" style="background-color: #286279"># of questions</li>
+                    <li class="list-group-item fw-bold text-white" style="background-color: #286279">Question Count</li>
                     <li class="list-group-item list-group-item-light"><?= $num_questions ?></li>
                 </ul>
             </div>

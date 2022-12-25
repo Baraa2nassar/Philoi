@@ -26,14 +26,14 @@ $game_code = $_SESSION['game_code'] ?? null;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/other.css">
 </head>
-<body class="bg-dark">
+<body>
     <div class="d-flex flex-column mx-auto text-white" style="width: 450px; margin-top: 55px">
         <h1 class="text-center" style="color: lightblue">Success</h1>
         <hr>
 
         <form method="post">
             <div class="text-center">
-                <h5 class="mb-4" style="color: lightblue;">Your quiz has been created!</h5>
+                <h5 class="mb-4">Your quiz has been created!</h5>
                 <h4>Game code: <?= $game_code ?></h4>
                 <p>Remember this code as you'll need it to join a lobby.</p>
 

@@ -49,7 +49,7 @@ session_destroy();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/other.css">
 </head>
-<body class="bg-dark">
+<body>
     <div class="d-flex flex-column mx-auto text-white" style="width: 350px; margin-top: 80px">
         <h1 class="text-center" style="color: lightblue;">Results</h1>
         <hr>

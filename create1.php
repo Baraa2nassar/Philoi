@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
         }
     </style>
 </head>
-<body class="bg-dark">
+<body>
     <div class="d-flex flex-column mx-auto text-white" style="width: 420px; margin-top: 3%">
         <h1 class="text-center" style="color: lightblue">Create a New Quiz</h1>
         <hr>
@@ -59,14 +59,14 @@ if (isset($_POST['submit'])) {
         <form method="post">
             <!-- Number of questions -->
             <div class="row mb-3">
-                <label class="text-center col-sm-9 col-form-label">How many questions per player? <span class="text-muted">(10 max)</span></label>
+                <label class="text-center col-sm-9 col-form-label">How many questions per player? <span style="color: #ddd">(10 max)</span></label>
                 <div class="col-sm-3">
                     <input class="form-control" type="number" step="1" name="num_questions" min="1" max="10" required>
                 </div>
             </div>
 
             <div class="mt-3 text-center">
-                <h5 class="text-center mb-1" style="color: lightblue;">Enter the names of your friends <span class="" style="opacity: 70%">(3 min)</span></h5>
+                <h5 class="text-center mb-1" style="color: #efefef;">Enter the names of your friends <span style="color: #ddd">(3 min)</span></h5>
 
                 <!-- Player names -->
                 <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="border-width: 2.5px">

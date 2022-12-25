@@ -71,11 +71,11 @@ if (isset($next)) {
         .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
     </style>
 </head>
-<body class="p-3 mb-2 bg-dark text-white">
-    <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 60px">
+<body>
+    <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 70px">
         <div class="text-center">
-            <h5 class="text-muted">Question <?= $current  ?> of <?= count($qna) ?></h5>
-            <h4 class=""><?= $question ?></h4>
+            <h5 class="text-white">Question <?= $current  ?> of <?= count($qna) ?></h5>
+            <h4 class="text-white"><?= $question ?></h4>
         </div>
 
         <div class="player-btns text-center my-4">
@@ -94,7 +94,7 @@ if (isset($next)) {
                 <?php for ($i = 0; $i < $num_players; $i++): ?>
                     <div class="d-flex row my-3">
                         <div class="col-6 col-form-label">
-                            <span><span class=""><?= $players[$i] ?></span> chose:</sp>
+                            <span class="text-white"><span class=""><?= $players[$i] ?></span> chose:</sp>
                         </div>
                         <div class="col-4">
                             <?php if ($selections[$i] == $answer): ?>

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/other.css">
 </head>
-<body class="bg-dark">
+<body>
     <div class="d-flex flex-column mx-auto mt-5" style="width: 37.5rem;">
 
         <section class="my-2 p-2 px-3" style="background-color: #286279; border-radius: 12px;">

@@ -66,10 +66,10 @@ if (isset($_POST['next'])) {
         .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
     </style>
 </head>
-<body class="p-3 mb-2 bg-dark text-white">
-    <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 60px">
+<body>
+    <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 70px">
         <div class="text-center">
-            <h5 class="text-muted">Question <?= $current + 1 ?> of <?= count($qna) ?></h5>
+            <h5 class="text-white">Question <?= $current + 1 ?> of <?= count($qna) ?></h5>
             <h4 class="text-white"><?= $question ?></h4>
         </div>
 
@@ -85,7 +85,7 @@ if (isset($_POST['next'])) {
                 <?php foreach ($players as $player): ?>
                     <div class="d-flex row my-3">
                         <div class="col-6 col-form-label">
-                            <span><span class=""><?= $player ?></span> chooses:</sp>
+                            <span class="text-white"><span class=""><?= $player ?></span> chooses:</sp>
                         </div>
                         <div class="col-4">
                             <select class="form-select bg-light" name="selections[]" required>
