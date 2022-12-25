@@ -64,7 +64,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Create a new game - Philoi</title>
+    <title>Create a new quiz - Philoi</title>
 
     <!-- Favorite icon -->
     <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
