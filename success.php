@@ -5,6 +5,7 @@ session_start();
 if (!isset($_SESSION['SUCCESS_ACCESS'])) {
     header('Location: index.php');
 }
+unset($_SESSION['SUCCESS_ACCESS']);
 
 $game_code = $_SESSION['game_code'] ?? null;
 
