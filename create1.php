@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body class="bg-dark">
     <div class="d-flex flex-column mx-auto text-white" style="width: 420px; margin-top: 3%">
-        <h1 class="text-center" style="color: darkturquoise">Create a New Quiz</h1>
+        <h1 class="text-center" style="color: lightblue">Create a New Quiz</h1>
         <hr>
 
         <form method="post">

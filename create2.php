@@ -93,8 +93,8 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
 </head>
 <body class="bg-dark">
     <div class="d-flex flex-column mx-auto" style="width: 650px; margin-top: 3%">
-        <h1 class="text-center" style="color: darkturquoise">Create a New Quiz</h1>
-        <hr>
+        <h1 class="text-center" style="color: lightblue">Create a New Quiz</h1>
+        <hr class="text-white">
         <form method="post">
             <h5 class="mb-2 text-center text-white" style="color: #000;">Click on a name to enter their questions</h5>
             <div class="d-flex p-3 rounded " style="background: #ddd">

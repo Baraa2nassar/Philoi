@@ -28,14 +28,14 @@ $game_code = $_SESSION['game_code'] ?? null;
 </head>
 <body class="bg-dark">
     <div class="d-flex flex-column mx-auto text-white" style="width: 450px; margin-top: 55px">
-        <h1 class="text-center" style="color: darkturquoise">Success</h1>
+        <h1 class="text-center" style="color: lightblue">Success</h1>
         <hr>
 
         <form method="post">
             <div class="text-center">
                 <h5 class="mb-4" style="color: lightblue;">Your quiz has been created!</h5>
                 <h4>Game code: <?= $game_code ?></h4>
-                <p class="text-muted">Remember this code as you'll need it to join a lobby.</p>
+                <p>Remember this code as you'll need it to join a lobby.</p>
 
                 <div class="d-flex flex-column text-center mt-4 mb-5" style="margin: 0px 90px;">
                     <button type="button" class="mx-3 btn custom-btn-primary mt-2" name="create" style="width: 225px" onclick="location.href = 'index.php'">Return home</button>

@@ -65,7 +65,7 @@ $_SESSION['scores'] = $scores;
 </head>
 <body class="p-3 mb-2 bg-dark text-white">
     <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 30px">
-        <h1 class="text-center" style="color: DarkTurquoise;">Lobby</h1>
+        <h1 class="text-center" style="color: lightblue;">Lobby</h1>
         <hr>
 
         <h5 class="text-center mb-3" style="color: lightgray;">Game will begin after clicking 'Start'</h5>

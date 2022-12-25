@@ -51,7 +51,7 @@ session_destroy();
 </head>
 <body class="bg-dark">
     <div class="d-flex flex-column mx-auto text-white" style="width: 350px; margin-top: 80px">
-        <h1 class="text-center" style="color: darkturquoise;">Results</h1>
+        <h1 class="text-center" style="color: lightblue;">Results</h1>
         <hr>
 
         <div class="container text-center" style="height: 250px">
