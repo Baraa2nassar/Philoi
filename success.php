@@ -5,7 +5,6 @@ session_start();
 if (!isset($_SESSION['SUCCESS_ACCESS'])) {
     header('Location: index.php');
 }
-unset($_SESSION['SUCCESS_ACCESS']);
 
 $game_code = $_SESSION['game_code'] ?? null;
 
@@ -35,7 +34,7 @@ $game_code = $_SESSION['game_code'] ?? null;
             <div class="text-center">
                 <h5 class="mb-4">Your quiz has been created!</h5>
                 <h4>Game code: <?= $game_code ?></h4>
-                <p>Remember this code as you'll need it to join a lobby.</p>
+                <p style="color: #88A0A8">Remember this code as you'll need it to join a lobby.</p>
 
                 <div class="d-flex flex-column text-center mt-4 mb-5" style="margin: 0px 90px;">
                     <button type="button" class="mx-3 btn custom-btn-primary mt-2" name="create" style="width: 225px" onclick="location.href = 'index.php'">Return home</button>
