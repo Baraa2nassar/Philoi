@@ -48,7 +48,7 @@ if (isset($game_code)) {
 
         <form class="row my-2 mb-3" method="post">
             <div class="col-8">
-                <input class="form-control bg-light" type="text" name="game_code" placeholder="Enter your game code" required>
+                <input class="form-control" type="text" name="game_code" placeholder="Enter your game code" required>
             </div>
             <div class="col-4 text-center">
                 <button class="btn custom-btn-success text-white w-100" style="background: #588157">Enter</button>
@@ -62,7 +62,6 @@ if (isset($game_code)) {
 
             <?php unset($_SESSION['INVALID_GAME_CODE']); ?>
         <?php endif; ?>
-
 
         <a href="create1.php" class="my-1" tabindex="-1">
             <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">Create a new quiz</button>

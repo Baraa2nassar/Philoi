@@ -2,6 +2,17 @@ body {
   background: #1B4353 !important;
 }
 
+input[type=text],
+input[type=number] {
+  background-color: #f7f5f3 !important;
+  border-color: #e7e5e3 !important;
+}
+
+input[type=text]::placeholder,
+input[type=password]::placeholder {
+  color: #9b9a99 !important;
+}
+
 .custom-btn-primary {
   color: #fff;
   background-color: #1D70A2 !important;
