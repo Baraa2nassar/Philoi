@@ -49,17 +49,22 @@ if (isset($_POST['submit'])) {
         .form-control::placeholder {
             opacity: 0.5;
         }
+        @media screen and (max-width: 550px) { .d-flex { width: 24rem !important; } button { width: 170px !important; } }
+        @media screen and (max-width: 500px) { .d-flex { width: 23rem !important; } }
+        @media screen and (max-width: 450px) { .d-flex { width: 21rem !important; } button { width: 145px !important; } }
+        @media screen and (max-width: 400px) { .d-flex { width: 20rem !important; } }
+        @media screen and (max-width: 350px) { .d-flex { width: 19rem !important; } }
     </style>
 </head>
 <body>
-    <div class="d-flex flex-column mx-auto text-white" style="width: 420px; margin-top: 3%">
+    <div class="d-flex flex-column mx-auto text-white" style="width: 26.25rem; margin-top: 3%">
         <h1 class="text-center" style="color: lightblue">Create a New Quiz</h1>
         <hr>
 
         <form method="post">
             <!-- Number of questions -->
             <div class="row mb-3">
-                <label class="text-center col-sm-9 col-form-label">How many questions per player? <span style="color: #ddd">(10 max)</span></label>
+                    <label class="text-center col-sm-9 col-form-label">How many questions per player? <span style="color: #ddd">(10 max)</span></label>
                 <div class="col-sm-3">
                     <input class="form-control" type="number" step="1" name="num_questions" min="1" max="10" required>
                 </div>
@@ -84,10 +89,12 @@ if (isset($_POST['submit'])) {
                 <?php endif; ?>
 
                 <div class="d-flex mt-4">
-                    <a href="index.php" tabindex="-1">
-                        <button class="me-2 btn custom-btn-secondary" type="button" style="width: 200px; background: #5D737E">Back</button>
+                    <a href="index.php" tabindex="-1" class="mx-auto">
+                        <button class="btn custom-btn-secondary" type="button" style="width: 200px;">Back</button>
                     </a>
-                    <button class="ms-2 btn custom-btn-primary" name="submit" style="width: 200px">Continue</button>
+                    <a class="mx-auto">
+                        <button class="btn custom-btn-primary" name="submit" style="width: 200px;">Continue</button>
+                    </a>
                 </div>
             </div>
         </form>
