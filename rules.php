@@ -13,6 +13,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/other.css">
+
+    <style>
+        @media screen and (max-width: 550px) { .d-flex { width: 28rem !important; } }
+        @media screen and (max-width: 500px) { .d-flex { width: 26rem !important; } }
+        @media screen and (max-width: 450px) { .d-flex { width: 23rem !important; } }
+        @media screen and (max-width: 400px) { .d-flex { width: 20rem !important; } }
+        @media screen and (max-width: 350px) { .d-flex { width: 18rem !important; } }
+    </style>
 </head>
 <body>
     <div class="d-flex flex-column mx-auto mt-5" style="width: 30rem;">
