@@ -74,21 +74,14 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
     <link rel="stylesheet" href="static/css/other.css">
     <style>
         .player-btn {
-            opacity: 0.4 !important;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+            opacity: 0.8 !important;
+            width: 125px !important;
         }
-        .player-btn:active {
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
-        }
+        .player-btn:active,
         .player-btn:hover {
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
-            opacity: 0.6 !important;
+            background-color: #005E7C55;
+            border-color: #005E7C55 !important;
         }
-        .player-btn-0 { background-color: #565656 !important; border-color: #5a5b5c !important; color: white !important; width: 125px; }
-        .player-btn-1 { background-color: #d14430 !important; border-color: #d92007 !important; color: white !important; width: 125px; }
-        .player-btn-2 { background-color: #28a745 !important; border-color: #28a745 !important; color: white !important; width: 125px; }
-        .player-btn-3 { background-color: #885cb5 !important; border-color: #9b42f5 !important; color: white !important; width: 125px; }
-        .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 125px; }
     </style>
 </head>
 <body>
@@ -97,13 +90,13 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
         <hr class="text-white">
         <form method="post">
             <h5 class="mb-3 text-center text-white" style="color: #000;">Click on a name to enter their questions</h5>
-            <div class="d-flex p-3 rounded " style="background: #ddd">
+            <div class="d-flex p-3 rounded" style="background: #ddd">
                 <!-- Left pane -->
                 <div class="col-3">
                     <div class="player-btns">
                         <?php for ($i = 0; $i < $num_players; $i++): ?>
                             <!-- Player buttons have a custom class named `player-btn` -->
-                            <button class="btn player-btn my-1 player-btn-<?=$i?>" type="button" value="<?= $i ?>"><?= $players[$i] ?></button>
+                            <button class="btn btn-light player-btn my-1" type="button" value="<?= $i ?>"><?= $players[$i] ?></button>
                         <?php endfor; ?>
                     </div>
                 </div>
@@ -147,7 +140,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
         let numPlayers = playerButtons.length;
         let numQuestions = questions.length;
 
-        const s = 'opacity: 1.0 !important; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;';
+        const s = 'background: #005E7C; color: white; border-color: #005E7C !important';
         playerButtons[0].setAttribute('style', s);
 
         for (let playerButton of playerButtons) {
