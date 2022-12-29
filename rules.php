@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="static/css/other.css">
 </head>
 <body>
-    <div class="d-flex flex-column mx-auto mt-5" style="width: 37.5rem;">
+    <div class="d-flex flex-column mx-auto mt-5" style="width: 30rem;">
 
         <section class="my-2 p-2 px-3" style="background-color: #286279; border-radius: 12px;">
             <h1 class="mt-2 fs-3 text-white">What is Philoi? 🔎</h1>
