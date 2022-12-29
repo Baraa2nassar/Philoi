@@ -51,7 +51,11 @@ if (isset($_POST['submit'])) {
         }
         @media screen and (max-width: 550px) { .d-flex { width: 24rem !important; } button { width: 170px !important; } }
         @media screen and (max-width: 500px) { .d-flex { width: 23rem !important; } }
-        @media screen and (max-width: 450px) { .d-flex { width: 21rem !important; } button { width: 145px !important; } }
+        @media screen and (max-width: 450px) {
+            .d-flex { width: 21rem !important; }
+            button { width: 145px !important; }
+            h5 { font-size: 17px !important; }
+        }
         @media screen and (max-width: 400px) { .d-flex { width: 20rem !important; } }
         @media screen and (max-width: 350px) { .d-flex { width: 19rem !important; } }
     </style>
