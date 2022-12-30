@@ -90,7 +90,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
         <hr class="text-white">
         <form method="post">
             <h5 class="mb-3 text-center text-white" style="color: #000;">Click on a name to enter their questions</h5>
-            <div class="d-flex p-3 rounded" style="background: #ddd">
+            <div class="d-flex p-3 rounded" style="background: #ddd; height: 332px !important;">
                 <!-- Left pane -->
                 <div class="col-3">
                     <div class="player-btns">
