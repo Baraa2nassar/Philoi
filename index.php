@@ -41,6 +41,7 @@ if (isset($game_code)) {
     <link rel="stylesheet" href="static/css/other.css">
 </head>
 <body>
+    <?php include 'includes/squares.php'; ?>
     <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 90px">
         <h1 class="text-center" style="color: lightblue;">Welcome to Philoi</h1>
         <h6 class="text-center mx-1" style="color: lightgray;">A game to see how well friends know each other</h6>
