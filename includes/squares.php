@@ -10,8 +10,7 @@
 }
 
 @media screen and (max-width: 1000px) { .square { opacity: 0.5; } }
-@media screen and (max-width:  800px) { .square { opacity: 0.35; } }
-@media screen and (max-width:  600px) { .square { opacity: 0.2; } }
+@media screen and (max-width:  700px) { .square { opacity: 0.3; } }
 </style>
 <div>
     <!-- Left side -->
