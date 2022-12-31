@@ -1,10 +1,10 @@
 # [Philoi](http://philoi.tech)
 
 <div align="center">
-  <img src="static/images/favicon.ico" alt="Philoi logo" width="100">
+  <img src="https://cdn.discordapp.com/attachments/971958892156317777/1058768151845806121/background.png" alt="Philoi logo">
   <br>
   <p>
-    A full stack web application that lets you create quizzes to test which facts applies to your friends.
+    Philoi is a full stack web application that lets you create quizzes to test which facts applies to your friends. This project was first developed by Baraa Nassar and Mushtaq Miah.
     <br>
     <p style="font-size: 19px;">
       <a href="http://philoi.tech/">Visit the site</a>
@@ -21,7 +21,7 @@
 
 ## Table of Contents
 
-- [About The Project](#about-the-project) <!-- - [Getting Started](#getting-started) -->
+- [About The Project](#about-the-project)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [Contact](#contact)
@@ -30,39 +30,27 @@
 
 ## About The Project
 
-<div align="center">
-  <img src="https://cdn.discordapp.com/attachments/1045702617742979157/1045702765814493254/philoi.png">
-</div>
-
 Philoi is Greek for "friend" :)
 
-This project is developed by Baraa Nassar and Mushtaq Miah.
+Usually, when groups, students, or even friends get to know each other they begin with some facts about themselves. Some teachers would play a game of (two truths/one lie) with their students, so they can start building a strong bond with the students.
 
-Usually, when groups, students, or even friends get to know each other they begin with some facts about themselves. Some teachers would play a game of (two truths/one lie) with their students, so they can start building a strong bond with the students. This app aims to tackle this aspect of social life using a game hosted by an instructor (creator) and played by group
+This app aims to tackle this aspect of social life using a game led by a host (who creates questions) and played by a group of people.
 
 Why?
 * New way introduction system
 * Get conversations going in a group
 
 
-<!-- ## Getting Started -->
-
-
 ## Roadmap
-
-- [x] Create a README
-- [x] Host the site at philoi.tech
-- [x] Use git command linked to cloud
-- [x] Fix the rules page
-- [ ] add a demo video in the rules page
-- [ ] Enable users to put password of their game sessions
-- [ ] Enable a way where people can put in questions remotely (sockets)
-- [ ] Create a short video demoing and link it here
-
-*Ideas for the online version*:
-  - [ ] When playing a round = Quick game(ppl answer) **vs** Discussion game(host puts the answers)
-  - [ ] When Creating a round =  Ppl's choice (particpants put in facts) **vs** Host's choice (Host puts the participants and the questions)
-  - [ ] Voting system to whether the question is good or bad (if the majority puts in bad the person loses a point).
+- [ ] Use versioning.
+- [ ] Create a video demoing the app and add it to the site.
+- [ ] Change game codes to a six-digit number.
+- [ ] When a game is played, make it so that it can be done in two ways:
+  - A quick game, where the players answer themselves.
+  - A discussion game, where the host puts in the answers of each player (which is the current method).
+- [ ] When creating a quiz, implement a way where players can make questions instead of the host.
+- [ ] Create a voting system to determine whether a question is good or bad.
+  - If the majority of players votes bad for that question, the player who made that question loses a point.
 
 Check out [open issues](https://github.com/Baraa2nassar/Philoi/issues) to see any proposed features AKA issues.
 
