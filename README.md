@@ -44,7 +44,6 @@ Why?
 ## Roadmap
 - [ ] Use versioning.
 - [ ] Create a video demoing the app and add it to the site.
-- [ ] Change game codes to a six-digit number.
 - [ ] When a game is played, make it so that it can be done in two ways:
   - A quick game, where the players answer themselves.
   - A discussion game, where the host puts in the answers of each player (which is the current method).
