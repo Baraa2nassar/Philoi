@@ -7,7 +7,7 @@ if (!isset($_SESSION['LOBBY_ACCESS'])) {
 }
 unset($_SESSION['LOBBY_ACCESS']);
 
-$game_code = $_SESSION['game_code'] ?? null;
+$quiz_id = $_SESSION['quiz_id'] ?? null;
 
 if (isset($_POST['start'])) {
     $_SESSION['QUESTION_ACCESS'] = true;
@@ -20,9 +20,11 @@ $pdo = get_database_connection();
 
 $query = "SELECT * FROM quizzes WHERE quiz_id = ?";
 $statement = $pdo->prepare($query);
-$statement->execute(array($game_code));
+$statement->execute(array($quiz_id));
+
 $row = $statement->fetch();
 
+$game_pin = $row['game_pin'];
 $questions = json_decode($row['questions']);
 $choices = json_decode($row['choices']);
 $answers = json_decode($row['answers']);
@@ -73,8 +75,8 @@ $_SESSION['scores'] = $scores;
         <div class="d-flex">
             <div class="flex-item mx-2" style="width: 220px">
                 <ul class="list-group text-center">
-                    <li class="list-group-item fw-bold text-white" style="background-color: #286279">Game code</li>
-                    <li class="list-group-item list-group-item-light"><?= $game_code ?></li>
+                    <li class="list-group-item fw-bold text-white" style="background-color: #286279">Game PIN</li>
+                    <li class="list-group-item list-group-item-light"><?= $game_pin ?></li>
                 </ul>
             </div>
             <div class="flex-item mx-2" style="width: 220px">
