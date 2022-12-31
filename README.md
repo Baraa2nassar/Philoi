@@ -1,7 +1,9 @@
 # [Philoi](http://philoi.tech)
 
 <div align="center">
-  <img src="https://cdn.discordapp.com/attachments/971958892156317777/1058768151845806121/background.png" alt="Philoi logo" style="margin-bottom: 10px;">
+  <img src="https://cdn.discordapp.com/attachments/971958892156317777/1058768151845806121/background.png" alt="Philoi logo">
+  <br>
+  <br>
   <p>
     Philoi is a full stack web application that lets you create quizzes to test which facts applies to your friends. This project was first developed by Baraa Nassar and Mushtaq Miah.
     <br>
@@ -20,14 +22,14 @@
 
 ## Table of Contents
 
-- [About The Project](#about-the-project)
+- [About](#about)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [Contact](#contact)
 - [License](#license)
 
 
-## About The Project
+## About
 
 Philoi is Greek for "friend" :)
 
