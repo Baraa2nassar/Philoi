@@ -39,6 +39,7 @@ if (isset($game_code)) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/other.css">
+    <style> footer div a:hover { text-decoration: underline !important; } </style>
 </head>
 <body>
     <?php include 'includes/squares.php'; ?>
@@ -70,6 +71,24 @@ if (isset($game_code)) {
         <a href="rules.php" class="mt-2" tabindex="-1">
             <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">View rules</button>
         </a>
+
+        <footer class="d-flex text-center rounded mt-5">
+            <div class="m-auto mt-1">
+                <a class="text-white" href="https://github.com/Baraa2nassar/Philoi/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">View on GitHub</a>
+            </div>
+
+            <div class="my-auto" style="user-select: none !important; color: #fff; opacity: 0.2;">|</div>
+
+            <div class="m-auto mt-1">
+                <a class="text-white" href="mailto:baraa2aziz@gmail.com" target="_blank" style="text-decoration: none;">Contact Us</a>
+            </div>
+
+            <div class="my-auto" style="user-select: none !important; color: #fff; opacity: 0.2;">|</div>
+
+            <div class="m-auto mt-1">
+                <a class="text-secondary disabled" href="#" style="text-decoration: none;">Privacy Policy</a>
+            </div>
+        </footer>
     </div>
     <!-- Bootstrap JS with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
