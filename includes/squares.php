@@ -5,12 +5,12 @@
   border-radius: 10px;
   position: absolute !important;
   overflow: hidden !important;
-  /* box-shadow: rgba(0, 0, 0, 0.20) 0px 3px 8px; */
-
 }
 
-@media screen and (max-width: 1000px) { .square { opacity: 0.5; } }
-@media screen and (max-width:  700px) { .square { opacity: 0.3; } }
+@media screen and (max-width: 1000px) { .square { opacity: 0.4; } }
+@media screen and (max-width:  850px) { .square { opacity: 0.3; } }
+@media screen and (max-width:  700px) { .square { opacity: 0.2; } }
+@media screen and (max-width:  500px) { .square { opacity: 0.1; } }
 </style>
 <div>
     <!-- Left side -->
