@@ -42,9 +42,18 @@ if (isset($questions)) {
     require 'includes/functions.php';
 
     $pdo = get_database_connection();
-    $game_pin = generate_pin();
 
-    // TODO: Repeatedly generate a new pin if it isn't unique.
+    function pin_exists($pin) {
+        $pdo = get_database_connection();
+        $statement = $pdo->prepare("SELECT * FROM quizzes WHERE game_pin = ?");
+        $statement->execute(array($pin));
+        return $statement->rowCount() > 0;
+    }
+
+    $game_pin = generate_pin();
+    while (pin_exists($game_pin)) {
+        $game_pin = generate_pin();
+    }
 
     $query = "INSERT INTO quizzes (game_pin, questions, choices, answers) VALUES (?, ?, ?, ?)";
     $statement = $pdo->prepare($query);
