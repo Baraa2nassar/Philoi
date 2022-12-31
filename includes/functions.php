@@ -17,3 +17,13 @@ function get_database_connection()
 
     return $pdo;
 }
+
+function generate_pin()
+{
+    define("DIGITS", ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]);
+    $pin = "";
+    for ($i = 0; $i < 6; $i++) {
+        $pin .= array_rand(DIGITS);
+    }
+    return $pin;
+}

@@ -42,12 +42,15 @@ if (isset($questions)) {
     require 'includes/functions.php';
 
     $pdo = get_database_connection();
+    $game_pin = generate_pin();
 
-    $query = "INSERT INTO quizzes (questions, choices, answers) VALUES (?, ?, ?)";
+    // TODO: Repeatedly generate a new pin if it isn't unique.
+
+    $query = "INSERT INTO quizzes (game_pin, questions, choices, answers) VALUES (?, ?, ?, ?)";
     $statement = $pdo->prepare($query);
-    $statement->execute(array($questions_json, $choices_json, $answers_json));
+    $statement->execute(array($game_pin, $questions_json, $choices_json, $answers_json));
 
-    $_SESSION['game_code'] = $pdo->lastInsertId();
+    $_SESSION['game_pin'] = $game_pin;
 
     unset($_SESSION['CREATE2_ACCESS']);
     $_SESSION['SUCCESS_ACCESS'] = true;
