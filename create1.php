@@ -17,7 +17,14 @@ if (isset($_POST['submit'])) {
 
     if (count($players) < 3) {
         // User needs to enter at least 3 valid player names.
-        $_SESSION['INVALID_PLAYER_NAMES'] = "Please enter at least 3 non-empty player names.";
+        $_SESSION['ERROR'] = "Please enter at least 3 non-empty player names.";
+        header('Location: create1.php');
+        exit;
+    }
+
+    if (count(array_unique($players)) != count($players)) {
+        // Duplicate player names were entered.
+        $_SESSION['ERROR'] = "Please enter at least 3 unique player names.";
         header('Location: create1.php');
         exit;
     }
@@ -77,7 +84,7 @@ if (isset($_POST['submit'])) {
             </div>
 
             <div class="mt-3 text-center">
-                <h5 class="text-center mb-1" style="color: #efefef;">Enter the names of your friends <span style="color: #90A9B7">(3 min)</span></h5>
+                <h5 class="text-center mb-1" style="color: #efefef;">Enter the names of the players <span style="color: #90A9B7">(3 min)</span></h5>
 
                 <!-- Player names -->
                 <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="border-width: 2.5px">
@@ -86,12 +93,12 @@ if (isset($_POST['submit'])) {
                 <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 4" style="border-width: 2.5px">
                 <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 5" style="border-width: 2.5px">
 
-                <?php if (isset($_SESSION['INVALID_PLAYER_NAMES'])): ?>
+                <?php if (isset($_SESSION['ERROR'])): ?>
                     <div class="alert alert-danger text-center" style="padding: 10px 5px">
-                        <?= $_SESSION['INVALID_PLAYER_NAMES'] ?>
+                        <?= $_SESSION['ERROR'] ?>
                     </div>
 
-                    <?php unset($_SESSION['INVALID_PLAYER_NAMES']); ?>
+                    <?php unset($_SESSION['ERROR']); ?>
                 <?php endif; ?>
 
                 <div class="d-flex my-4">
