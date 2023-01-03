@@ -90,7 +90,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
         <hr class="text-white">
         <form method="post">
             <h5 class="mb-3 text-center text-white" style="color: #000;">Click on a name to enter their questions</h5>
-            <div class="d-flex flex-column p-3 rounded" style="background: #ddd; height: px !important;">
+            <div class="d-flex flex-column p-3 rounded" style="background: #ddd; height: 330px !important;">
                 <!-- Left pane -->
                 <div class="mb-2">
                     <div>
@@ -101,7 +101,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
                     </div>
                 </div>
                 <!-- Right pane -->
-                <div class="rounded" style="max-height: 270px !important; overflow-y: scroll !important; background: #cdcdcd">
+                <div class="rounded" style="max-height: 270px !important; overflow-y: auto !important; background: #cdcdcd">
                     <div class="text-center">
                         <div class="my-2">
                             <?php for ($i = 0; $i < $num_players; $i++): ?>
