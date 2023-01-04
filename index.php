@@ -92,12 +92,19 @@ if (isset($game_pin)) {
                 </div>
 
                 <div class="mt-4">
-                    <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.0.1</span>
+                    <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.0.2</span>
                 </div>
             </footer>
         </div>
     </main>
 
+    <style>
+        @media screen and (max-width: 550px) { #rules { width: 28rem !important; } }
+        @media screen and (max-width: 500px) { #rules { width: 26rem !important; } }
+        @media screen and (max-width: 450px) { #rules { width: 23rem !important; } }
+        @media screen and (max-width: 400px) { #rules { width: 20rem !important; } }
+        @media screen and (max-width: 350px) { #rules { width: 18rem !important; } }
+    </style>
     <div class="d-flex flex-column mx-auto mt-5" id="rules" style="width: 30rem; display: none !important;">
         <section class="my-2 p-2 px-3" style="background-color: #286279; border-radius: 12px;">
             <h1 class="mt-2 fs-3 text-white">What is Philoi? &#128269;</h1>
