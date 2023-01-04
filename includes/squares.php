@@ -14,6 +14,12 @@
 @media screen and (max-width:  850px) { .square { opacity: 0.3; } }
 @media screen and (max-width:  700px) { .square { opacity: 0.2; } }
 @media screen and (max-width:  500px) { .square { opacity: 0.1; } }
+@media screen and (max-width:  450px) {
+  .square {
+    height: calc(20%) !important;
+    width: calc(25%) !important;
+  }
+}
 </style>
 <div>
     <!-- Left side -->
