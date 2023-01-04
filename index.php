@@ -92,7 +92,7 @@ if (isset($game_pin)) {
                 </div>
 
                 <div class="mt-4">
-                    <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.0.3</span>
+                    <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.0.4</span>
                 </div>
             </footer>
         </div>
