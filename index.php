@@ -92,7 +92,7 @@ if (isset($game_pin)) {
                 </div>
 
                 <div class="mt-4">
-                    <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.0.5</span>
+                    <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.0.6</span>
                 </div>
             </footer>
         </div>
@@ -180,7 +180,13 @@ if (isset($game_pin)) {
         let rulesButton = document.getElementById('rules-button');
         let rulesBackButton = document.getElementById('rules-back-button');
 
+        function removeAlert() {
+            let alert = document.getElementsByClassName('alert')[0]
+            if (alert) alert.remove();
+        }
+
         rulesButton.addEventListener('click', () => {
+            removeAlert();
             main.replaceChildren(rules);
             rules.style.display = 'unset';
         });
@@ -195,6 +201,7 @@ if (isset($game_pin)) {
         let privacyBackButton = document.getElementById('privacy-back-button');
 
         privacyLink.addEventListener('click', () => {
+            removeAlert();
             main.replaceChildren(privacy);
             privacy.style.display = 'unset';
         });
