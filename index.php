@@ -2,22 +2,25 @@
 
 session_start();
 
-$game_code = $_POST['game_code'] ?? null;
+$game_pin = $_POST['game_pin'] ?? null;
 
-if (isset($game_code)) {
+if (isset($game_pin)) {
     require 'includes/functions.php';
     $pdo = get_database_connection();
 
-    $query = "SELECT * FROM quizzes WHERE quiz_id = ?";
+    $query = "SELECT * FROM quizzes WHERE game_pin = ?";
     $statement = $pdo->prepare($query);
-    $statement->execute(array($game_code));
+    $statement->execute(array($game_pin));
+
+    $row = $statement->fetch();
+    $quiz_id = $row['quiz_id'];
 
     if ($statement->rowCount() == 0) {
-        $_SESSION["INVALID_GAME_CODE"] = "Invalid game code. Please try again.";
+        $_SESSION['INVALID_GAME_PIN'] = "Invalid Game PIN. Please try again.";
         header('Location: index.php');
         exit;
     } else {
-        $_SESSION['game_code'] = $game_code;
+        $_SESSION['quiz_id'] = $quiz_id;
         $_SESSION['LOBBY_ACCESS'] = true;
         header('Location: lobby.php');
     }
@@ -50,19 +53,19 @@ if (isset($game_code)) {
 
         <form class="row my-2 mb-3" method="post">
             <div class="col-8">
-                <input class="form-control" type="text" name="game_code" placeholder="Enter your game code" required>
+                <input class="form-control" type="text" name="game_pin" placeholder="Enter a Game PIN" required>
             </div>
             <div class="col-4 text-center">
                 <button class="btn custom-btn-success text-white w-100" style="background: #588157">Enter</button>
             </div>
         </form>
 
-        <?php if (isset($_SESSION['INVALID_GAME_CODE'])): ?>
+        <?php if (isset($_SESSION['INVALID_GAME_PIN'])): ?>
             <div class="alert alert-danger text-center" style="padding: 5px 20px">
-                <?= $_SESSION['INVALID_GAME_CODE'] ?>
+                <?= $_SESSION['INVALID_GAME_PIN'] ?>
             </div>
 
-            <?php unset($_SESSION['INVALID_GAME_CODE']); ?>
+            <?php unset($_SESSION['INVALID_GAME_PIN']); ?>
         <?php endif; ?>
 
         <a href="create1.php" class="my-1" tabindex="-1">

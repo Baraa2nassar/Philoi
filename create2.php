@@ -43,11 +43,23 @@ if (isset($questions)) {
 
     $pdo = get_database_connection();
 
-    $query = "INSERT INTO quizzes (questions, choices, answers) VALUES (?, ?, ?)";
-    $statement = $pdo->prepare($query);
-    $statement->execute(array($questions_json, $choices_json, $answers_json));
+    function pin_exists($pin) {
+        $pdo = get_database_connection();
+        $statement = $pdo->prepare("SELECT * FROM quizzes WHERE game_pin = ?");
+        $statement->execute(array($pin));
+        return $statement->rowCount() > 0;
+    }
 
-    $_SESSION['game_code'] = $pdo->lastInsertId();
+    $game_pin = generate_pin();
+    while (pin_exists($game_pin)) {
+        $game_pin = generate_pin();
+    }
+
+    $query = "INSERT INTO quizzes (game_pin, questions, choices, answers) VALUES (?, ?, ?, ?)";
+    $statement = $pdo->prepare($query);
+    $statement->execute(array($game_pin, $questions_json, $choices_json, $answers_json));
+
+    $_SESSION['game_pin'] = $game_pin;
 
     unset($_SESSION['CREATE2_ACCESS']);
     $_SESSION['SUCCESS_ACCESS'] = true;

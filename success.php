@@ -7,7 +7,7 @@ if (!isset($_SESSION['SUCCESS_ACCESS'])) {
 }
 unset($_SESSION['SUCCESS_ACCESS']);
 
-$game_code = $_SESSION['game_code'] ?? null;
+$game_pin = $_SESSION['game_pin'] ?? null;
 
 ?>
 <!doctype html>
@@ -27,18 +27,18 @@ $game_code = $_SESSION['game_code'] ?? null;
     <link rel="stylesheet" href="static/css/other.css">
 </head>
 <body>
-    <div class="d-flex flex-column mx-auto text-white" style="width: 450px; margin-top: 55px">
+    <div class="d-flex flex-column mx-auto text-white" style="width: 360px; margin-top: 55px">
         <h1 class="text-center" style="color: lightblue">Success</h1>
         <hr>
 
         <form method="post">
             <div class="text-center">
                 <h5 class="mb-4">Your quiz has been created!</h5>
-                <h4>Game code: <?= $game_code ?></h4>
-                <p style="color: #88A0A8">Remember this code as you'll need it to join a lobby.</p>
+                <h4>Game PIN: <?= $game_pin ?></h4>
+                <p style="color: #ccc">Remember this PIN as you'll need to start a lobby.</p>
 
-                <div class="d-flex flex-column text-center mt-4 mb-5" style="margin: 0px 90px;">
-                    <button type="button" class="mx-3 btn custom-btn-primary mt-2" name="create" style="width: 225px" onclick="location.href = 'index.php'">Return home</button>
+                <div class="d-flex flex-column mt-4 mb-5">
+                    <button type="button" class="mx-3 btn custom-btn-primary mt-2 mx-auto" name="create" style="width: 225px" onclick="location.href = 'index.php'">Return home</button>
                 </div>
             </div>
         </form>
