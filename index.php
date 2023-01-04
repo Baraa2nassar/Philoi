@@ -89,7 +89,7 @@ if (isset($game_pin)) {
             <div class="my-auto" style="user-select: none !important; color: #fff; opacity: 0.2;">|</div>
 
             <div class="m-auto mt-1">
-                <a class="text-secondary disabled" href="#" style="text-decoration: none;">Privacy Policy</a>
+                <a class="text-white" href="privacy.php" style="text-decoration: none;">Privacy Policy</a>
             </div>
         </footer>
     </div>
