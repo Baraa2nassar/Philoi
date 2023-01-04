@@ -75,23 +75,26 @@ if (isset($game_pin)) {
             <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">View rules</button>
         </a>
 
-        <footer class="d-flex text-center rounded mt-5">
-            <div class="m-auto mt-1">
-                <a class="text-white" href="https://github.com/Baraa2nassar/Philoi/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">View on GitHub</a>
+        <footer class="d-flex flex-column text-center rounded mt-5">
+            <div class="d-flex">
+                <div class="m-auto mt-1">
+                    <a class="text-white" href="https://github.com/Baraa2nassar/Philoi/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">View on GitHub</a>
+                </div>
+                <div class="my-auto" style="user-select: none !important; color: #fff; opacity: 0.2;">|</div>
+                <div class="m-auto mt-1">
+                    <a class="text-white" href="mailto:baraa2aziz@gmail.com" target="_blank" style="text-decoration: none;">Contact Us</a>
+                </div>
+                <div class="my-auto" style="user-select: none !important; color: #fff; opacity: 0.2;">|</div>
+                <div class="m-auto mt-1">
+                    <a class="text-white" href="privacy.php" style="text-decoration: none;">Privacy Policy</a>
+                </div>
             </div>
 
-            <div class="my-auto" style="user-select: none !important; color: #fff; opacity: 0.2;">|</div>
-
-            <div class="m-auto mt-1">
-                <a class="text-white" href="mailto:baraa2aziz@gmail.com" target="_blank" style="text-decoration: none;">Contact Us</a>
-            </div>
-
-            <div class="my-auto" style="user-select: none !important; color: #fff; opacity: 0.2;">|</div>
-
-            <div class="m-auto mt-1">
-                <a class="text-white" href="privacy.php" style="text-decoration: none;">Privacy Policy</a>
+            <div class="mt-4">
+                <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.0.0</span>
             </div>
         </footer>
+
     </div>
     <!-- Bootstrap JS with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>

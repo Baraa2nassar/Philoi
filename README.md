@@ -42,7 +42,6 @@ Why?
 
 
 ## Roadmap
-- [ ] Use versioning.
 - [ ] Create a video demoing the app and add it to the site.
 - [ ] When a game is played, make it so that it can be done in two ways:
   - A quick game, where the players answer themselves.
