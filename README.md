@@ -1,4 +1,4 @@
-# [Philoi](http://philoi.tech)
+# [Philoi](http://www.philoi.tech)
 
 <div align="center">
   <img src="static/images/favicon.ico" alt="Philoi logo" width="100px">
@@ -7,7 +7,7 @@
     Philoi is a full stack web application that lets you create quizzes to test which facts applies to your friends. This project was first developed by Baraa Nassar and Mushtaq Miah.
     <br>
     <p style="font-size: 19px;">
-      <a href="http://philoi.tech/">Visit the site</a>
+      <a href="http://www.philoi.tech/">Visit the site</a>
       -
       <!-- <a href="http://philoi.tech/">View demo</a> later in the future inshAllah -->
       <!-- - -->
