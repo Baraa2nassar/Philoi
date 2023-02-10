@@ -211,5 +211,25 @@ if (isset($game_pin)) {
             privacy.style.display = 'none !important';
         });
     </script>
+
+    <script>
+        function animation(i) {
+            let square = document.getElementById(i);
+            square.style.transition = '0.7s';
+            square.style.borderColor = '#6DAEDB';
+            setTimeout(() => { square.style.borderColor = '#1B4353'; }, 700);
+        }
+
+        setTimeout(() => {
+            for (let i = 1; i <= 10; i++) {
+                setTimeout(() => {animation(i)}, i*200);
+            }
+        }, 100);
+        setInterval(() => {
+            for (let i = 1; i <= 10; i++) {
+                setTimeout(() => {animation(i)}, i*200);
+            }
+        }, 2100);
+    </script>
 </body>
 </html>
