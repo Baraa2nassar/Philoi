@@ -66,7 +66,7 @@ $_SESSION['scores'] = $scores;
     <link rel="stylesheet" href="static/css/other.css">
 </head>
 <body>
-    <div class="d-flex flex-column mx-auto w-100 px-3 px-md-5" style="max-width: 350px; margin-top: 30px;">
+    <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 30px">
         <h1 class="text-center" style="color: lightblue;">Lobby</h1>
         <hr class="text-white">
 
