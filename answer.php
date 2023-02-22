@@ -71,8 +71,8 @@ if (isset($next)) {
         .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
     </style>
 </head>
-<body>
-    <div class="d-flex flex-column mx-auto" style="width: 700px; margin-top: 70px">
+<body class="bg-dark">
+    <div class="d-flex flex-column mx-auto w-100 px-3 px-md-5" style="max-width: 600px; margin-top: 30px;">
         <div class="text-center">
             <h5 class="text-white">Question <?= $current  ?> of <?= count($qna) ?></h5>
             <h4 class="text-white"><?= $question ?></h4>
@@ -90,7 +90,7 @@ if (isset($next)) {
         </div>
 
         <form method="post">
-            <div class="text-center mx-3">
+            <div class="text-left mx-3">
                 <?php for ($i = 0; $i < $num_players; $i++): ?>
                     <div class="d-flex row my-3">
                         <div class="col-6 col-form-label">
