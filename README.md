@@ -39,7 +39,11 @@ This app aims to tackle this aspect of social life using a game led by a host (w
 Why?
 * New way introduction system
 * Get conversations going in a group
+<div align="center">
+  <img src="https://media.discordapp.net/attachments/1038123706830049335/1077818378720382976/image.png" alt="game_view2" width="100%">
+  <img src="https://media.discordapp.net/attachments/1038123706830049335/1077818001191096380/image.png" alt="game_view1" width="100%">
 
+<div>
 
 ## Roadmap
 - [ ] Create a video demoing the app and add it to the site.

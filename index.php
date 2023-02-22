@@ -59,6 +59,11 @@ if (isset($game_pin)) {
                 <div class="col-4 text-center">
                     <button class="btn custom-btn-success text-white w-100" style="background: #588157">Enter</button>
                 </div>
+
+                <div class="col-auto">
+                  <span id="textExample2" class="text-light"> Demo Game: 321090 </span>
+                </div>
+
             </form>
 
             <?php if (isset($_SESSION['INVALID_GAME_PIN'])): ?>
