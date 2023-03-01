@@ -87,13 +87,6 @@ if (isset($_POST['play_demo'])) {
 
             </form>
 
-            <form method="post">
-                <div class="rounded text-center mb-2 py-1 demo">
-                    <span class="">New to Philoi?<span> <button name="play_demo">Play a demo game</button></span>
-                </div>
-            </form>
-
-
             <?php if (isset($_SESSION['INVALID_GAME_PIN'])): ?>
                 <div class="alert alert-danger text-center" style="padding: 5px 20px">
                     <?= $_SESSION['INVALID_GAME_PIN'] ?>
@@ -101,6 +94,12 @@ if (isset($_POST['play_demo'])) {
 
                 <?php unset($_SESSION['INVALID_GAME_PIN']); ?>
             <?php endif; ?>
+
+            <form method="post">
+                <div class="rounded text-center mb-2 py-1 demo">
+                    <span class="">New to Philoi?<span> <button name="play_demo">Play a demo game</button></span>
+                </div>
+            </form>
 
             <a href="create1.php" class="my-1" tabindex="-1">
                 <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">Create a new quiz</button>
