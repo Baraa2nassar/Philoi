@@ -26,6 +26,31 @@ if (isset($game_pin)) {
     }
 }
 
+if (isset($_POST['play_demo'])) {
+    require 'includes/functions.php';
+    $pdo = get_database_connection();
+
+    $game_pin = "321090";
+
+    $query = "SELECT * FROM quizzes WHERE game_pin = ?";
+    $statement = $pdo->prepare($query);
+    $statement->execute(array($game_pin));
+
+    $row = $statement->fetch();
+    $quiz_id = $row['quiz_id'];
+
+    if ($statement->rowCount() == 0) {
+        $_SESSION['INVALID_GAME_PIN'] = "Invalid Game PIN. Please try again.";
+        header('Location: index.php');
+        exit;
+    } else {
+        $_SESSION['quiz_id'] = $quiz_id;
+        $_SESSION['LOBBY_ACCESS'] = true;
+        header('Location: lobby.php');
+        exit;
+    }
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -60,11 +85,14 @@ if (isset($game_pin)) {
                     <button class="btn custom-btn-success text-white w-100" style="background: #588157">Enter</button>
                 </div>
 
-                <div class="col-auto">
-                  <span id="textExample2" class="text-light"> Demo Game: 321090 </span>
-                </div>
-
             </form>
+
+            <form method="post">
+                <div class="rounded text-center mb-2 py-1 demo">
+                    <span class="">New to Philoi?<span> <button name="play_demo">Play a demo game</button></span>
+                </div>
+            </form>
+
 
             <?php if (isset($_SESSION['INVALID_GAME_PIN'])): ?>
                 <div class="alert alert-danger text-center" style="padding: 5px 20px">
@@ -97,7 +125,7 @@ if (isset($game_pin)) {
                 </div>
 
                 <div class="mt-4">
-                    <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.1.0</span>
+                    <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.1.1</span>
                 </div>
             </footer>
         </div>
@@ -220,9 +248,9 @@ if (isset($game_pin)) {
     <script>
         function animation(i) {
             let square = document.getElementById(i);
-            square.style.transition = '0.7s';
+            square.style.transition = '0.65s';
             square.style.borderColor = '#6DAEDB';
-            setTimeout(() => { square.style.borderColor = '#1B4353'; }, 700);
+            setTimeout(() => { square.style.borderColor = '#1B4353'; }, 650);
         }
 
         setTimeout(() => {
