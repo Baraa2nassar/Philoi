@@ -105,7 +105,7 @@ if (isset($_POST['play_demo'])) {
                 <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">Create a new quiz</button>
             </a>
             <a class="mt-2" tabindex="-1">
-                <button class="btn custom-btn-primary text-white w-100" id="rules-button" style="height: 57px;">View rules</button>
+                <button class="btn custom-btn-primary text-white w-100" id="rules-button" onmousedown="bleep.play()"style="height: 57px;">View rules</button>
             </a>
 
             <footer class="d-flex flex-column text-center rounded mt-5">
@@ -203,6 +203,12 @@ if (isset($_POST['play_demo'])) {
 
     <!-- Bootstrap JS with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        var bleep = new Audio();
+        bleep.src = "bleep.mp3";
+
+    </script>
     <!-- Transitions -->
     <script>
         let main = document.getElementById('main');
