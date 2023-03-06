@@ -4,7 +4,7 @@
   <img src="static/images/favicon.ico" alt="Philoi logo" width="100px">
   <br>
   <p>
-    Philoi is a full stack web application that lets you create quizzes to test which facts applies to your friends. This project was first developed by Baraa Nassar and Mushtaq Miah.
+    Philoi is a full stack web application that lets you create quizzes to test which facts applies to your friends. This project was first developed by Baraa Nassar and <a href="https://www.github.com/mhmh4">mhmh4</a>.
     <br>
     <p style="font-size: 19px;">
       <a href="http://www.philoi.tech/">Visit the site</a>
@@ -76,7 +76,7 @@ You can also download Github Desktop to use GUI system to do similar function to
 
 Baraa Nassar: [@baraa2nassar](https://www.instagram.com/baraa2nassar) - baraa-aziz@hotmail.com - [LinkedIn](https://www.linkedin.com/in/baraa2nassar/)
 
-Mushtaq Miah: [GitHub](https://github.com/mhmh4)
+mhmh4: [GitHub](https://github.com/mhmh4)
 
 
 ## License
