@@ -59,20 +59,52 @@ if (isset($_POST['next'])) {
     <link rel="stylesheet" href="static/css/other.css">
     <style>
         .player-btn {
-            cursor: unset;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #28a745 !important;
+            border-color: #28a745 !important;
+            color: white !important;
+            width: auto;
+            padding: 10px;
+            margin: 0 2px;
         }
+
+        .player-name {
+            margin-right: 10px;
+        }
+
+        .player-score {
+            font-weight: bold;
+        }
+        .player-name:hover + .player-btn.hoverable, 
+        .player-btn.hoverable:hover {
+            transform: scale(1.02);
+          /* Add your hover styles here */
+          background-color: yellow;
+          color: black;
+          /* ... */
+        }
+        
+
         .player-btn:active {
             box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px !important;
         }
         .player-btn:hover {
             cursor: unset;
         }
-        .player-btn-0 { background-color: #565656 !important; border-color: #5a5b5c !important; color: white !important; width: 100px !important; }
-        .player-btn-1 { background-color: #d14430 !important; border-color: #d92007 !important; color: white !important; width: 100px !important; }
-        .player-btn-2 { background-color: #28a745 !important; border-color: #28a745 !important; color: white !important; width: 100px !important; }
-        .player-btn-3 { background-color: #885cb5 !important; border-color: #9b42f5 !important; color: white !important; width: 100px !important; }
-        .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
+        .player-btn-0 { background-color: #565656 !important; border-color: #5a5b5c !important; color: white !important; width: 130px !important; }
+        .player-btn-1 { background-color: #d14430 !important; border-color: #d92007 !important; color: white !important; width: 130px !important; }
+        .player-btn-2 {
+            background-color: #28a745 !important;
+            border-color: #28a745 !important;
+            color: white !important;
+            width: 130px !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .player-btn-3 { background-color: #885cb5 !important; border-color: #9b42f5 !important; color: white !important; width: 130px !important; }
+        .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 130px !important; }
     </style>
 </head>
 <body >
@@ -85,7 +117,11 @@ if (isset($_POST['next'])) {
         <div class="player-btns text-center my-4">
             <?php for ($i = 0; $i < $num_players; $i++): ?>
                 <!-- Player buttons have a custom class named `player-btn` -->
-                <button class="btn mx-2 player-btn player-btn-<?=$i?>" type="button" value="<?= $i ?>" tabindex="-1"><?= $players[$i] ?>: <?= $total[$i]?></button>
+
+                <button class="btn mx-2 player-btn player-btn-<?=$i?> hoverable" type="button" value="<?= $i ?>" tabindex="-1">
+                    <span class="player-name"><?= $players[$i] ?></span>
+                    <span class="player-score"><?= $total[$i]?></span>
+                </button>
             <?php endfor; ?>
         </div>
 
@@ -100,7 +136,7 @@ if (isset($_POST['next'])) {
                             <select class="form-select bg-light" name="selections[]" required>
                                 <option selected="true" disabled="true"></option>
                                 <?php for ($i = 0; $i < $num_players; $i++): ?>
-                                    <option value="<?= $players[$i] ?>"><?= $players[$i]; ?></option>
+                                    <option class="player-name" value="<?= $players[$i] ?>"><?= $players[$i]; ?></option>
                                 <?php endfor; ?>
                             </select>
                         </div>
