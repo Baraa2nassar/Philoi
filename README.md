@@ -9,7 +9,7 @@
     <p style="font-size: 19px;">
       <a href="http://www.philoi.tech/">Visit the site</a>
       -
-      <!-- <a href="http://philoi.tech/">View demo</a> later in the future inshAllah -->
+      <a href="https://www.youtube.com/watch?v=W68XvTuNgm8">View demo</a> 
       <!-- - -->
       <a href="https://github.com/Baraa2nassar/Philoi/issues">Report a bug</a>
       -
@@ -46,7 +46,7 @@ Why?
 </div>
 
 ## Roadmap
-- [ ] Create a video demoing the app and add it to the site.
+- [x] Create a video demoing the app and add it to the site.
 - [ ] When a game is played, make it so that it can be done in two ways:
   - A quick game, where the players answer themselves.
   - A discussion game, where the host puts in the answers of each player (which is the current method).
