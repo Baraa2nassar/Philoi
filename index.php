@@ -81,8 +81,8 @@ if (isset($_POST['play_demo'])) {
 <body>
     <?php include 'includes/squares.php'; ?>
     <main id="main">
-        <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 90px">
-            <h1 class="text-center" style="color: lightblue;">Welcome to Philoi</h1>
+        <div class="d-flex flex-column mx-auto" style="width: 360px; margin-top: 60px">
+            <h1 class="text-center" style="color: lightblue;">Philoi</h1>
             <h6 class="text-center mx-1" style="color: lightgray;">A game to see how well friends know each other</h6>
             <hr class="text-white">
 
