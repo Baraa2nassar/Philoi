@@ -262,16 +262,20 @@ if (isset($_POST['play_demo'])) {
             setTimeout(() => { square.style.borderColor = '#1B4353'; }, 650);
         }
 
-        setTimeout(() => {
-            for (let i = 1; i <= 10; i++) {
-                setTimeout(() => {animation(i)}, i*200);
-            }
-        }, 100);
-        setInterval(() => {
-            for (let i = 1; i <= 10; i++) {
-                setTimeout(() => {animation(i)}, i*200);
-            }
-        }, 2100);
+        function showAnimations() {
+            setTimeout(() => {
+                for (let i = 1; i <= 10; i++) {
+                    setTimeout(() => {animation(i)}, i*200);
+                }
+            }, 100);
+            setInterval(() => {
+                for (let i = 1; i <= 10; i++) {
+                    setTimeout(() => {animation(i)}, i*200);
+                }
+            }, 2100);
+        }
+
+        // showAnimations();
     </script>
 </body>
 </html>
