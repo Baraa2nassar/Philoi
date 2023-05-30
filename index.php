@@ -133,7 +133,7 @@ if (isset($_POST['play_demo'])) {
                 </div>
 
                 <div class="mt-4">
-                    <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.1.1</span>
+                    <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.1</span>
                 </div>
             </footer>
         </div>
