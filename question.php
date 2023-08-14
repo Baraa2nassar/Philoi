@@ -36,15 +36,6 @@ if (isset($_POST['next'])) {
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NRENDFTKN"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-8NRENDFTKN');
-    </script>
     <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,7 +68,7 @@ if (isset($_POST['next'])) {
         .player-score {
             font-weight: bold;
         }
-        .player-name:hover + .player-btn.hoverable, 
+        .player-name:hover + .player-btn.hoverable,
         .player-btn.hoverable:hover {
             transform: scale(1.02);
           /* Add your hover styles here */
@@ -85,7 +76,7 @@ if (isset($_POST['next'])) {
           color: black;
           /* ... */
         }
-        
+
 
         .player-btn:active {
             box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px !important;
