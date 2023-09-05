@@ -104,8 +104,8 @@ if (isset($_POST['play_demo'])) {
             <a href="create1.php" class="my-1" tabindex="-1">
                 <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">Create a new quiz</button>
             </a>
-            <a class="mt-2" tabindex="-1">
-                <button class="btn custom-btn-primary text-white w-100" id="rules-button" style="height: 57px;">View rules</button>
+            <a href="rules.php" class="mt-2" tabindex="-1">
+                <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">View rules</button>
             </a>
 
             <footer class="d-flex flex-column text-center rounded mt-5">
@@ -125,31 +125,6 @@ if (isset($_POST['play_demo'])) {
             </footer>
         </div>
     </main>
-
-    <style>
-        @media screen and (max-width: 550px) { #rules { width: 28rem !important; } }
-        @media screen and (max-width: 500px) { #rules { width: 26rem !important; } }
-        @media screen and (max-width: 450px) { #rules { width: 23rem !important; } }
-        @media screen and (max-width: 400px) { #rules { width: 20rem !important; } }
-        @media screen and (max-width: 350px) { #rules { width: 18rem !important; } }
-    </style>
-    <div class="d-flex flex-column mx-auto mt-5" id="rules" style="width: 30rem; display: none !important;">
-        <section class="my-2 p-2 px-3" style="background-color: #286279; border-radius: 12px;">
-            <h1 class="mt-2 fs-3 text-white">What is Philoi? &#128269;</h1>
-            <p class="text-light ">Philoi is a quiz game designed to test how well friends know each other.</p>
-        </section>
-        <section class="my-2 p-2 px-3" style="background-color: #286279; border-radius: 12px;">
-            <h1 class="mt-2 fs-3 text-white">Organizer &#129504;</h1>
-            <p class="text-light ">One person will serve as the organizer. They will create the questions for a set of players, host the game, and input the answer each player gives.</p>
-        </section>
-        <section class="my-2 p-2 px-3" style="background-color: #286279; border-radius: 12px;">
-            <h1 class="mt-2 fs-3 text-white">Players &#128377;</h1>
-            <p class="text-light ">Players can see the game by the organizer sharing their screen with them or the players can be together in a physical location.</p>
-        </section>
-        <div class="col text-center">
-            <button class="mx-auto btn btn-secondary custom-btn-secondary mt-3" id="rules-back-button" style="width: 200px">Back</button>
-        </div>
-    </div>
 
     <style>
         @media screen and (max-width: 550px) { #privacy { width: 28rem !important; } }
@@ -205,25 +180,10 @@ if (isset($_POST['play_demo'])) {
         let main = document.getElementById('main');
         let temp = main.children[0];
 
-        let rules = document.getElementById('rules');
-        let rulesButton = document.getElementById('rules-button');
-        let rulesBackButton = document.getElementById('rules-back-button');
-
         function removeAlert() {
             let alert = document.getElementsByClassName('alert')[0]
             if (alert) alert.remove();
         }
-
-        rulesButton.addEventListener('click', () => {
-            removeAlert();
-            main.replaceChildren(rules);
-            rules.style.display = 'unset';
-        });
-
-        rulesBackButton.addEventListener('click', () => {
-            main.replaceChildren(temp);
-            rules.style.display = 'none !important';
-        });
 
         let privacy = document.getElementById('privacy');
         let privacyLink = document.getElementById('privacy-link');
