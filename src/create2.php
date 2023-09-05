@@ -8,7 +8,7 @@ if (!isset($_SESSION['CREATE2_ACCESS'])) {
 }
 
 // Get information from previous page
-$num_questions = $_SESSION["num_questions"] ?? null;
+$num_questions_per_player = $_SESSION["num_questions_per_player"] ?? null;
 $players = $_SESSION['players'];
 
 $num_players = count($players);
@@ -26,11 +26,9 @@ if (isset($questions)) {
         }
     }
 
-    $questions_per_player = $num_questions;
-
     $answers = [];
     for ($i = 0; $i < $num_players; $i++) {
-        for ($j = 0; $j < $questions_per_player; $j++) {
+        for ($j = 0; $j < $num_questions_per_player; $j++) {
             $answers[] = $players[$i];
         }
     }
@@ -117,7 +115,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
                     <div class="text-center">
                         <div class="my-2">
                             <?php for ($i = 0; $i < $num_players; $i++): ?>
-                                <?php for ($j = 1; $j <= $num_questions; $j++): ?>
+                                <?php for ($j = 1; $j <= $num_questions_per_player; $j++): ?>
                                     <div class="row mx-3">
                                         <?php if ($i > 0): ?>
                                             <input class="form-control my-1 bg-light" name="questions[]" style="display: none" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>

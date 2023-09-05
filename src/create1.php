@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
     }
 
     $_SESSION['players'] = $players;
-    $_SESSION['num_questions'] = $_POST['num_questions'];
+    $_SESSION["num_questions_per_player"] = $_POST["num_questions_per_player"];
 
     $_SESSION['CREATE2_ACCESS'] = True;
     header("Location: create2.php");
@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
             <div class="row mb-3">
                     <label class="text-center col-sm-9 col-form-label">How many questions per player? <span style="color: #90A9B7">(10 max)</span></label>
                 <div class="col-sm-3">
-                    <input class="form-control" type="number" step="1" name="num_questions" min="1" max="10" required>
+                    <input class="form-control" type="number" step="1" name="num_questions_per_player" min="1" max="10" required>
                 </div>
             </div>
 
