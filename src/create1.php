@@ -88,11 +88,9 @@ if (isset($_POST['submit'])) {
 
                 <!-- Player names -->
                 <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="border-width: 2.5px" maxlength="17">
-
                 <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" style="border-width: 2.5px" maxlength="17">
                 <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" style="border-width: 2.5px" maxlength="17">
                 <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 4" style="border-width: 2.5px" maxlength="17">
-                <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 5" style="border-width: 2.5px" maxlength="17">
 
                 <?php if (isset($_SESSION['ERROR'])): ?>
                     <div class="alert alert-danger text-center" style="padding: 10px 5px">
