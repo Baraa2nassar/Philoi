@@ -54,24 +54,55 @@ if (isset($next)) {
 
     <style>
         .player-btn {
-            /* opacity: 0.5 !important; */
-            cursor: unset;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #28a745 !important;
+            border-color: #28a745 !important;
+            color: white !important;
+            width: auto;
+            padding: 10px;
+            margin: 0 2px;
         }
+
+        .player-name {
+            margin-right: 10px;
+        }
+
+        .player-score {
+            font-weight: bold;
+        }
+        .player-name:hover + .player-btn.hoverable,
+        .player-btn.hoverable:hover {
+            transform: scale(1.02);
+          /* Add your hover styles here */
+          background-color: yellow;
+          color: black;
+          /* ... */
+        }
+
+
         .player-btn:active {
             box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px !important;
         }
         .player-btn:hover {
             cursor: unset;
         }
-        .player-btn-0 { background-color: #565656 !important; border-color: #5a5b5c !important; color: white !important; width: 100px !important; }
-        .player-btn-1 { background-color: #d14430 !important; border-color: #d92007 !important; color: white !important; width: 100px !important; }
-        .player-btn-2 { background-color: #28a745 !important; border-color: #28a745 !important; color: white !important; width: 100px !important; }
-        .player-btn-3 { background-color: #885cb5 !important; border-color: #9b42f5 !important; color: white !important; width: 100px !important; }
-        .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 100px !important; }
+        .player-btn-0 { background-color: #565656 !important; border-color: #5a5b5c !important; color: white !important; width: 130px !important; }
+        .player-btn-1 { background-color: #d14430 !important; border-color: #d92007 !important; color: white !important; width: 130px !important; }
+        .player-btn-2 {
+            background-color: #28a745 !important;
+            border-color: #28a745 !important;
+            color: white !important;
+            width: 130px !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .player-btn-3 { background-color: #885cb5 !important; border-color: #9b42f5 !important; color: white !important; width: 130px !important; }
+        .player-btn-4 { background-color: #449DD1 !important; border-color: #449DD1 !important; color: white !important; width: 130px !important; }
     </style>
 </head>
-<body class="bg-dark">
+<body>
     <div class="d-flex flex-column mx-auto w-100 px-3 px-md-5" style="max-width: 600px; margin-top: 30px;">
         <div class="text-center">
             <h5 class="text-white">Question <?= $current  ?> of <?= count($qna) ?></h5>
