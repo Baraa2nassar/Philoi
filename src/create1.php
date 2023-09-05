@@ -1,5 +1,5 @@
 <?php
-// this is a comment test
+
 session_start();
 
 if (isset($_POST['submit'])) {
@@ -16,14 +16,12 @@ if (isset($_POST['submit'])) {
     $players = $tmp;
 
     if (count($players) < 3) {
-        // User needs to enter at least 3 valid player names.
         $_SESSION['ERROR'] = "Please enter at least 3 non-empty player names.";
         header('Location: create1.php');
         exit;
     }
 
     if (count(array_unique($players)) != count($players)) {
-        // Duplicate player names were entered.
         $_SESSION['ERROR'] = "Please enter at least 3 unique player names.";
         header('Location: create1.php');
         exit;
@@ -40,16 +38,13 @@ if (isset($_POST['submit'])) {
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Create a new quiz - Philoi</title>
 
-    <!-- Favorite icon -->
     <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/other.css">
     <style>
@@ -75,7 +70,6 @@ if (isset($_POST['submit'])) {
         <hr>
 
         <form method="post">
-            <!-- Number of questions -->
             <div class="row mb-3">
                     <label class="text-center col-sm-9 col-form-label">How many questions per player? <span style="color: #90A9B7">(10 max)</span></label>
                 <div class="col-sm-3">
@@ -86,7 +80,6 @@ if (isset($_POST['submit'])) {
             <div class="mt-3 text-center">
                 <h5 class="text-center mb-1" style="color: #efefef;">Enter the names of the players <span style="color: #90A9B7">(3 min)</span></h5>
 
-                <!-- Player names -->
                 <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="border-width: 2.5px" maxlength="17">
                 <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" style="border-width: 2.5px" maxlength="17">
                 <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" style="border-width: 2.5px" maxlength="17">
@@ -112,7 +105,6 @@ if (isset($_POST['submit'])) {
         </form>
     </div>
 
-    <!-- Bootstrap JS with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
