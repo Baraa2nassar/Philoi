@@ -122,10 +122,6 @@ if (isset($_POST['play_demo'])) {
                         <a class="text-white" id="privacy-link" style="text-decoration: none; cursor: pointer;">Privacy Policy</a>
                     </div>
                 </div>
-
-                <div class="mt-4">
-                    <span class="badge bg-dark rounded-pill px-3 text-muted" style="user-select: none;">v1.1</span>
-                </div>
             </footer>
         </div>
     </main>
