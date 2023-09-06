@@ -9,7 +9,7 @@
     <p style="font-size: 19px;">
       <a href="http://www.philoi.tech/">Visit the site</a>
       -
-      <a href="https://www.youtube.com/watch?v=W68XvTuNgm8">View demo</a> 
+      <a href="https://www.youtube.com/watch?v=W68XvTuNgm8">View demo</a>
       -
       <a href="https://github.com/Baraa2nassar/Philoi/issues">Report a bug</a>
       -
@@ -17,15 +17,6 @@
     </p>
   </p>
 </div>
-
-
-## Table of Contents
-
-- [About](#about)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [Contact](#contact)
-- [License](#license)
 
 
 ## About
