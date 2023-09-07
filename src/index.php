@@ -60,7 +60,7 @@ if (isset($_POST['play_demo'])) {
 
     <title>Philoi</title>
 
-    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon">
 
     <script src="https://cdn.tailwindcss.com"></script>
 

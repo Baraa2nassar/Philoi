@@ -6,7 +6,7 @@
 
   <title>Rules - Philoi</title>
 
-  <link rel="icon" href="static/images/favicon.ico">
+  <link rel="icon" href="static/icons/favicon.ico">
 
   <script src="https://cdn.tailwindcss.com"></script>
 </head>

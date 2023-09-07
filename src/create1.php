@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 
     <title>Create a new game - Philoi</title>
 
-    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/other.css">
