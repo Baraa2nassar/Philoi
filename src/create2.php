@@ -74,7 +74,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Create a new quiz - Philoi</title>
+    <title>Create a new game - Philoi</title>
 
     <!-- Favorite icon -->
     <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
@@ -96,7 +96,7 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
 </head>
 <body>
     <div class="d-flex flex-column mx-auto" style="width: 650px; margin-top: 3%">
-        <h1 class="text-center" style="color: lightblue">Create a New Quiz</h1>
+        <h1 class="text-center" style="color: lightblue">Create a New Game</h1>
         <hr class="text-white">
         <form method="post">
             <h5 class="mb-3 text-center text-white" style="color: #000;">Click on a name to enter their questions</h5>

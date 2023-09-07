@@ -33,7 +33,7 @@ $game_pin = $_SESSION['game_pin'] ?? null;
 
         <form method="post">
             <div class="text-center">
-                <h5 class="mb-4">Your quiz has been created!</h5>
+                <h5 class="mb-4">Your game has been created!</h5>
                 <h4>Game PIN: <?= $game_pin ?></h4>
                 <p style="color: #ccc">Remember this PIN as you'll need to start a lobby.</p>
 

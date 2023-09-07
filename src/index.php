@@ -100,7 +100,7 @@ if (isset($_POST['play_demo'])) {
         </form>
 
         <a href="create1.php" class="my-1" tabindex="-1">
-            <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">Create a new quiz</button>
+            <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">Create a new game</button>
         </a>
         <a href="rules.php" class="mt-2" tabindex="-1">
             <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">View rules</button>

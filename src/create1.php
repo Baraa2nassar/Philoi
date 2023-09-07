@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Create a new quiz - Philoi</title>
+    <title>Create a new game - Philoi</title>
 
     <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
 
@@ -66,7 +66,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <div class="d-flex flex-column mx-auto text-white" style="width: 26.25rem; margin-top: 3%">
-        <h1 class="text-center" style="color: lightblue">Create a New Quiz</h1>
+        <h1 class="text-center" style="color: lightblue">Create a New Game</h1>
         <hr>
 
         <form method="post">
