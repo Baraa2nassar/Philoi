@@ -1,14 +1,12 @@
-# [Philoi](http://www.philoi.tech)
+# Philoi
 
 <div align="center">
   <img src="static/icons/favicon.ico" alt="Philoi logo" width="100px">
   <br>
   <p>
-    Philoi is a full stack web application that lets you create quizzes to test which facts applies to your friends. This project was first developed by Baraa Nassar and <a href="https://www.github.com/mhmh4">mhmh4</a>.
+    Philoi is a full stack web application that lets you create quizzes to test which facts applies to your friends.
     <br>
     <p style="font-size: 19px;">
-      <a href="http://www.philoi.tech/">Visit the site</a>
-      -
       <a href="https://www.youtube.com/watch?v=W68XvTuNgm8">View demo</a>
       -
       <a href="https://github.com/Baraa2nassar/Philoi/issues">Report a bug</a>
