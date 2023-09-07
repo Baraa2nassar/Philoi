@@ -16,12 +16,12 @@ function get_database_connection()
     return $pdo;
 }
 
-function generate_pin()
+function generate_game_pin()
 {
     $digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-    $pin = "";
+    $output = "";
     for ($i = 0; $i < 6; $i++) {
-        $pin .= array_rand($digits);
+        $output .= array_rand($digits);
     }
-    return $pin;
+    return $output;
 }

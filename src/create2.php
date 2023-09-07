@@ -48,9 +48,9 @@ if (isset($questions)) {
         return $statement->rowCount() > 0;
     }
 
-    $game_pin = generate_pin();
+    $game_pin = generate_game_pin();
     while (pin_exists($game_pin)) {
-        $game_pin = generate_pin();
+        $game_pin = generate_game_pin();
     }
 
     $query = "INSERT INTO quizzes (game_pin, questions, choices, answers) VALUES (?, ?, ?, ?)";
