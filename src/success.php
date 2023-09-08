@@ -2,49 +2,47 @@
 
 session_start();
 
-if (!isset($_SESSION['SUCCESS_ACCESS'])) {
-    header('Location: index.php');
+if (!isset($_SESSION["SUCCESS_ACCESS"])) {
+    header("Location: index.php");
 }
-unset($_SESSION['SUCCESS_ACCESS']);
+unset($_SESSION["SUCCESS_ACCESS"]);
 
-$game_pin = $_SESSION['game_pin'] ?? null;
+$game_pin = $_SESSION["game_pin"];
 
 ?>
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Success - Philoi</title>
+  <title>Success - Philoi</title>
 
-    <!-- Favorite icon -->
-    <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="static/icons/favicon.ico">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/other.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="static/icons/favicon.ico">
 </head>
-<body>
-    <div class="d-flex flex-column mx-auto text-white" style="width: 360px; margin-top: 55px">
-        <h1 class="text-center" style="color: lightblue">Success</h1>
-        <hr>
+<body class="bg-[#1B4353]">
+  <div class="mx-auto mt-8 w-1/3 text-white text-center">
+    <section class="mb-3">
+      <h1 class="text-center text-4xl text-[#ADD8E6]">Success</h1>
+      <hr class="h-px border-0 bg-slate-400 my-2">
+    </section>
 
-        <form method="post">
-            <div class="text-center">
-                <h5 class="mb-4">Your game has been created!</h5>
-                <h4>Game PIN: <?= $game_pin ?></h4>
-                <p style="color: #ccc">Remember this PIN as you'll need to start a lobby.</p>
+    <section class="mb-6">
+      <h5>Your game has been created! Here is your game PIN:</h5>
+      <h4 class="text-3xl my-3"><?= $game_pin ?></h4>
+      <p class="text-slate-300">Remember to have this PIN memorized, as it's required for creating a lobby.</p>
+    </section>
 
-                <div class="d-flex flex-column mt-4 mb-5">
-                    <button type="button" class="mx-3 btn custom-btn-primary mt-2 mx-auto" name="create" style="width: 225px" onclick="location.href = 'index.php'">Return home</button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    <!-- Bootstrap JS with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <section>
+      <a href="index.php">
+        <div class="rounded px-2 py-2 bg-[#1D70A2] border-[#1D70A2] hover:bg-[#185f89] hover:border-[#185f89] border w-2/3 mx-auto">
+          Return
+        </div>
+      </a>
+    </section>
+  </div>
 </body>
 </html>
