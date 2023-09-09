@@ -69,6 +69,7 @@ if (isset($_POST['play_demo'])) {
     <!-- <style> footer div a:hover { text-decoration: underline !important; } </style> -->
 </head>
 <body class="bg-[#1B4353] text-white">
+  <?php include "./includes/squares.php" ?>
 
   <div class="w-1/3 mx-auto mt-8">
     <section class="mb-3">

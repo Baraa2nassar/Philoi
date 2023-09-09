@@ -11,11 +11,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#1B4353]">
+  <?php include "./includes/squares.php" ?>
 
-  <div class="w-1/3 mx-auto text-white mt-6">
+  <div class="w-1/3 mx-auto text-white mt-8">
     <section class="mb-3">
       <h1 class="text-center text-4xl text-[#ADD8E6]">Privacy Policy</h1>
-      <hr class="h-px border-0 bg-slate-400 my-2">
+      <hr class="h-px border-0 bg-[#395b6c] my-4">
     </section>
 
     <section class="max-h-[400px] overflow-y-auto px-2 mb-3">

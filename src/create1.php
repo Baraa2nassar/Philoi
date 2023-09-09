@@ -48,6 +48,7 @@ if (isset($_POST['submit'])) {
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#1B4353]">
+  <?php include "./includes/squares.php" ?>
 
   <div class="w-1/3 mx-auto text-white mt-8">
     <section class="mb-3">
