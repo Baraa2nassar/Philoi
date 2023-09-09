@@ -5,50 +5,50 @@ session_start();
 $game_pin = $_POST['game_pin'] ?? null;
 
 if (isset($game_pin)) {
-    require 'includes/functions.php';
-    $pdo = get_database_connection();
+  require 'includes/functions.php';
+  $pdo = get_database_connection();
 
-    $query = "SELECT * FROM quizzes WHERE game_pin = ?";
-    $statement = $pdo->prepare($query);
-    $statement->execute(array($game_pin));
+  $query = "SELECT * FROM quizzes WHERE game_pin = ?";
+  $statement = $pdo->prepare($query);
+  $statement->execute(array($game_pin));
 
-    $row = $statement->fetch();
-    $quiz_id = $row['quiz_id'];
+  $row = $statement->fetch();
+  $quiz_id = $row['quiz_id'];
 
-    if ($statement->rowCount() == 0) {
-        $_SESSION['INVALID_GAME_PIN'] = "Invalid Game PIN. Please try again.";
-        header('Location: index.php');
-        exit;
-    } else {
-        $_SESSION['quiz_id'] = $quiz_id;
-        $_SESSION['LOBBY_ACCESS'] = true;
-        header('Location: lobby.php');
-    }
+  if ($statement->rowCount() == 0) {
+    $_SESSION['INVALID_GAME_PIN'] = "Invalid Game PIN. Please try again.";
+    header('Location: index.php');
+    exit;
+  } else {
+    $_SESSION['quiz_id'] = $quiz_id;
+    $_SESSION['LOBBY_ACCESS'] = true;
+    header('Location: lobby.php');
+  }
 }
 
 if (isset($_POST['play_demo'])) {
-    require 'includes/functions.php';
-    $pdo = get_database_connection();
+  require 'includes/functions.php';
+  $pdo = get_database_connection();
 
-    $game_pin = "321090";
+  $game_pin = "321090";
 
-    $query = "SELECT * FROM quizzes WHERE game_pin = ?";
-    $statement = $pdo->prepare($query);
-    $statement->execute(array($game_pin));
+  $query = "SELECT * FROM quizzes WHERE game_pin = ?";
+  $statement = $pdo->prepare($query);
+  $statement->execute(array($game_pin));
 
-    $row = $statement->fetch();
-    $quiz_id = $row['quiz_id'];
+  $row = $statement->fetch();
+  $quiz_id = $row['quiz_id'];
 
-    if ($statement->rowCount() == 0) {
-        $_SESSION['INVALID_GAME_PIN'] = "Invalid Game PIN. Please try again.";
-        header('Location: index.php');
-        exit;
-    } else {
-        $_SESSION['quiz_id'] = $quiz_id;
-        $_SESSION['LOBBY_ACCESS'] = true;
-        header('Location: lobby.php');
-        exit;
-    }
+  if ($statement->rowCount() == 0) {
+      $_SESSION['INVALID_GAME_PIN'] = "Invalid Game PIN. Please try again.";
+      header('Location: index.php');
+      exit;
+  } else {
+      $_SESSION['quiz_id'] = $quiz_id;
+      $_SESSION['LOBBY_ACCESS'] = true;
+      header('Location: lobby.php');
+      exit;
+  }
 }
 
 ?>
@@ -64,26 +64,30 @@ if (isset($_POST['play_demo'])) {
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/other.css">
-    <style> footer div a:hover { text-decoration: underline !important; } </style>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="static/css/other.css"> -->
+    <!-- <style> footer div a:hover { text-decoration: underline !important; } </style> -->
 </head>
-<body>
-    <?php include 'includes/squares.php'; ?>
-    <div class="d-flex flex-column mx-auto mt-14 w-1/3">
+<body class="bg-[#1B4353] text-white">
+
+  <div class="w-1/3 mx-auto mt-8">
+    <section class="mb-3">
         <h1 class="text-center text-4xl text-[#ADD8E6]">Philoi</h1>
-        <h6 class="text-center my-2 text-[#D3D3D3]">A game to see how well friends know each other</h6>
-        <hr class="text-white my-3">
+        <hr class="h-px border-0 bg-[#395b6c] my-4">
+    </section>
 
-        <form class="row my-2 mb-3" method="post">
-            <div class="col-8">
-                <input class="form-control" type="text" name="game_pin" placeholder="Enter a Game PIN" required>
-            </div>
-            <div class="col-4 text-center">
-                <button class="btn custom-btn-success text-white w-100" style="background: #588157">Enter</button>
-            </div>
+    <h6 class="text-center my-2 text-[#D3D3D3]">A game to see how well friends know each other</h6>
 
-        </form>
+        <section class="mb-3">
+            <form class="row my-2" method="post">
+                <div class="col-8">
+                    <input class="form-control" type="text" name="game_pin" placeholder="Enter a Game PIN" required>
+                </div>
+                <div class="col-4 text-center">
+                    <button class="btn custom-btn-success text-white w-100" style="background: #588157">Enter</button>
+                </div>
+            </form>
+        </section>
 
         <?php if (isset($_SESSION['INVALID_GAME_PIN'])): ?>
             <div class="alert alert-danger text-center" style="padding: 5px 20px">
@@ -93,21 +97,36 @@ if (isset($_POST['play_demo'])) {
             <?php unset($_SESSION['INVALID_GAME_PIN']); ?>
         <?php endif; ?>
 
-        <form method="post">
-            <div class="rounded text-center mb-2 py-1 demo">
-                <span class="">New to Philoi?<span> <button name="play_demo">Play a demo game</button></span>
-            </div>
-        </form>
+        <section class="bg-[#dadada] rounded">
+            <form method="post">
+                <div class="rounded text-center mb-2 py-1 demo">
+                    <span class="text-black">New to Philoi?<span> <button class="text-cyan-600 underline" name="play_demo">Play a demo game</button></span>
+                </div>
+            </form>
+        </section>
 
-        <a href="create1.php" class="my-1" tabindex="-1">
+        <section class="text-center mt-3">
+          <a href="create1.php">
+            <div class="mb-3 rounded px-2 py-4 bg-[#1D70A2] border-[#1D70A2] hover:bg-[#185f89] hover:border-[#185f89] border w-full mx-auto">
+              Create a new game
+            </div>
+          </a>
+            <a href="rules.php">
+            <div class="mb-3 rounded px-2 py-4 bg-[#1D70A2] border-[#1D70A2] hover:bg-[#185f89] hover:border-[#185f89] border w-full mx-auto">
+                View rules
+                </div>
+            </a>
+                </section>
+
+        <!-- <a href="create1.php" class="my-1" tabindex="-1">
             <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">Create a new game</button>
         </a>
         <a href="rules.php" class="mt-2" tabindex="-1">
             <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">View rules</button>
-        </a>
+        </a> -->
 
-        <footer class="d-flex flex-column text-center rounded mt-5">
-            <div class="d-flex">
+        <section>
+            <div class="flex">
                 <div class="m-auto mt-1">
                     <a class="text-white" href="https://github.com/Baraa2nassar/Philoi/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">View on GitHub</a>
                 </div>
@@ -120,10 +139,8 @@ if (isset($_POST['play_demo'])) {
                     <a href="privacy.php" class="text-white" style="text-decoration: none; cursor: pointer;">Privacy Policy</a>
                 </div>
             </div>
-        </footer>
+        </section>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         function animation(i) {
@@ -146,7 +163,7 @@ if (isset($_POST['play_demo'])) {
             }, 2100);
         }
 
-        // showAnimations();
+        //showAnimations();
     </script>
 </body>
 </html>
