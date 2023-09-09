@@ -77,15 +77,13 @@ if (isset($_POST['play_demo'])) {
         <hr class="h-px border-0 bg-[#395b6c] my-4">
     </section>
 
-    <h6 class="text-center my-2 text-[#D3D3D3]">A game to see how well friends know each other</h6>
+    <h6 class="text-center mb-3 text-[#D3D3D3]">A game to see how well friends know each other</h6>
 
         <section class="mb-3">
-            <form class="row my-2" method="post">
-                <div class="col-8">
-                    <input class="form-control" type="text" name="game_pin" placeholder="Enter a Game PIN" required>
-                </div>
-                <div class="col-4 text-center">
-                    <button class="btn custom-btn-success text-white w-100" style="background: #588157">Enter</button>
+            <form class="flex my-2" method="post">
+                <input class="grow me-3 rounded-sm" type="text" name="game_pin" placeholder="Enter a Game PIN" required>
+                <div class="">
+                    <button class="btn custom-btn-success text-white w-100 px-4 rounded-sm" style="background: #588157">Enter</button>
                 </div>
             </form>
         </section>
@@ -127,19 +125,23 @@ if (isset($_POST['play_demo'])) {
         </a> -->
 
         <section>
-            <div class="flex">
+            <footer class="flex">
                 <div class="m-auto mt-1">
-                    <a class="text-white" href="https://github.com/Baraa2nassar/Philoi/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">View on GitHub</a>
+                    <a class="text-white hover:underline" href="https://github.com/Baraa2nassar/Philoi/" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                 </div>
-                <div class="my-auto" style="user-select: none !important; color: #fff; opacity: 0.2;">|</div>
+                <div class="my-auto select-none text-[#fff] opacity-[20%]">
+                  |
+                </div>
                 <div class="m-auto mt-1">
-                    <a class="text-white" href="mailto:baraa2aziz@gmail.com" target="_blank" style="text-decoration: none;">Contact Us</a>
+                    <a class="text-white hover:underline" href="mailto:baraa2aziz@gmail.com" target="_blank">Contact Us</a>
                 </div>
-                <div class="my-auto" style="user-select: none !important; color: #fff; opacity: 0.2;">|</div>
+                <div class="my-auto select-none text-[#fff] opacity-[20%]">
+                  |
+                </div>
                 <div class="m-auto mt-1">
-                    <a href="privacy.php" class="text-white" style="text-decoration: none; cursor: pointer;">Privacy Policy</a>
+                    <a href="privacy.php" class="text-white hover:underline">Privacy Policy</a>
                 </div>
-            </div>
+            </footer>
         </section>
     </div>
 
