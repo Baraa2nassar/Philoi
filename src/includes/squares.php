@@ -1,35 +1,13 @@
-<style>
-.square {
-  z-index: -1;
-  border: 0.5px solid #6DAEDB;
-  border-radius: 10px;
-  overflow: hidden !important;
-  rotate: 30deg;
-}
+<section class="overflow-hidden z-[-1]">
+  <div class="border-[0.5px] border-[#6daedb44] absolute rotate-[30deg] rounded-xl h-[200px] w-[200px]  top-[-50px] left-[200px]"></div>
+  <div class="border-[0.5px] border-[#6daedb44] absolute rotate-[30deg] rounded-xl h-[200px] w-[200px]  top-[170px] left-[70px]"></div>
+  <div class="border-[0.5px] border-[#6daedb44] absolute rotate-[30deg] rounded-xl h-[150px] w-[150px]  top-[400px] left-[-20px]"></div>
+  <div class="border-[0.5px] border-[#6daedb44] absolute rotate-[30deg] rounded-xl h-[300px] w-[300px] top-[-100px] left-[-200px]"></div>
+  <div class="border-[0.5px] border-[#6daedb44] absolute rotate-[30deg] rounded-xl h-[120px] w-[120px]  top-[400px] left-[240px]"></div>
 
-@media screen and (max-width: 1200px) { .square { opacity: 0.5; } }
-@media screen and (max-width: 1000px) { .square { opacity: 0.4; } }
-@media screen and (max-width:  850px) { .square { opacity: 0.3; } }
-@media screen and (max-width:  700px) { .square { opacity: 0.2; } }
-@media screen and (max-width:  500px) { .square { opacity: 0.1; } }
-@media screen and (max-width:  450px) {
-  .square {
-    height: calc(20%) !important;
-    width: calc(25%) !important;
-  }
-}
-</style>
-<div>
-    <!-- Left side -->
-    <div id="2" class="square absolute" style="height: 200px; width: 200px; top:  -50px; left:  200px;"></div>
-    <div id="3" class="square absolute" style="height: 200px; width: 200px; top:  170px; left:   70px;"></div>
-    <div id="4" class="square absolute" style="height: 150px; width: 150px; top:  400px; left:  -20px;"></div>
-    <div id="1" class="square absolute" style="height: 300px; width: 300px; top: -100px; left: -200px;"></div>
-    <div id="5" class="square absolute" style="height: 120px; width: 120px; top:  400px; left:  240px;"></div>
-    <!-- Right side -->
-    <div id="6"  class="square absolute" style="height: 300px; width: 300px; top: -150px; right: 100px;"></div>
-    <div id="7"  class="square absolute" style="height: 120px; width: 120px; top:  130px; right:  30px;"></div>
-    <div id="8"  class="square absolute" style="height: 130px; width: 130px; top:  160px; right: 280px;"></div>
-    <div id="9"  class="square absolute" style="height: 250px; width: 250px; top:  270px; right:  50px;"></div>
-    <div id="10" class="square absolute" style="height: 100px; width: 100px; top:  490px; right: 295px;"></div>
-</div>
+  <div class="border-[0.5px] border-[#6daedb44] absolute rotate-[30deg] rounded-xl h-[300px] w-[300px] top-[-150px] right-[100px]"></div>
+  <div class="border-[0.5px] border-[#6daedb44] absolute rotate-[30deg] rounded-xl h-[120px] w-[120px]  top-[130px] right-[30px]"></div>
+  <div class="border-[0.5px] border-[#6daedb44] absolute rotate-[30deg] rounded-xl h-[100px] w-[100px]  top-[220px] right-[280px]"></div>
+  <div class="border-[0.5px] border-[#6daedb44] absolute rotate-[30deg] rounded-xl h-[250px] w-[250px]  top-[270px] right-[50px]"></div>
+  <div class="border-[0.5px] border-[#6daedb44] absolute rotate-[30deg] rounded-xl h-[100px] w-[100px]  top-[490px] right-[295px]"></div>
+</section>
