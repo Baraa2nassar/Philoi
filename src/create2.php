@@ -84,48 +84,31 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/other.css">
-    <style>
-        .player-btn {
-            opacity: 0.8 !important;
-            width: 120px !important;
-        }
-        .player-btn:active,
-        .player-btn:hover {
-            background-color: #005E7C55;
-            border-color: #005E7C55 !important;
-        }
-    </style>
 </head>
-<body>
-    <div class="d-flex flex-column mx-auto" style="width: 650px; margin-top: 3%">
-        <h1 class="text-center" style="color: lightblue">Create a New Game</h1>
-        <hr class="text-white">
+<body class="bg-[#1B4353]">
+
+  <div class="w-1/3 mx-auto text-white mt-8">
+
+  <section class="mb-3">
+      <h1 class="text-center text-4xl text-[#ADD8E6]">Create a New Game</h1>
+      <hr class="h-px border-0 bg-[#395b6c] my-3">
+    </section>
+
         <form method="post">
-            <h5 class="mb-3 text-center text-white" style="color: #000;">Click on a name to enter their questions</h5>
-            <div class="d-flex flex-column p-3 rounded" style="background: #ddd; height: 330px !important;">
-                <!-- Left pane -->
-                <div class="mb-2">
-                    <div>
-                        <?php for ($i = 0; $i < $num_players; $i++): ?>
-                            <!-- Player buttons have a custom class named `player-btn` -->
-                            <button class="btn btn-light player-btn my-1" type="button" value="<?= $i ?>"><?= $players[$i] ?></button>
-                        <?php endfor; ?>
-                    </div>
-                </div>
-                <!-- Right pane -->
-                <div class="rounded" style="max-height: 270px !important; overflow-y: auto !important; background: #cdcdcd">
-                    <div class="text-center">
+            <h5 class="mb-3 text-center text-white" style="color: #000;">Enter the questions for each player</h5>
+                <div class="rounded" style="max-height: 350px; overflow-y: auto;">
+                    <div class="">
                         <div class="my-2">
                             <?php for ($i = 0; $i < $num_players; $i++): ?>
-                                <?php for ($j = 1; $j <= $num_questions_per_player; $j++): ?>
-                                    <div class="row mx-3">
-                                        <?php if ($i > 0): ?>
-                                            <input class="form-control my-1 bg-light" name="questions[]" style="display: none" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>
-                                        <?php else: ?>
-                                            <input class="form-control my-1 bg-light" name="questions[]" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>
-                                        <?php endif; ?>
-                                    </div>
-                                <?php endfor; ?>
+                                <section class="my-3 border p-2 rounded">
+                                    <?= $players[$i] ?>
+                                    <?php for ($j = 1; $j <= $num_questions_per_player; $j++): ?>
+                                        <div class="row mx-2 my-1">
+                                            <input class="block w-full px-2.5 py-1.5 rounded-md text-black border border-2 border-gray-200 bg-[#f7f5f3]" name="questions[]" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>
+                                        </div>
+                                    <?php endfor; ?>
+                                </section>
+
                             <?php endfor; ?>
                         </div>
                         <?php if (isset($_SESSION['INVALID_QUESTION'])): ?>
@@ -137,46 +120,11 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
                         <?php endif; ?>
                     </div>
                 </div>
-            </div>
             <div class="d-flex text-center mt-3 " style="margin: 0px 90px;">
                 <button type="button" class="mx-3 btn custom-btn-secondary text-white mt-1" style="width: 225px" onclick="location.href = 'create1.php'">Back</button>
                 <button type="submit" class="mx-3 btn custom-btn-primary text-white mt-1" name="create" style="width: 225px">Create</button>
             </div>
         </form>
     </div>
-
-    <script>
-        let playerButtons = document.querySelectorAll('.player-btn');
-        let questions = document.querySelectorAll('input');
-
-        let numPlayers = playerButtons.length;
-        let numQuestions = questions.length;
-
-        const s = 'background: #005E7C; color: white; border-color: #005E7C !important';
-        playerButtons[0].setAttribute('style', s);
-
-        for (let playerButton of playerButtons) {
-            playerButton.addEventListener('click', () => {
-                for (let button of playerButtons) {
-                    button.removeAttribute('style', s)
-                }
-                playerButton.setAttribute('style', s);
-
-                let value = playerButton.value;
-                let questionNumLo = value * Math.floor(numQuestions / numPlayers);
-                let questionNumHi = questionNumLo + Math.floor(numQuestions / numPlayers) - 1;
-                for (let i = 0; i < numQuestions; i++) {
-                    if (i >= questionNumLo && i <= questionNumHi) {
-                        questions[i].setAttribute('style', 'display: unset;');
-                    } else {
-                        questions[i].setAttribute('style', 'display: none;');
-                    }
-                }
-            });
-        }
-    </script>
-
-    <!-- Bootstrap JS with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
