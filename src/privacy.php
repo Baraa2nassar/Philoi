@@ -1,67 +1,62 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Privacy Policy - Philoi</title>
+  <title>Privacy Policy - Philoi</title>
 
-    <!-- Favorite icon -->
-    <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="static/icons/favicon.ico">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/other.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<style>
-        @media screen and (max-width: 550px) { #privacy { width: 28rem !important; } }
-        @media screen and (max-width: 500px) { #privacy { width: 26rem !important; } }
-        @media screen and (max-width: 450px) { #privacy { width: 23rem !important; } }
-        @media screen and (max-width: 400px) { #privacy { width: 20rem !important; } }
-        @media screen and (max-width: 350px) { #privacy { width: 18rem !important; } }
-    </style>
-    <div class="d-flex flex-column mx-auto" id="privacy" style="width: 30rem; margin-top: 50px;">
-        <h1 class="text-center" style="color: lightblue;">Philoi Privacy Policy</h1>
-        <hr class="text-white">
-        <div class="bg-light text-white px-3 py-2 mx-auto" style="max-height: 350px; overflow-y: auto; background-color: #1B4353 !important;">
-            <p>Philoi operates the <u>https://philoi.tech</u> website, which provides the service.</p>
-            <p>This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our service, the Philoi website.</p>
-            <p>If you choose to use our service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
-            <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at <u>https://philoi.tech</u>, unless otherwise defined in this Privacy Policy.</p>
-            <h2>Information Collection and Use</h2>
-            <p>For a better experience while using our service, we may require you to provide us with certain personally identifiable information, including but not limited to your name, phone number, and postal address. The information that we collect will be used to contact or identify you.</p>
-            <h2>Log Data</h2>
-            <p>We want to inform you that whenever you visit our service, we collect information that your browser sends to us that is called Log Data. This Log Data may include information such as your computer's Internet Protocol ("IP") address, browser version, pages of our service that you visit, the time and date of your visit, the time spent on those pages, and other statistics.</p>
-            <h2>Cookies</h2>
-            <p>Cookies are files with small amount of data that is commonly used an anonymous unique identifier. These are sent to your browser from the website that you visit and are stored on your computer's hard drive.</p>
-            <p>Our website uses these "cookies" to collection information and to improve our service. You have the option to either accept or refuse these cookies, and know when a cookie is being sent to your computer. If you choose to refuse our cookies, you may not be able to use some portions of our service.</p>
-            <h2>Service Providers</h2>
-            <p>We may employ third-party companies and individuals due to the following reasons:</p>
-            <ul>
-                <li>To facilitate our service;</li>
-                <li>To provide the service on our behalf;</li>
-                <li>To perform service-related services; or</li>
-                <li>To assist us in analyzing how our service is used.</li>
-            </ul>
-            <p>We want to inform our service users that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
-            <h2>Security</h2>
-            <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
-            <h2>Links to Other Sites</h2>
-            <p>Our service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
-            <h2>Changes to This Privacy Policy</h2>
-            <p>We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.</p>
-            <h2>Contact Us</h2>
-            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
-        </div>
+<body class="bg-[#1B4353]">
 
-        <a href="index.php" class="col text-center">
-            <button class="mx-auto btn btn-secondary custom-btn-secondary mt-4" id="privacy-back-button" style="width: 200px">Back</button>
-        </a>
-    </div>
+  <div class="w-1/3 mx-auto text-white mt-6">
+    <section class="mb-3">
+      <h1 class="text-center text-4xl text-[#ADD8E6]">Privacy Policy</h1>
+      <hr class="h-px border-0 bg-slate-400 my-2">
+    </section>
+
+    <section class="max-h-[400px] overflow-y-auto px-2 mb-3">
+      <p class="mb-3">This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our service, the Philoi website.</p>
+      <p class="mb-3">If you choose to use our service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
+      <p class="mb-3">The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at <u>https://philoi.tech</u>, unless otherwise defined in this Privacy Policy.</p>
+      <h2 class="text-2xl my-4">Information Collection and Use</h2>
+      <p class="mb-3">For a better experience while using our service, we may require you to provide us with certain personally identifiable information, including but not limited to your name, phone number, and postal address. The information that we collect will be used to contact or identify you.</p>
+      <h2 class="text-2xl my-4">Log Data</h2>
+      <p class="mb-3">We want to inform you that whenever you visit our service, we collect information that your browser sends to us that is called Log Data. This Log Data may include information such as your computer's Internet Protocol ("IP") address, browser version, pages of our service that you visit, the time and date of your visit, the time spent on those pages, and other statistics.</p>
+      <h2 class="text-2xl my-4">Cookies</h2>
+      <p class="mb-3">Cookies are files with small amount of data that is commonly used an anonymous unique identifier. These are sent to your browser from the website that you visit and are stored on your computer's hard drive.</p>
+      <p class="mb-3">Our website uses these "cookies" to collection information and to improve our service. You have the option to either accept or refuse these cookies, and know when a cookie is being sent to your computer. If you choose to refuse our cookies, you may not be able to use some portions of our service.</p>
+      <h2 class="text-2xl my-4">Service Providers</h2>
+      <p class="mb-3">We may employ third-party companies and individuals due to the following reasons:</p>
+      <ul>
+        <li>To facilitate our service;</li>
+        <li>To provide the service on our behalf;</li>
+        <li>To perform service-related services; or</li>
+        <li>To assist us in analyzing how our service is used.</li>
+      </ul>
+      <p class="mb-3">We want to inform our service users that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
+      <h2 class="text-2xl my-4">Security</h2>
+      <p class="mb-3">We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+      <h2 class="text-2xl my-4">Links to Other Sites</h2>
+      <p class="mb-3">Our service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+      <h2 class="text-2xl my-4">Changes to This Privacy Policy</h2>
+      <p class="mb-3">We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.</p>
+      <h2 class="text-2xl my-4">Contact Us</h2>
+      <p class="mb-3">If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+    </section>
+
+    <section>
+      <a href="index.php" class="m">
+        <div class="mt-4 mx-auto w-2/3 bg-[#5D737E] py-2 rounded-md text-center hover:bg-[#546771]">
+          Back
+        </div>
+      </a>
+    </section>
+
+  </div>
+
 </body>
 </html>
