@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
   <div class="w-1/3 mx-auto text-white mt-8">
     <section class="mb-3">
       <h1 class="text-center text-4xl text-[#ADD8E6]">Create a New Game</h1>
-      <hr class="h-px border-0 bg-slate-400 my-3">
+      <hr class="h-px border-0 bg-[#395b6c] my-4">
     </section>
 
         <form method="post">
@@ -81,7 +81,7 @@ if (isset($_POST['submit'])) {
                             Continue
                         </button>
 
-                    <a href="index.php" class="m">
+                    <a href="index.php">
                         <div class="mx-auto w-2/3 bg-[#5D737E] py-2 rounded-md text-center hover:bg-[#546771] select-none">
                         Back
                         </div>
