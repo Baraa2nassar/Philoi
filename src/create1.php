@@ -46,47 +46,28 @@ if (isset($_POST['submit'])) {
     <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon">
 
     <script src="https://cdn.tailwindcss.com"></script>
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/other.css">
-    <style>
-        @media screen and (max-width: 550px) {
-            .d-flex { width: 24rem !important; }
-            button { width: 170px !important; }
-            h1 { margin-top: 10px; }
-        }
-        @media screen and (max-width: 500px) { .d-flex { width: 23rem !important; } }
-        @media screen and (max-width: 450px) {
-            .d-flex { width: 21rem !important; }
-            button { width: 145px !important; }
-            h5 { font-size: 17px !important; }
-            h1 { margin-top: 15px; }
-        }
-        @media screen and (max-width: 400px) { .d-flex { width: 20rem !important; } }
-        @media screen and (max-width: 350px) { .d-flex { width: 19rem !important; } }
-    </style>
 </head>
-<body>
-    <div class="d-flex flex-column mx-auto text-white" style="width: 26.25rem; margin-top: 3%">
-        <h1 class="text-center" style="color: lightblue">Create a New Game</h1>
-        <hr>
+<body class="bg-[#1B4353]">
+
+  <div class="w-1/3 mx-auto text-white mt-6">
+    <section class="mb-3">
+      <h1 class="text-center text-4xl text-[#ADD8E6]">Create a New Game</h1>
+      <hr class="h-px border-0 bg-slate-400 my-2">
+    </section>
 
         <form method="post">
-            <div class="row mb-3">
-                    <label class="text-center col-sm-9 col-form-label">How many questions per player? <span style="color: #90A9B7">(10 max)</span></label>
-                <div class="col-sm-3">
-                    <input class="form-control" type="number" step="1" name="num_questions_per_player" min="1" max="10" required>
-                </div>
+            <div class="flex mb-3">
+                <label class="w-5/6 p-2 text-center col-sm-9 col-form-label">How many questions per player? <span style="color: #90A9B7">(10 max)</span></label>
+                <input class="w-1/6 p-2 text-black rounded" type="number" step="1" name="num_questions_per_player" min="1" max="10" required>
             </div>
 
             <div class="mt-3 text-center">
                 <h5 class="text-center mb-1" style="color: #efefef;">Enter the names of the players <span style="color: #90A9B7">(3 min)</span></h5>
 
-                <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 1" style="border-width: 2.5px" maxlength="17">
-                <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 2" style="border-width: 2.5px" maxlength="17">
-                <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 3" style="border-width: 2.5px" maxlength="17">
-                <input class="form-control my-3" type="text" name="players[]" id="username" placeholder="Player 4" style="border-width: 2.5px" maxlength="17">
+                <input class="my-3 block w-full p-2 rounded-md text-black" type="text" name="players[]" placeholder="Player 1" maxlength="17">
+                <input class="my-3 block w-full p-2 rounded-md text-black" type="text" name="players[]" placeholder="Player 2" maxlength="17">
+                <input class="my-3 block w-full p-2 rounded-md text-black" type="text" name="players[]" placeholder="Player 3" maxlength="17">
+                <input class="my-3 block w-full p-2 rounded-md text-black" type="text" name="players[]" placeholder="Player 4" maxlength="17">
 
                 <?php if (isset($_SESSION['ERROR'])): ?>
                     <div class="alert alert-danger text-center" style="padding: 10px 5px">
@@ -96,14 +77,18 @@ if (isset($_POST['submit'])) {
                     <?php unset($_SESSION['ERROR']); ?>
                 <?php endif; ?>
 
-                <div class="d-flex my-4">
-                    <a href="index.php" tabindex="-1" class="mx-auto">
-                        <button class="btn custom-btn-secondary" type="button" style="width: 200px;">Back</button>
+                <section>
+                        <button name="submit" class="mb-3 rounded-md px-2 py-2 bg-[#1D70A2] border-[#1D70A2] hover:bg-[#185f89] hover:border-[#185f89] border w-2/3 mx-auto">
+                            Continue
+                        </button>
+
+                    <a href="index.php" class="m">
+                        <div class="mx-auto w-2/3 bg-[#5D737E] py-2 rounded-md text-center hover:bg-[#546771]">
+                        Back
+                        </div>
                     </a>
-                    <a class="mx-auto">
-                        <button class="btn custom-btn-primary" name="submit" style="width: 200px;">Continue</button>
-                    </a>
-                </div>
+                </section>
+
             </div>
         </form>
     </div>
