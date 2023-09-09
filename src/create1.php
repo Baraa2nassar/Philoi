@@ -57,8 +57,8 @@ if (isset($_POST['submit'])) {
 
         <form method="post">
             <div class="flex mb-3">
-                <label class="w-5/6 p-2 py-1">How many questions per player? <span style="color: #90A9B7">(10 max)</span></label>
-                <input class="w-1/6 ps-1.5 text-black rounded" type="number" step="1" name="num_questions_per_player" min="1" max="10" required>
+                <label class="w-5/6 p-2 py-1">How many questions per player? <span style="color: #90A9B7">(5 max)</span></label>
+                <input class="w-1/6 ps-1.5 text-black rounded" type="number" step="1" name="num_questions_per_player" min="1" max="5" required>
             </div>
 
                 <h5 class="text-center mb-3 text-xl" style="color: #efefef;">Enter the names of the players <span style="color: #90A9B7">(3 min)</span></h5>
