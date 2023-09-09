@@ -76,6 +76,8 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
 
     <title>Create a new game - Philoi</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Favorite icon -->
     <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon">
 

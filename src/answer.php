@@ -45,6 +45,8 @@ if (isset($next)) {
 
     <title>Answer - Philoi</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Favorite icon -->
     <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon">
 

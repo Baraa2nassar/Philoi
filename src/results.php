@@ -45,6 +45,7 @@ session_destroy();
     <!-- Favorite icon -->
     <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon">
 
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/other.css">
