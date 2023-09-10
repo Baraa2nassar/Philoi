@@ -3,7 +3,7 @@
 session_start();
 
 if (!isset($_SESSION["SUCCESS_ACCESS"])) {
-    header("Location: index.php");
+  header("Location: index.php");
 }
 unset($_SESSION["SUCCESS_ACCESS"]);
 
@@ -24,10 +24,12 @@ $game_pin = $_SESSION["game_pin"];
   <link rel="icon" href="static/icons/favicon.ico">
 </head>
 <body class="bg-[#1B4353]">
+<?php include "includes/squares.php" ?>
+
   <div class="mx-auto mt-8 w-1/3 text-white text-center">
     <section class="mb-3">
       <h1 class="text-center text-4xl text-[#ADD8E6]">Success</h1>
-      <hr class="h-px border-0 bg-slate-400 my-2">
+      <hr class="h-px border-0 bg-[#395b6c] my-4">
     </section>
 
     <section class="mb-6">
@@ -39,7 +41,7 @@ $game_pin = $_SESSION["game_pin"];
     <section>
       <a href="index.php">
         <div class="rounded px-2 py-2 bg-[#1D70A2] border-[#1D70A2] hover:bg-[#185f89] hover:border-[#185f89] border w-2/3 mx-auto">
-          Return
+          Continue
         </div>
       </a>
     </section>
