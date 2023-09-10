@@ -84,46 +84,45 @@ $ordinal = [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th",
 
   <div class="w-1/3 mx-auto text-white mt-8">
 
-  <section class="mb-3">
+    <section class="mb-3">
       <h1 class="text-center text-4xl text-[#ADD8E6]">Create a New Game</h1>
       <hr class="h-px border-0 bg-[#395b6c] my-4">
-  </section>
+    </section>
 
-        <form method="post">
-            <h5 class="mb-3 text-center text-white">Enter the questions for each player</h5>
-                <div class="rounded" style="max-height: 350px; overflow-y: auto;">
-                    <?php for ($i = 0; $i < $num_players; $i++): ?>
-                        <section class="mb-3 border p-2 rounded">
-                            <?= $players[$i] ?>
-                            <?php for ($j = 1; $j <= $num_questions_per_player; $j++): ?>
-                                <div class="row mx-2 my-1">
-                                    <input class="block w-full px-2.5 py-1.5 rounded-md text-black border border-2 border-gray-200 bg-[#f7f5f3]" name="questions[]" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>
-                                </div>
-                            <?php endfor; ?>
-                        </section>
+      <form method="post">
+          <h5 class="mb-3 text-center text-white">Enter the questions for each player</h5>
+              <div class="rounded overflow-y-auto max-h-[300px]">
+                  <?php for ($i = 0; $i < $num_players; $i++): ?>
+                      <section class="mb-3 border p-2 rounded">
+                          <?= $players[$i] ?>
+                          <?php for ($j = 1; $j <= $num_questions_per_player; $j++): ?>
+                              <div class="row mx-2 my-1">
+                                  <input class="block w-full px-2.5 py-1.5 rounded-md text-black border border-2 border-gray-200 bg-[#f7f5f3]" name="questions[]" type='text' placeholder='Enter the <?= $ordinal[$j]; ?> question for <?=$players[$i]?>' required>
+                              </div>
+                          <?php endfor; ?>
+                      </section>
+                  <?php endfor; ?>
 
-                    <?php endfor; ?>
-                <?php if (isset($_SESSION['INVALID_QUESTION'])): ?>
-                    <div class="alert alert-danger text-center mt-3" style="padding: 10px 20px">
-                        <?= $_SESSION['INVALID_QUESTION'] ?>
+                  <?php if (isset($_SESSION['INVALID_QUESTION'])): ?>
+                    <div class="mb-3 text-[#963c44] bg-[#f8d7da] text-center py-2.5 p-5 rounded">
+                      <?= $_SESSION['INVALID_QUESTION'] ?>
                     </div>
-
                     <?php unset($_SESSION['INVALID_QUESTION']); ?>
                 <?php endif; ?>
-                </div>
+              </div>
 
-                <section class="text-center mt-3">
-                        <button name="create" class="mb-3 rounded-md px-2 py-2 bg-[#1D70A2] border-[#1D70A2] hover:bg-[#185f89] hover:border-[#185f89] border w-2/3 mx-auto">
-                            Continue
-                        </button>
+              <section class="text-center mt-3">
+                      <button name="create" class="mb-3 rounded-md px-2 py-2 bg-[#1D70A2] border-[#1D70A2] hover:bg-[#185f89] hover:border-[#185f89] border w-2/3 mx-auto">
+                          Continue
+                      </button>
 
-                    <a href="index.php">
-                        <div class="mx-auto w-2/3 bg-[#5D737E] py-2 rounded-md text-center hover:bg-[#546771] select-none">
-                        Back
-                        </div>
-                    </a>
-                </section>
-        </form>
+                  <a href="index.php">
+                      <div class="mx-auto w-2/3 bg-[#5D737E] py-2 rounded-md text-center hover:bg-[#546771] select-none">
+                      Back
+                      </div>
+                  </a>
+              </section>
+      </form>
     </div>
 </body>
 </html>
