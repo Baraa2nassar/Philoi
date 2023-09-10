@@ -16,7 +16,7 @@ if (isset($game_pin)) {
   $quiz_id = $row['quiz_id'];
 
   if ($statement->rowCount() == 0) {
-    $_SESSION['INVALID_GAME_PIN'] = "Invalid Game PIN. Please try again.";
+    $_SESSION['INVALID_GAME_PIN'] = "Invalid game PIN. Please try again.";
     header('Location: index.php');
     exit;
   } else {
@@ -55,18 +55,14 @@ if (isset($_POST['play_demo'])) {
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Philoi</title>
+  <title>Philoi</title>
 
-    <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="static/icons/favicon.ico">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"> -->
-    <!-- <link rel="stylesheet" href="static/css/other.css"> -->
-    <!-- <style> footer div a:hover { text-decoration: underline !important; } </style> -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#1B4353] text-white">
   <?php include "./includes/squares.php" ?>
@@ -81,15 +77,15 @@ if (isset($_POST['play_demo'])) {
 
         <section class="mb-3">
             <form class="flex my-2" method="post">
-                <input class="grow me-3 rounded-sm" type="text" name="game_pin" placeholder="Enter a Game PIN" required>
-                <div class="">
-                    <button class="btn custom-btn-success text-white w-100 px-4 rounded-sm" style="background: #588157">Enter</button>
+                <input class="grow me-3 rounded text-black px-1.5 bg-[#f7f5f3]" type="text" name="game_pin" placeholder="Enter your game PIN" required>
+                <div>
+                  <button class="btn custom-btn-success py-2 text-white w-100 px-4 rounded bg-[#588157] hover:bg-[#4a6d49]">Enter</button>
                 </div>
             </form>
         </section>
 
         <?php if (isset($_SESSION['INVALID_GAME_PIN'])): ?>
-            <div class="alert alert-danger text-center" style="padding: 5px 20px">
+            <div class="mb-3 text-[#963c44] bg-[#f8d7da] text-center py-2.5 p-5 rounded">
                 <?= $_SESSION['INVALID_GAME_PIN'] ?>
             </div>
 
@@ -117,14 +113,7 @@ if (isset($_POST['play_demo'])) {
             </a>
                 </section>
 
-        <!-- <a href="create1.php" class="my-1" tabindex="-1">
-            <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">Create a new game</button>
-        </a>
-        <a href="rules.php" class="mt-2" tabindex="-1">
-            <button class="btn custom-btn-primary text-white w-100" style="height: 57px;">View rules</button>
-        </a> -->
-
-        <section>
+        <section class="mt-8">
             <footer class="flex">
                 <div class="m-auto mt-1">
                     <a class="text-white hover:underline" href="https://github.com/Baraa2nassar/Philoi/" target="_blank" rel="noopener noreferrer">View on GitHub</a>
@@ -144,29 +133,5 @@ if (isset($_POST['play_demo'])) {
             </footer>
         </section>
     </div>
-
-    <script>
-        function animation(i) {
-            let square = document.getElementById(i);
-            square.style.transition = '0.65s';
-            square.style.borderColor = '#6DAEDB';
-            setTimeout(() => { square.style.borderColor = '#1B4353'; }, 650);
-        }
-
-        function showAnimations() {
-            setTimeout(() => {
-                for (let i = 1; i <= 10; i++) {
-                    setTimeout(() => {animation(i)}, i*200);
-                }
-            }, 100);
-            setInterval(() => {
-                for (let i = 1; i <= 10; i++) {
-                    setTimeout(() => {animation(i)}, i*200);
-                }
-            }, 2100);
-        }
-
-        //showAnimations();
-    </script>
 </body>
 </html>
