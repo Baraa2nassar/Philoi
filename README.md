@@ -65,7 +65,6 @@ You can also download Github Desktop to use GUI system to do similar function to
 
 Baraa Nassar: [@baraa2nassar](https://www.instagram.com/baraa2nassar) - baraa-aziz@hotmail.com - [LinkedIn](https://www.linkedin.com/in/baraa2nassar/)
 
-mhmh4: [GitHub](https://github.com/mhmh4)
 
 
 ## License
