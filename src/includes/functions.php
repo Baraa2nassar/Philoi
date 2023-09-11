@@ -25,3 +25,12 @@ function generate_game_pin()
     }
     return $output;
 }
+
+function redirect_if_not_set(string $session_key, string $redirect_url)
+{
+    if (!isset($_SESSION[$session_key])) {
+        header("Location: $redirect_url");
+        exit;
+    }
+    unset($_SESSION[$session_key]);
+}
