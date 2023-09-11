@@ -2,10 +2,10 @@
 
 session_start();
 
-// if (!isset($_SESSION['LOBBY_ACCESS'])) {
-//     header('Location: index.php');
-// }
-// unset($_SESSION['LOBBY_ACCESS']);
+if (!isset($_SESSION['LOBBY_ACCESS'])) {
+    header('Location: index.php');
+}
+unset($_SESSION['LOBBY_ACCESS']);
 
 $quiz_id = $_SESSION['quiz_id'] ?? null;
 
@@ -52,30 +52,32 @@ $_SESSION['scores'] = $scores;
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NRENDFTKN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8NRENDFTKN');
+    </script>
     <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Lobby - Philoi</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- Favorite icon -->
-    <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/other.css">
 </head>
-<body class="bg-[#1B4353] text-white">
-  <?php include "./includes/squares.php" ?>
-
-  <div class="w-1/3 mx-auto mt-8">
-  <section class="mb-3">
-        <h1 class="text-center text-4xl text-[#ADD8E6]">Lobby</h1>
-        <hr class="h-px border-0 bg-[#395b6c] my-4">
-    </section>
-
+<body>
+    <div class="d-flex flex-column mx-auto" style="width: 350px; margin-top: 30px">
+        <h1 class="text-center" style="color: lightblue;">Lobby</h1>
+        <hr class="text-white">
 
         <h5 class="text-center mb-3 text-white">Game will begin after clicking 'Start'</h5>
 

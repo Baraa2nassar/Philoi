@@ -1,13 +1,15 @@
-# Philoi
+# [Philoi](http://www.philoi.tech)
 
 <div align="center">
-  <img src="static/icons/favicon.ico" alt="Philoi logo" width="100px">
+  <img src="static/images/favicon.ico" alt="Philoi logo" width="100px">
   <br>
   <p>
-    Philoi is a full stack web application that lets you create quizzes to test which facts applies to your friends.
+    Philoi is a full stack web application that lets you create quizzes to test which facts applies to your friends. This project was first developed by Baraa Nassar and <a href="https://www.github.com/mhmh4">mhmh4</a>.
     <br>
     <p style="font-size: 19px;">
-      <a href="https://www.youtube.com/watch?v=W68XvTuNgm8">View demo</a>
+      <a href="http://www.philoi.tech/">Visit the site</a>
+      -
+      <a href="https://www.youtube.com/watch?v=W68XvTuNgm8">View demo</a> 
       -
       <a href="https://github.com/Baraa2nassar/Philoi/issues">Report a bug</a>
       -
@@ -15,6 +17,15 @@
     </p>
   </p>
 </div>
+
+
+## Table of Contents
+
+- [About](#about)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- [License](#license)
 
 
 ## About
@@ -65,6 +76,7 @@ You can also download Github Desktop to use GUI system to do similar function to
 
 Baraa Nassar: [@baraa2nassar](https://www.instagram.com/baraa2nassar) - baraa-aziz@hotmail.com - [LinkedIn](https://www.linkedin.com/in/baraa2nassar/)
 
+mhmh4: [GitHub](https://github.com/mhmh4)
 
 
 ## License
